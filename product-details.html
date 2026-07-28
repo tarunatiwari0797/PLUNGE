@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamond Bib Cock - PLUNGE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 800: '#1a2235', 900: '#0f1423', 950: '#080b14' },
+            chrome: { 300: '#e2e8f0', 400: '#cbd5e1', 500: '#94a3b8' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="font-sans antialiased text-gray-900 bg-white pt-24">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 w-full z-50 bg-navy-950 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <svg class="w-8 h-8 text-chrome-300" fill="currentColor" viewBox="0 0 32 32"><path d="M16 2L4 8v8c0 7.18 5.12 13.08 12 14 6.88-.92 12-6.82 12-14V8L16 2zm0 4l8 4v6c0 5.5-3.44 10.34-8 11.2C9.44 26.34 6 21.5 6 16v-6l8-4z"/></svg>
+          <span class="font-serif text-xl lg:text-2xl font-bold text-white tracking-wider">PLUNGE</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="text-chrome-400 hover:text-white text-sm font-medium transition-colors">Home</a>
+          <a href="collections.html" class="text-chrome-500 hover:text-white text-sm font-medium transition-colors">Collections</a>
+          <a href="gallery.html" class="text-chrome-400 hover:text-white text-sm font-medium transition-colors">Gallery</a>
+          <a href="about.html" class="text-chrome-400 hover:text-white text-sm font-medium transition-colors">About</a>
+          <a href="faq.html" class="text-chrome-400 hover:text-white text-sm font-medium transition-colors">FAQ</a>
+          <a href="contact.html" class="text-chrome-400 hover:text-white text-sm font-medium transition-colors">Contact</a>
+          <a href="enquire.html" class="text-chrome-400 hover:text-white text-sm font-medium transition-colors">Enquire</a>
+        </nav>
+
+        <!-- Icons + Hamburger -->
+        <div class="flex items-center gap-4">
+          <button class="text-chrome-400 hover:text-white transition-colors hidden sm:block" aria-label="Search">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </button>
+          <a href="wishlist.html" class="text-chrome-400 hover:text-white transition-colors hidden sm:block" aria-label="Wishlist">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </a>
+          <a href="cart.html" class="text-chrome-400 hover:text-white transition-colors relative" aria-label="Cart">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            <span class="absolute -top-1 -right-1 bg-chrome-300 text-navy-900 text-xs w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span>
+          </a>
+          <button id="mobile-menu-btn" class="lg:hidden text-chrome-400 hover:text-white transition-colors ml-1" aria-label="Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/60 z-50 hidden"></div>
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-navy-950 z-50 transform translate-x-full transition-transform duration-300">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-10">
+        <span class="font-serif text-xl font-bold text-white tracking-wider">PLUNGE</span>
+        <button id="mobile-close" class="text-chrome-400 hover:text-white transition-colors" aria-label="Close menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-1">
+        <a href="index.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 rounded-lg px-4 py-3 text-sm font-medium transition-all">Home</a>
+        <a href="collections.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 rounded-lg px-4 py-3 text-sm font-medium transition-all">Collections</a>
+        <a href="gallery.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 rounded-lg px-4 py-3 text-sm font-medium transition-all">Gallery</a>
+        <a href="about.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 rounded-lg px-4 py-3 text-sm font-medium transition-all">About</a>
+        <a href="faq.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 rounded-lg px-4 py-3 text-sm font-medium transition-all">FAQ</a>
+        <a href="contact.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 rounded-lg px-4 py-3 text-sm font-medium transition-all">Contact</a>
+        <a href="enquire.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 rounded-lg px-4 py-3 text-sm font-medium transition-all">Enquire</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- BREADCRUMB -->
+  <section class="bg-gray-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <nav class="flex items-center gap-2 text-xs sm:text-sm text-gray-500">
+        <a href="index.html" class="hover:text-navy-900 transition-colors">Home</a>
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+        <a href="collections.html" class="hover:text-navy-900 transition-colors">Collections</a>
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+        <a href="#" class="hover:text-navy-900 transition-colors">Diamond Series</a>
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+        <span class="text-navy-900 font-medium">Diamond Bib Cock</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- PRODUCT DETAILS SECTION -->
+  <section class="bg-white py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-16">
+
+        <!-- LEFT COLUMN: Gallery -->
+        <div>
+          <div class="relative overflow-hidden rounded-2xl bg-gray-100 aspect-square">
+            <img id="gallery-main-img" src="assets/images/faucet-product.svg" alt="Diamond Bib Cock" class="w-full h-full object-cover transition-opacity duration-300" />
+          </div>
+          <!-- Thumbnails -->
+          <div class="mt-4 flex gap-3 overflow-x-auto pb-2">
+            <button class="gallery-thumb flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 border-navy-900 opacity-100 transition-all duration-200 hover:opacity-100" data-src="assets/images/faucet-product.svg">
+              <img src="assets/images/faucet-product.svg" alt="Thumbnail 1" class="w-full h-full object-cover" />
+            </button>
+            <button class="gallery-thumb flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 border-gray-200 opacity-60 transition-all duration-200 hover:opacity-100" data-src="assets/images/hero-bathroom.svg">
+              <img src="assets/images/hero-bathroom.svg" alt="Thumbnail 2" class="w-full h-full object-cover" />
+            </button>
+            <button class="gallery-thumb flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 border-gray-200 opacity-60 transition-all duration-200 hover:opacity-100" data-src="assets/images/shower-system.svg">
+              <img src="assets/images/shower-system.svg" alt="Thumbnail 3" class="w-full h-full object-cover" />
+            </button>
+            <button class="gallery-thumb flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 border-gray-200 opacity-60 transition-all duration-200 hover:opacity-100" data-src="assets/images/faucet-product.svg">
+              <img src="assets/images/faucet-product.svg" alt="Thumbnail 4" class="w-full h-full object-cover" />
+            </button>
+            <button class="gallery-thumb flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden border-2 border-gray-200 opacity-60 transition-all duration-200 hover:opacity-100" data-src="assets/images/bathroom-interior.svg">
+              <img src="assets/images/bathroom-interior.svg" alt="Thumbnail 5" class="w-full h-full object-cover" />
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Details -->
+        <div class="mt-8 lg:mt-0">
+          <!-- Product Code -->
+          <p class="text-sm text-gray-400 font-medium tracking-wide uppercase">DI-FS-01</p>
+
+          <!-- Title -->
+          <h1 class="font-serif text-3xl lg:text-4xl font-bold text-navy-950 mt-2">Diamond Bib Cock</h1>
+
+          <!-- Rating -->
+          <div class="flex items-center gap-2 mt-3">
+            <div class="flex gap-0.5">
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            </div>
+            <span class="text-sm font-medium text-navy-900">4.8</span>
+            <a href="#reviews" class="text-sm text-gray-500 hover:text-navy-900 transition-colors">(124 reviews)</a>
+          </div>
+
+          <!-- Price -->
+          <div class="flex items-baseline gap-3 mt-5">
+            <span class="text-3xl lg:text-4xl font-bold text-navy-950">₹780</span>
+            <span class="text-lg text-gray-400 line-through">₹999</span>
+            <span class="text-sm font-semibold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">22% OFF</span>
+          </div>
+
+          <!-- Short Description -->
+          <p class="mt-5 text-gray-600 leading-relaxed text-sm lg:text-base">
+            The Diamond Bib Cock combines elegant design with superior craftsmanship. Made from premium brass with a flawless chrome finish, it delivers reliable performance and a touch of luxury for your bathroom or kitchen. Featuring a high-quality ceramic cartridge for smooth, drip-free operation.
+          </p>
+
+          <div class="border-t border-gray-200 mt-6"></div>
+
+          <!-- Finishes -->
+          <div class="mt-6">
+            <label class="text-sm font-semibold text-navy-900 block mb-3">Available Finishes</label>
+            <div class="flex gap-3">
+              <button class="finish-swatch w-10 h-10 rounded-full bg-gray-300 ring-2 ring-offset-2 ring-navy-900 transition-all" title="Chrome"></button>
+              <button class="finish-swatch w-10 h-10 rounded-full bg-gray-900 ring-2 ring-offset-2 ring-transparent hover:ring-gray-400 transition-all" title="Matte Black"></button>
+              <button class="finish-swatch w-10 h-10 rounded-full bg-yellow-600 ring-2 ring-offset-2 ring-transparent hover:ring-gray-400 transition-all" title="Brushed Gold"></button>
+              <button class="finish-swatch w-10 h-10 rounded-full bg-gray-600 ring-2 ring-offset-2 ring-transparent hover:ring-gray-400 transition-all" title="Gun Metal"></button>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200 mt-6"></div>
+
+          <!-- Quantity -->
+          <div class="mt-6">
+            <label class="text-sm font-semibold text-navy-900 block mb-3">Quantity</label>
+            <div class="inline-flex items-center border border-gray-300 rounded-lg overflow-hidden">
+              <button type="button" class="qty-btn-minus w-11 h-11 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors text-lg font-medium" aria-label="Decrease quantity">−</button>
+              <input type="number" value="1" min="1" max="99" class="w-14 h-11 text-center border-x border-gray-300 text-sm font-medium focus:outline-none [-moz-appearance:_textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" />
+              <button type="button" class="qty-btn-plus w-11 h-11 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition-colors text-lg font-medium" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200 mt-6"></div>
+
+          <!-- Add to Cart -->
+          <div class="mt-6 space-y-3">
+            <a href="cart.html" class="bg-chrome-300 text-navy-900 hover:bg-chrome-400 font-semibold uppercase tracking-wider text-sm w-full flex items-center justify-center gap-2 py-4 rounded-xl transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </a>
+            <a href="checkout.html" class="bg-navy-900 text-white hover:bg-navy-800 font-semibold uppercase tracking-wider text-sm w-full flex items-center justify-center gap-2 py-4 rounded-xl transition-colors">
+              Buy Now
+            </a>
+            <a href="wishlist.html" class="border border-gray-300 text-gray-700 hover:border-navy-900 hover:text-navy-900 font-medium text-sm w-full flex items-center justify-center gap-2 py-3.5 rounded-xl transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              Add to Wishlist
+            </a>
+          </div>
+
+          <div class="border-t border-gray-200 mt-6"></div>
+
+          <!-- Share -->
+          <div class="mt-6 flex items-center gap-4">
+            <span class="text-sm font-semibold text-navy-900">Share</span>
+            <div class="flex gap-3">
+              <a href="#" class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-navy-900 hover:text-white transition-all" aria-label="Facebook">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-navy-900 hover:text-white transition-all" aria-label="Twitter">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-navy-900 hover:text-white transition-all" aria-label="Pinterest">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641 0 12.017 0z"/></svg>
+              </a>
+              <a href="#" class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-navy-900 hover:text-white transition-all" aria-label="Email">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200 mt-6"></div>
+
+          <!-- Delivery Info -->
+          <div class="mt-6 space-y-3">
+            <span class="inline-flex items-center gap-1.5 bg-green-50 text-green-700 text-sm font-semibold px-3 py-1 rounded-full">✓ In Stock</span>
+            <ul class="space-y-2.5 text-sm text-gray-600">
+              <li class="flex items-start gap-2">
+                <span class="mt-0.5">🚚</span>
+                <span>Free shipping on orders above ₹2,000</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-0.5">📦</span>
+                <span>Estimated delivery: 5-7 business days</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-0.5">↩</span>
+                <span>30-day return policy</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="border-t border-gray-200 mt-6"></div>
+
+          <!-- Coupon -->
+          <div class="mt-6">
+            <label class="text-sm font-semibold text-navy-900 block mb-2">Have a coupon?</label>
+            <div class="flex gap-2">
+              <input type="text" placeholder="Enter coupon code" class="flex-1 border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-navy-900 transition-all" />
+              <button class="bg-navy-900 text-white hover:bg-navy-800 px-6 py-2.5 rounded-lg text-sm font-semibold transition-colors">Apply</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABS SECTION -->
+  <section class="bg-white border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Tab Buttons -->
+      <div class="flex overflow-x-auto border-b border-gray-200 -mb-px">
+        <button class="product-tab-btn whitespace-nowrap px-6 py-4 text-sm font-semibold border-b-2 border-navy-900 text-navy-900 transition-colors" data-tab="tab-desc">Description</button>
+        <button class="product-tab-btn whitespace-nowrap px-6 py-4 text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-navy-900 transition-colors" data-tab="tab-specs">Specifications</button>
+        <button class="product-tab-btn whitespace-nowrap px-6 py-4 text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-navy-900 transition-colors" data-tab="tab-features">Features &amp; Benefits</button>
+        <button class="product-tab-btn whitespace-nowrap px-6 py-4 text-sm font-semibold border-b-2 border-transparent text-gray-500 hover:text-navy-900 transition-colors" data-tab="tab-dimensions">Dimensions</button>
+      </div>
+
+      <!-- Tab Contents -->
+      <div class="py-8 lg:py-10">
+        <!-- Description -->
+        <div id="tab-desc" class="product-tab-content">
+          <div class="prose max-w-none">
+            <h3 class="font-serif text-xl font-bold text-navy-950 mb-4">About the Diamond Bib Cock</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              The Diamond Bib Cock from PLUNGE is engineered to deliver an unparalleled blend of form and function. Crafted from premium-grade brass, this bib cock is built to withstand the rigors of daily use while maintaining its stunning aesthetic appeal for years to come.
+            </p>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Its multi-layer chrome plating process ensures a mirror-like finish that resists tarnishing, corrosion, and scratches. The high-quality ceramic cartridge inside provides smooth, precise water flow control with a quarter-turn operation, eliminating drips and ensuring water conservation.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Whether you're outfitting a modern bathroom or upgrading your kitchen, the Diamond Bib Cock brings a refined, contemporary look that complements any decor. Its ergonomic handle design offers comfortable grip and effortless operation for users of all ages.
+            </p>
+          </div>
+        </div>
+
+        <!-- Specifications -->
+        <div id="tab-specs" class="product-tab-content hidden">
+          <h3 class="font-serif text-xl font-bold text-navy-950 mb-4">Technical Specifications</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <tbody>
+                <tr class="border-b border-gray-100">
+                  <td class="py-3 pr-8 font-semibold text-navy-900 w-1/3">Material</td>
+                  <td class="py-3 text-gray-600">Premium Brass</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-3 pr-8 font-semibold text-navy-900">Finish</td>
+                  <td class="py-3 text-gray-600">Chrome Plated</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-3 pr-8 font-semibold text-navy-900">Cartridge Type</td>
+                  <td class="py-3 text-gray-600">Ceramic</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-3 pr-8 font-semibold text-navy-900">Water Pressure</td>
+                  <td class="py-3 text-gray-600">0.5 - 5 Bar</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-3 pr-8 font-semibold text-navy-900">Connection Size</td>
+                  <td class="py-3 text-gray-600">1/2" BSP</td>
+                </tr>
+                <tr class="border-b border-gray-100">
+                  <td class="py-3 pr-8 font-semibold text-navy-900">Weight</td>
+                  <td class="py-3 text-gray-600">320g</td>
+                </tr>
+                <tr>
+                  <td class="py-3 pr-8 font-semibold text-navy-900">Warranty</td>
+                  <td class="py-3 text-gray-600">5 Years</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Features & Benefits -->
+        <div id="tab-features" class="product-tab-content hidden">
+          <h3 class="font-serif text-xl font-bold text-navy-950 mb-6">Features &amp; Benefits</h3>
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="flex gap-3">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 text-sm">Smooth Operation</h4>
+                <p class="text-gray-500 text-sm mt-1">Quarter-turn ceramic cartridge ensures effortless and precise water flow control.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 text-sm">Drip-Free Performance</h4>
+                <p class="text-gray-500 text-sm mt-1">Advanced ceramic disc technology prevents leaks and water wastage.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 text-sm">Easy Installation</h4>
+                <p class="text-gray-500 text-sm mt-1">Standard 1/2" BSP connection fits most plumbing systems. Simple DIY installation.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 text-sm">Corrosion Resistant</h4>
+                <p class="text-gray-500 text-sm mt-1">Multi-layer chrome plating protects against tarnishing and everyday wear.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 text-sm">Premium Build</h4>
+                <p class="text-gray-500 text-sm mt-1">Solid brass construction delivers lasting durability and a premium feel.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-navy-900 text-sm">5-Year Warranty</h4>
+                <p class="text-gray-500 text-sm mt-1">Backed by our comprehensive 5-year manufacturer warranty for complete peace of mind.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dimensions -->
+        <div id="tab-dimensions" class="product-tab-content hidden">
+          <h3 class="font-serif text-xl font-bold text-navy-950 mb-6">Product Dimensions</h3>
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="bg-gray-50 rounded-2xl p-8 flex items-center justify-center aspect-square max-w-sm">
+              <!-- Simple Dimension Diagram Placeholder -->
+              <svg viewBox="0 0 200 200" class="w-full max-w-[200px] h-auto">
+                <line x1="40" y1="20" x2="40" y2="180" stroke="#1a2235" stroke-width="1.5" stroke-dasharray="4 3"/>
+                <line x1="35" y1="20" x2="45" y2="20" stroke="#1a2235" stroke-width="1.5"/>
+                <line x1="35" y1="180" x2="45" y2="180" stroke="#1a2235" stroke-width="1.5"/>
+                <text x="25" y="105" fill="#1a2235" font-size="11" font-family="Inter" text-anchor="middle" transform="rotate(-90, 25, 105)">120mm</text>
+
+                <line x1="60" y1="100" x2="150" y2="100" stroke="#1a2235" stroke-width="1.5" stroke-dasharray="4 3"/>
+                <line x1="60" y1="95" x2="60" y2="105" stroke="#1a2235" stroke-width="1.5"/>
+                <line x1="150" y1="95" x2="150" y2="105" stroke="#1a2235" stroke-width="1.5"/>
+                <text x="105" y="93" fill="#1a2235" font-size="11" font-family="Inter" text-anchor="middle">55mm</text>
+
+                <rect x="55" y="50" width="40" height="100" rx="4" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+                <rect x="95" y="80" width="55" height="20" rx="4" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-navy-900 mb-4">Measurement Details</h4>
+              <ul class="space-y-3 text-sm">
+                <li class="flex justify-between py-2 border-b border-gray-100">
+                  <span class="text-gray-500">Height</span>
+                  <span class="font-medium text-navy-900">120mm</span>
+                </li>
+                <li class="flex justify-between py-2 border-b border-gray-100">
+                  <span class="text-gray-500">Width</span>
+                  <span class="font-medium text-navy-900">55mm</span>
+                </li>
+                <li class="flex justify-between py-2 border-b border-gray-100">
+                  <span class="text-gray-500">Spout Reach</span>
+                  <span class="font-medium text-navy-900">85mm</span>
+                </li>
+                <li class="flex justify-between py-2">
+                  <span class="text-gray-500">Connection</span>
+                  <span class="font-medium text-navy-900">1/2" BSP</span>
+                </li>
+              </ul>
+              <p class="text-xs text-gray-400 mt-4">* Measurements are approximate. Please refer to the technical drawing for precise dimensions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER REVIEWS SECTION -->
+  <section id="reviews" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-serif text-2xl lg:text-3xl font-bold text-navy-950 text-center mb-12">Customer Reviews</h2>
+
+      <div class="lg:grid lg:grid-cols-3 lg:gap-12">
+        <!-- Rating Summary -->
+        <div class="lg:col-span-1 mb-10 lg:mb-0">
+          <div class="bg-white rounded-2xl p-8 shadow-sm text-center">
+            <div class="text-5xl font-bold text-navy-950">4.8</div>
+            <div class="flex justify-center gap-0.5 mt-3">
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            </div>
+            <p class="text-sm text-gray-500 mt-2">Based on 124 reviews</p>
+
+            <!-- Breakdown -->
+            <div class="mt-6 space-y-2">
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-medium text-gray-500 w-3">5</span>
+                <svg class="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <div class="flex-1 bg-gray-200 rounded-full h-2">
+                  <div class="bg-yellow-400 h-2 rounded-full" style="width: 71.8%"></div>
+                </div>
+                <span class="text-xs text-gray-500 w-6 text-right">89</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-medium text-gray-500 w-3">4</span>
+                <svg class="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <div class="flex-1 bg-gray-200 rounded-full h-2">
+                  <div class="bg-yellow-400 h-2 rounded-full" style="width: 19.4%"></div>
+                </div>
+                <span class="text-xs text-gray-500 w-6 text-right">24</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-medium text-gray-500 w-3">3</span>
+                <svg class="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <div class="flex-1 bg-gray-200 rounded-full h-2">
+                  <div class="bg-yellow-400 h-2 rounded-full" style="width: 6.5%"></div>
+                </div>
+                <span class="text-xs text-gray-500 w-6 text-right">8</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-medium text-gray-500 w-3">2</span>
+                <svg class="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <div class="flex-1 bg-gray-200 rounded-full h-2">
+                  <div class="bg-yellow-400 h-2 rounded-full" style="width: 1.6%"></div>
+                </div>
+                <span class="text-xs text-gray-500 w-6 text-right">2</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-medium text-gray-500 w-3">1</span>
+                <svg class="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                <div class="flex-1 bg-gray-200 rounded-full h-2">
+                  <div class="bg-yellow-400 h-2 rounded-full" style="width: 0.8%"></div>
+                </div>
+                <span class="text-xs text-gray-500 w-6 text-right">1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews List -->
+        <div class="lg:col-span-2 space-y-6">
+          <!-- Review 1 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold text-navy-900">Rahul M.</h4>
+                <div class="flex gap-0.5 mt-1">
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                </div>
+              </div>
+              <span class="text-xs text-gray-400">2 weeks ago</span>
+            </div>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Outstanding quality! The chrome finish is flawless and it works perfectly. Installation was straightforward and the build quality is exceptional for this price range. Highly recommend PLUNGE products.</p>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold text-navy-900">Sneha K.</h4>
+                <div class="flex gap-0.5 mt-1">
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-gray-200 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                </div>
+              </div>
+              <span class="text-xs text-gray-400">1 month ago</span>
+            </div>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Very well made product. Installation was easy and the water flow is smooth. I gave 4 stars only because I wish there were more color options available in the store near me. Otherwise, a great purchase.</p>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm">
+            <div class="flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold text-navy-900">Vikram R.</h4>
+                <div class="flex gap-0.5 mt-1">
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                  <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                </div>
+              </div>
+              <span class="text-xs text-gray-400">3 weeks ago</span>
+            </div>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Premium feel at an affordable price. Highly recommended for anyone looking for quality bathroom fittings. The packaging was excellent and delivery was quick. Will be buying more from PLUNGE.</p>
+          </div>
+
+          <!-- Write a Review -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm mt-8">
+            <h3 class="font-serif text-lg font-bold text-navy-950 mb-4">Write a Review</h3>
+            <form class="space-y-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <input type="text" placeholder="Your name" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-navy-900 transition-all" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <input type="email" placeholder="your@email.com" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-navy-900 transition-all" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Rating</label>
+                <select class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-navy-900 transition-all bg-white">
+                  <option value="" disabled selected>Select rating</option>
+                  <option value="5">5 Stars - Excellent</option>
+                  <option value="4">4 Stars - Very Good</option>
+                  <option value="3">3 Stars - Good</option>
+                  <option value="2">2 Stars - Fair</option>
+                  <option value="1">1 Star - Poor</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Review</label>
+                <textarea rows="4" placeholder="Share your experience..." class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-navy-900 focus:border-navy-900 transition-all resize-none"></textarea>
+              </div>
+              <button type="button" class="bg-navy-900 text-white hover:bg-navy-800 font-semibold text-sm px-8 py-3 rounded-lg transition-colors">Submit Review</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT FAQ SECTION -->
+  <section class="bg-white py-12 lg:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-serif text-2xl lg:text-3xl font-bold text-navy-950 text-center mb-10">Product FAQ</h2>
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-colors">
+            <span class="font-semibold text-navy-900 text-sm lg:text-base pr-4">Is this product suitable for high-rise buildings?</span>
+            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-4">
+            <p class="text-gray-600 text-sm leading-relaxed">Yes, the Diamond Bib Cock is designed to handle water pressure from 0.5 to 5 Bar, making it perfectly suitable for high-rise buildings. The robust brass construction and ceramic cartridge ensure reliable performance even at higher water pressures commonly found in tall residential and commercial buildings.</p>
+          </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-colors">
+            <span class="font-semibold text-navy-900 text-sm lg:text-base pr-4">Does it come with installation accessories?</span>
+            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-4">
+            <p class="text-gray-600 text-sm leading-relaxed">Yes, the Diamond Bib Cock comes with all necessary installation accessories, including a 1/2" BSP connector, wall flange, and an Allen key for tightening. Basic installation can be done as a DIY project. However, we recommend professional installation for optimal results and warranty coverage.</p>
+          </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-colors">
+            <span class="font-semibold text-navy-900 text-sm lg:text-base pr-4">What is the warranty coverage?</span>
+            <svg class="faq-icon flex-shrink-0 w-5 h-5 text-gray-500 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="faq-content hidden px-6 pb-4">
+            <p class="text-gray-600 text-sm leading-relaxed">The Diamond Bib Cock comes with a comprehensive 5-year manufacturer warranty that covers manufacturing defects, finish peeling, and cartridge malfunction under normal usage conditions. The warranty does not cover damage caused by improper installation, use of harsh chemicals, or physical damage. Please retain your purchase receipt for warranty claims.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED PRODUCTS SECTION -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-serif text-2xl lg:text-3xl font-bold text-navy-950 text-center mb-12">Related Products</h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <!-- Product 1 -->
+        <a href="product-details.html" class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+          <div class="aspect-square overflow-hidden bg-gray-100">
+            <img src="assets/images/hero-bathroom.svg" alt="Diamond Long Body" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-gray-400 font-medium">DI-FS-02</p>
+            <h3 class="font-serif text-sm sm:text-base font-bold text-navy-950 mt-1 group-hover:text-navy-800 transition-colors">Diamond Long Body</h3>
+            <p class="text-lg font-bold text-navy-900 mt-2">₹850</p>
+          </div>
+        </a>
+        <!-- Product 2 -->
+        <a href="product-details.html" class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+          <div class="aspect-square overflow-hidden bg-gray-100">
+            <img src="assets/images/shower-system.svg" alt="Diamond Sink Cock" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-gray-400 font-medium">DI-FS-03</p>
+            <h3 class="font-serif text-sm sm:text-base font-bold text-navy-950 mt-1 group-hover:text-navy-800 transition-colors">Diamond Sink Cock</h3>
+            <p class="text-lg font-bold text-navy-900 mt-2">₹1,200</p>
+          </div>
+        </a>
+        <!-- Product 3 -->
+        <a href="product-details.html" class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+          <div class="aspect-square overflow-hidden bg-gray-100">
+            <img src="assets/images/faucet-product.svg" alt="Diamond Angle Cock" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-gray-400 font-medium">DI-FS-04</p>
+            <h3 class="font-serif text-sm sm:text-base font-bold text-navy-950 mt-1 group-hover:text-navy-800 transition-colors">Diamond Angle Cock</h3>
+            <p class="text-lg font-bold text-navy-900 mt-2">₹550</p>
+          </div>
+        </a>
+        <!-- Product 4 -->
+        <a href="product-details.html" class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+          <div class="aspect-square overflow-hidden bg-gray-100">
+            <img src="assets/images/bathroom-interior.svg" alt="Opal Prime Bib Cock" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-4">
+            <p class="text-xs text-gray-400 font-medium">OP-FS-01</p>
+            <h3 class="font-serif text-sm sm:text-base font-bold text-navy-950 mt-1 group-hover:text-navy-800 transition-colors">Opal Prime Bib Cock</h3>
+            <p class="text-lg font-bold text-navy-900 mt-2">₹820</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-950 text-chrome-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2 mb-4">
+            <svg class="w-8 h-8 text-chrome-300" fill="currentColor" viewBox="0 0 32 32"><path d="M16 2L4 8v8c0 7.18 5.12 13.08 12 14 6.88-.92 12-6.82 12-14V8L16 2zm0 4l8 4v6c0 5.5-3.44 10.34-8 11.2C9.44 26.34 6 21.5 6 16v-6l8-4z"/></svg>
+            <span class="font-serif text-xl font-bold text-white tracking-wider">PLUNGE</span>
+          </a>
+          <p class="text-sm leading-relaxed text-chrome-500">Crafting luxury bathroom and kitchen fittings with precision engineering and timeless design since 2010.</p>
+          <div class="flex gap-3 mt-5">
+            <a href="#" class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-chrome-500 hover:bg-navy-800 hover:text-white transition-all" aria-label="Facebook">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-chrome-500 hover:bg-navy-800 hover:text-white transition-all" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-chrome-500 hover:bg-navy-800 hover:text-white transition-all" aria-label="Twitter">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-navy-900 flex items-center justify-center text-chrome-500 hover:bg-navy-800 hover:text-white transition-all" aria-label="YouTube">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        <!-- Collections -->
+        <div>
+          <h3 class="font-serif text-white font-bold text-lg mb-4">Collections</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="collections.html" class="hover:text-white transition-colors">Diamond Series</a></li>
+            <li><a href="collections.html" class="hover:text-white transition-colors">Opal Series</a></li>
+            <li><a href="collections.html" class="hover:text-white transition-colors">Ruby Series</a></li>
+            <li><a href="collections.html" class="hover:text-white transition-colors">Pearl Series</a></li>
+            <li><a href="collections.html" class="hover:text-white transition-colors">New Arrivals</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h3 class="font-serif text-white font-bold text-lg mb-4">Contact</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>123 Design Avenue,<br/>Mumbai, Maharashtra 400001</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <span>+91 98765 43210</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              <span>hello@plunge.in</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Support -->
+        <div>
+          <h3 class="font-serif text-white font-bold text-lg mb-4">Support</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Shipping Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Return Policy</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="enquire.html" class="hover:text-white transition-colors">Enquiry</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-navy-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-chrome-500">&copy; 2026 PLUNGE. All rights reserved.</p>
+        <div class="flex gap-4 text-sm text-chrome-500">
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

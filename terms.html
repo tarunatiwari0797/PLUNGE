@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | Plunge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a2235',
+                            900: '#0f1423',
+                            950: '#080b14'
+                        },
+                        chrome: {
+                            300: '#e2e8f0',
+                            400: '#cbd5e1',
+                            500: '#94a3b8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 antialiased selection:bg-navy-900 selection:text-white pt-24">
+
+    <header id="main-header" class="fixed top-0 w-full z-50 py-5 px-6 md:px-12 flex justify-between items-center bg-navy-950 shadow-lg border-b border-gray-800 transition-all duration-300">
+        <a href="index.html" class="flex items-center gap-2 group">
+            <svg class="w-8 h-8 text-chrome-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2C12 2 6 9 6 14C6 17.3137 8.68629 20 12 20C15.3137 20 18 17.3137 18 14C18 9 12 2 12 2Z" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 20V14" stroke-linecap="round"/>
+            </svg>
+            <span class="font-serif text-2xl font-bold tracking-wider text-white">PLUNGE</span>
+        </a>
+        <nav class="hidden md:flex gap-8 text-sm font-medium tracking-wide text-gray-300">
+            <a href="index.html" class="hover:text-white transition-colors duration-200">Home</a>
+            <a href="collections.html" class="hover:text-white transition-colors duration-200">Collections</a>
+            <a href="gallery.html" class="hover:text-white transition-colors duration-200">Gallery</a>
+            <a href="about.html" class="hover:text-white transition-colors duration-200">About</a>
+            <a href="faq.html" class="hover:text-white transition-colors duration-200">FAQ</a>
+            <a href="contact.html" class="hover:text-white transition-colors duration-200">Contact</a>
+            <a href="contact.html#enquire" class="hover:text-white transition-colors duration-200">Enquire</a>
+        </nav>
+        <div class="flex gap-4 items-center text-white">
+            <button class="hover:text-chrome-300 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="M21 21L16.65 16.65" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <a href="wishlist.html" class="relative hover:text-chrome-300 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="absolute -top-2 -right-2 bg-white text-navy-900 text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
+            </a>
+            <a href="cart.html" class="relative hover:text-chrome-300 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path d="M6 2L3 6V20C3 21.1 3.9 22 5 22H19C20.1 22 21 21.1 21 20V6L18 2H6Z" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 6H21" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 10C16 12.21 14.21 14 12 14C9.79 14 8 12.21 8 10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="absolute -top-2 -right-2 bg-white text-navy-900 text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">3</span>
+            </a>
+            <button id="hamburger-btn" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path d="M4 6H20M4 12H20M4 18H20" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-80 bg-navy-950 z-50 p-8 shadow-2xl">
+        <button id="mobile-close" class="absolute top-6 right-6 text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path d="M18 6L6 18M6 6L18 18" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <a href="index.html" class="flex items-center gap-2 mb-10">
+            <svg class="w-8 h-8 text-chrome-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2C12 2 6 9 6 14C6 17.3137 8.68629 20 12 20C15.3137 20 18 17.3137 18 14C18 9 12 2 12 2Z" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 20V14" stroke-linecap="round"/>
+            </svg>
+            <span class="font-serif text-2xl font-bold tracking-wider text-white">PLUNGE</span>
+        </a>
+        <nav class="flex flex-col gap-1">
+            <a href="index.html" class="mobile-nav-link block py-3 text-gray-300 hover:text-white">Home</a>
+            <a href="collections.html" class="mobile-nav-link block py-3 text-gray-300 hover:text-white">Collections</a>
+            <a href="gallery.html" class="mobile-nav-link block py-3 text-gray-300 hover:text-white">Gallery</a>
+            <a href="about.html" class="mobile-nav-link block py-3 text-gray-300 hover:text-white">About</a>
+            <a href="faq.html" class="mobile-nav-link block py-3 text-gray-300 hover:text-white">FAQ</a>
+            <a href="contact.html" class="mobile-nav-link block py-3 text-gray-300 hover:text-white">Contact</a>
+            <a href="contact.html#enquire" class="mobile-nav-link block py-3 text-gray-300 hover:text-white">Enquire</a>
+        </nav>
+        <div class="absolute bottom-8 left-8 flex gap-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+        </div>
+    </div>
+    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-40"></div>
+
+    <section class="bg-navy-950 py-12 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-gray-400 text-sm tracking-wide mb-4">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <span class="mx-2">/</span>
+                <span class="text-chrome-300">Terms & Conditions</span>
+            </p>
+            <h1 class="font-serif text-3xl md:text-4xl text-white mb-3">Terms & Conditions</h1>
+            <p class="text-gray-400 text-sm">Last Updated: January 1, 2026</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container max-w-4xl mx-auto px-6">
+
+            <div class="mb-10">
+                <h3 class="font-serif text-xl text-navy-900 mb-4">1. Acceptance of Terms</h3>
+                <p class="text-gray-600 leading-relaxed">By accessing and using the Plunge website (plungefaucets.in), you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our website.</p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="font-serif text-xl text-navy-900 mb-4">2. Products and Services</h3>
+                <p class="text-gray-600 leading-relaxed">All products displayed are subject to availability. We reserve the right to modify or discontinue any product without prior notice. Images are for illustration and may differ slightly.</p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="font-serif text-xl text-navy-900 mb-4">3. Pricing and Payment</h3>
+                <p class="text-gray-600 leading-relaxed">All prices in INR inclusive of applicable taxes. We reserve the right to change prices without notice. Payment must be made in full at time of purchase.</p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="font-serif text-xl text-navy-900 mb-4">4. Orders and Acceptance</h3>
+                <p class="text-gray-600 leading-relaxed">Placing an order constitutes an offer to purchase. We reserve the right to accept or decline any order.</p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="font-serif text-xl text-navy-900 mb-4">5. Shipping and Delivery</h3>
+                <p class="text-gray-600 leading-relaxed">Shipping times are estimates. Plunge is not responsible for delays by carriers or customs. Risk passes upon delivery.</p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="font-serif text-xl text-navy-900 mb-4">6. Returns and Refunds</h3>
+                <p class="text-gray-600 leading-relaxed">Products may be returned within 30 days if unused and in original packaging. Refunds processed within 7-10 business days.</p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="font-serif text-xl text-navy-900 mb-4">7. Warranty</h3>
+                <p class="text-gray-600 leading-relaxed">Covered by standard warranty as specified per product. Does not cover misuse, improper installation, or normal wear.</p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="font-serif text-xl text-navy-900 mb-4">8. Intellectual Property</h3>
+                <p class="text-gray-600 leading-relaxed">All content is property of F.S. Enterprises, protected by copyright. Reproduction prohibited without permission.</p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="font-serif text-xl text-navy-900 mb-4">9. Limitation of Liability</h3>
+                <p class="text-gray-600 leading-relaxed">F.S. Enterprises shall not be liable for indirect damages. Total liability limited to purchase price.</p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="font-serif text-xl text-navy-900 mb-4">10. Governing Law</h3>
+                <p class="text-gray-600 leading-relaxed">Governed by laws of India. Disputes subject to courts in New Delhi.</p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="font-serif text-xl text-navy-900 mb-4">11. Modifications</h3>
+                <p class="text-gray-600 leading-relaxed">We reserve the right to modify these terms at any time.</p>
+            </div>
+
+            <div class="mb-10">
+                <h3 class="font-serif text-xl text-navy-900 mb-4">12. Contact</h3>
+                <p class="text-gray-600 leading-relaxed">F.S. Enterprises, Industrial Estate, New Delhi, India. Email: info@plungefaucets.in. Phone: +91 1800 123 4567.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-navy-900 pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="flex items-center gap-2 mb-6">
+                        <svg class="w-8 h-8 text-chrome-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2C12 2 6 9 6 14C6 17.3137 8.68629 20 12 20C15.3137 20 18 17.3137 18 14C18 9 12 2 12 2Z" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 20V14" stroke-linecap="round"/>
+                        </svg>
+                        <span class="font-serif text-2xl font-bold tracking-wider text-white">PLUNGE</span>
+                    </a>
+                    <p class="text-gray-400 leading-relaxed mb-6 max-w-sm">Crafting luxury bathroom fixtures that blend timeless elegance with modern precision. Every piece is a statement of refined living.</p>
+                    <a href="about.html" class="text-chrome-400 hover:text-white text-sm font-medium tracking-wide transition-colors">Discover Our Story &rarr;</a>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold tracking-wide mb-6">Collections</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="collections.html" class="hover:text-white transition-colors">Bathroom Faucets</a></li>
+                        <li><a href="collections.html" class="hover:text-white transition-colors">Kitchen Faucets</a></li>
+                        <li><a href="collections.html" class="hover:text-white transition-colors">Shower Systems</a></li>
+                        <li><a href="collections.html" class="hover:text-white transition-colors">Accessories</a></li>
+                        <li><a href="collections.html" class="hover:text-white transition-colors">Bathtub Fillers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold tracking-wide mb-6">Contact</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Industrial Estate, New Delhi, India</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                            <span>info@plungefaucets.in</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            <span>+91 1800 123 4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2026 Plunge by F.S. Enterprises. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top fixed bottom-6 right-6 bg-navy-900 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center z-50">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path d="M18 15L12 9L6 15" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

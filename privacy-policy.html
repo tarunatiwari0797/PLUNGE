@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | PLUNGE Luxury Fixtures</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a2235',
+                            900: '#0f1423',
+                            950: '#080b14'
+                        },
+                        chrome: {
+                            300: '#e2e8f0',
+                            400: '#cbd5e1',
+                            500: '#94a3b8'
+                        }
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'playfair': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .mobile-menu { transform: translateX(-100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); z-index: 100; }
+        .mobile-menu.active { transform: translateX(0); }
+        .mobile-overlay { opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; z-index: 99; }
+        .mobile-overlay.active { opacity: 1; visibility: visible; }
+        .mobile-nav-link { display: block; padding: 0.875rem 0; color: #cbd5e1; font-size: 1rem; letter-spacing: 0.05em; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.07); transition: color 0.2s, padding-left 0.2s; }
+        .mobile-nav-link:hover { color: #fff; padding-left: 8px; }
+        .toc-link { display: block; padding: 0.5rem 0; color: #64748b; font-size: 0.85rem; transition: color 0.2s, padding-left 0.2s; border-left: 2px solid transparent; padding-left: 1rem; }
+        .toc-link:hover, .toc-link.active { color: #0f1423; border-left-color: #1a2235; padding-left: 1.25rem; }
+        .back-to-top { opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s, transform 0.3s; transform: translateY(10px); }
+        .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+        .policy-content h3 { position: relative; padding-bottom: 0.75rem; }
+        .policy-content h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 48px; height: 2px; background: linear-gradient(90deg, #1a2235, transparent); }
+        .policy-content ul li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; }
+        .policy-content ul li::before { content: ''; position: absolute; left: 0; top: 0.6rem; width: 6px; height: 6px; background: #1a2235; border-radius: 50%; }
+        @media (max-width: 1023px) { .toc-sidebar { display: none !important; } }
+    </style>
+</head>
+<body class="bg-gray-50 font-inter antialiased pt-24">
+
+    <!-- HEADER -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 bg-navy-950 z-50 shadow-lg shadow-black/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="index.html" class="flex-shrink-0">
+                    <span class="font-playfair text-2xl sm:text-3xl font-bold text-white tracking-wider">PLUNGE</span>
+                    <span class="block text-[10px] text-chrome-500 tracking-[0.3em] uppercase -mt-1">Luxury Fixtures</span>
+                </a>
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-chrome-400 hover:text-white text-sm uppercase tracking-widest transition-colors">Home</a>
+                    <a href="collections.html" class="text-chrome-400 hover:text-white text-sm uppercase tracking-widest transition-colors">Collections</a>
+                    <a href="gallery.html" class="text-chrome-400 hover:text-white text-sm uppercase tracking-widest transition-colors">Gallery</a>
+                    <a href="about.html" class="text-chrome-400 hover:text-white text-sm uppercase tracking-widest transition-colors">About</a>
+                    <a href="faq.html" class="text-chrome-400 hover:text-white text-sm uppercase tracking-widest transition-colors">FAQ</a>
+                    <a href="contact.html" class="text-chrome-400 hover:text-white text-sm uppercase tracking-widest transition-colors">Contact</a>
+                    <a href="contact.html" class="ml-4 border border-chrome-500 text-chrome-300 hover:bg-white hover:text-navy-950 px-5 py-2 text-xs uppercase tracking-widest transition-all duration-300">Enquire</a>
+                </nav>
+                <div class="flex items-center space-x-4 sm:space-x-5">
+                    <button id="search-btn" class="text-chrome-400 hover:text-white transition-colors" aria-label="Search">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/></svg>
+                    </button>
+                    <a href="wishlist.html" class="relative text-chrome-400 hover:text-white transition-colors" aria-label="Wishlist">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 21C12 21 3 13.5 3 8.5C3 5.42 5.42 3 8.5 3C10.24 3 11.91 3.81 12 5C12.09 3.81 13.76 3 15.5 3C18.58 3 21 5.42 21 8.5C21 13.5 12 21 12 21Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span class="absolute -top-2 -right-2 bg-white text-navy-950 text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
+                    </a>
+                    <a href="cart.html" class="relative text-chrome-400 hover:text-white transition-colors" aria-label="Cart">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 6H21" stroke-linecap="round"/><path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke-linecap="round"/></svg>
+                        <span class="absolute -top-2 -right-2 bg-white text-navy-950 text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">3</span>
+                    </a>
+                    <button id="hamburger-btn" class="lg:hidden text-chrome-400 hover:text-white transition-colors" aria-label="Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 6H20M4 12H20M4 18H20" stroke-linecap="round"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/60 backdrop-blur-sm"></div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-navy-900 shadow-2xl">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-10">
+                <span class="font-playfair text-xl font-bold text-white tracking-wider">PLUNGE</span>
+                <button id="mobile-close" class="text-chrome-500 hover:text-white transition-colors" aria-label="Close menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6L18 18" stroke-linecap="round"/></svg>
+                </button>
+            </div>
+            <nav>
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="collections.html" class="mobile-nav-link">Collections</a>
+                <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="faq.html" class="mobile-nav-link">FAQ</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+                <a href="contact.html" class="mobile-nav-link" style="border-bottom:none;">Enquire</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <section class="bg-navy-950 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <nav class="flex items-center justify-center space-x-2 text-sm mb-6">
+                <a href="index.html" class="text-chrome-500 hover:text-white transition-colors">Home</a>
+                <span class="text-chrome-500/50">/</span>
+                <span class="text-chrome-300">Privacy Policy</span>
+            </nav>
+            <h1 class="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Privacy Policy</h1>
+            <div class="flex items-center justify-center space-x-3 text-sm text-chrome-500">
+                <div class="w-8 h-px bg-chrome-500/30"></div>
+                <span>Last Updated: January 1, 2026</span>
+                <div class="w-8 h-px bg-chrome-500/30"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRIVACY CONTENT -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:gap-12">
+                <!-- TOC Sidebar -->
+                <aside class="toc-sidebar hidden lg:block w-64 flex-shrink-0">
+                    <div class="sticky top-28">
+                        <h4 class="font-playfair text-base font-semibold text-navy-900 mb-4 pb-3 border-b border-gray-200">Table of Contents</h4>
+                        <nav id="toc-nav">
+                            <a href="#introduction" class="toc-link active">Introduction</a>
+                            <a href="#information-we-collect" class="toc-link">Information We Collect</a>
+                            <a href="#how-we-use" class="toc-link">How We Use Your Information</a>
+                            <a href="#cookies" class="toc-link">Cookies</a>
+                            <a href="#data-security" class="toc-link">Data Security</a>
+                            <a href="#third-party" class="toc-link">Third-Party Services</a>
+                            <a href="#your-rights" class="toc-link">Your Rights</a>
+                            <a href="#data-retention" class="toc-link">Data Retention</a>
+                            <a href="#childrens-privacy" class="toc-link">Childrens Privacy</a>
+                            <a href="#changes" class="toc-link">Changes to This Policy</a>
+                            <a href="#contact-us" class="toc-link">Contact Us</a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="policy-content flex-1 max-w-3xl">
+                    <div id="introduction" class="mb-10 scroll-mt-28">
+                        <h3 class="font-playfair text-xl sm:text-2xl font-semibold text-navy-900 mb-4">Introduction</h3>
+                        <p class="text-gray-600 leading-relaxed">We at Plunge (F.S. Enterprises) respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you visit our website and purchase our products.</p>
+                        <p class="text-gray-600 leading-relaxed mt-3">By accessing or using our website, you agree to the collection and use of information in accordance with this policy. We encourage you to read this policy carefully to understand our practices regarding your personal data.</p>
+                    </div>
+
+                    <div id="information-we-collect" class="mb-10 scroll-mt-28">
+                        <h3 class="font-playfair text-xl sm:text-2xl font-semibold text-navy-900 mb-4">Information We Collect</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">We collect various types of information to provide and improve our services to you. The categories of data we collect include:</p>
+                        <div class="space-y-4">
+                            <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+                                <h4 class="font-semibold text-navy-900 mb-2 text-sm uppercase tracking-wide">Personal Information</h4>
+                                <p class="text-gray-600 leading-relaxed text-sm">Name, email address, phone number, and billing/shipping addresses. This information is required to process your orders and communicate with you effectively.</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+                                <h4 class="font-semibold text-navy-900 mb-2 text-sm uppercase tracking-wide">Payment Information</h4>
+                                <p class="text-gray-600 leading-relaxed text-sm">Credit/debit card details and other payment information are processed securely through our PCI DSS-compliant payment partners. We do not store your full card details on our servers.</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+                                <h4 class="font-semibold text-navy-900 mb-2 text-sm uppercase tracking-wide">Usage Data</h4>
+                                <p class="text-gray-600 leading-relaxed text-sm">Browser type and version, operating system, IP address, pages visited, time and date of your visit, time spent on pages, and other diagnostic data collected automatically.</p>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-5 border border-gray-100">
+                                <h4 class="font-semibold text-navy-900 mb-2 text-sm uppercase tracking-wide">Cookies and Tracking Technologies</h4>
+                                <p class="text-gray-600 leading-relaxed text-sm">We use cookies, web beacons, and similar tracking technologies to enhance your browsing experience, analyse site traffic, and understand user behaviour patterns.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="how-we-use" class="mb-10 scroll-mt-28">
+                        <h3 class="font-playfair text-xl sm:text-2xl font-semibold text-navy-900 mb-4">How We Use Your Information</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">The personal data we collect is used for the following purposes:</p>
+                        <ul class="text-gray-600 leading-relaxed space-y-1">
+                            <li>Process and fulfil your orders, including shipping and delivery of our luxury products</li>
+                            <li>Communicate with you regarding your orders, account, and customer service inquiries</li>
+                            <li>Improve our website functionality, product offerings, and overall customer experience</li>
+                            <li>Send marketing communications about new collections, exclusive offers, and brand updates &mdash; only with your explicit consent</li>
+                            <li>Comply with applicable legal obligations, resolve disputes, and enforce our agreements</li>
+                            <li>Detect, prevent, and address technical issues and fraudulent activities</li>
+                            <li>Conduct analytics to understand how our website is used and optimize performance</li>
+                        </ul>
+                    </div>
+
+                    <div id="cookies" class="mb-10 scroll-mt-28">
+                        <h3 class="font-playfair text-xl sm:text-2xl font-semibold text-navy-900 mb-4">Cookies</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">Our website uses cookies and similar tracking technologies to enhance your browsing experience. Cookies are small data files stored on your device that help us recognize your browser and remember certain information.</p>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <span class="w-2 h-2 bg-navy-900 rounded-full mt-2 flex-shrink-0"></span>
+                                <div><strong class="text-navy-900">Essential Cookies</strong> &mdash; Required for basic website functionality including shopping cart, checkout processes, and security features.</div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="w-2 h-2 bg-navy-900 rounded-full mt-2 flex-shrink-0"></span>
+                                <div><strong class="text-navy-900">Analytics Cookies</strong> &mdash; Help us understand how visitors interact with our website by collecting anonymous usage data, enabling us to improve site performance.</div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="w-2 h-2 bg-navy-900 rounded-full mt-2 flex-shrink-0"></span>
+                                <div><strong class="text-navy-900">Marketing Cookies</strong> &mdash; Used to deliver personalised advertisements and measure the effectiveness of our marketing campaigns across platforms.</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mt-4">You can manage your cookie preferences through your browser settings at any time. Disabling certain cookies may affect the functionality of our website. Most browsers allow you to block or delete cookies, and detailed instructions can be found in your browser help documentation.</p>
+                    </div>
+
+                    <div id="data-security" class="mb-10 scroll-mt-28">
+                        <h3 class="font-playfair text-xl sm:text-2xl font-semibold text-navy-900 mb-4">Data Security</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">We implement industry-standard security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. Our security infrastructure includes:</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div class="flex items-center space-x-3 bg-gray-50 rounded-lg p-4 border border-gray-100">
+                                <svg class="w-5 h-5 text-navy-900 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 15V3M12 15L8 11M12 15L16 11" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 19H20" stroke-linecap="round"/></svg>
+                                <span class="text-sm text-gray-600">SSL Encryption for Data Transmission</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-gray-50 rounded-lg p-4 border border-gray-100">
+                                <svg class="w-5 h-5 text-navy-900 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                                <span class="text-sm text-gray-600">Secure Servers and Access Controls</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-gray-50 rounded-lg p-4 border border-gray-100">
+                                <svg class="w-5 h-5 text-navy-900 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span class="text-sm text-gray-600">Regular Security Audits</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-gray-50 rounded-lg p-4 border border-gray-100">
+                                <svg class="w-5 h-5 text-navy-900 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span class="text-sm text-gray-600">PCI DSS Compliance for Payments</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mt-4">While we strive to use commercially acceptable means to protect your personal information, no method of transmission over the internet or electronic storage is 100% secure. We continuously update our security practices to maintain the highest standards of data protection.</p>
+                    </div>
+
+                    <div id="third-party" class="mb-10 scroll-mt-28">
+                        <h3 class="font-playfair text-xl sm:text-2xl font-semibold text-navy-900 mb-4">Third-Party Services</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">We may share your information with trusted third-party service providers who assist us in operating our website and conducting our business. These providers are contractually obligated to protect your data and use it only for the purposes we specify:</p>
+                        <ul class="text-gray-600 leading-relaxed space-y-1">
+                            <li><strong class="text-navy-900">Payment Processors</strong> &mdash; Secure payment gateways that handle and process your transaction data in compliance with PCI DSS standards</li>
+                            <li><strong class="text-navy-900">Shipping Partners</strong> &mdash; Logistics and courier services that deliver your orders and require your name, address, and contact information</li>
+                            <li><strong class="text-navy-900">Analytics Providers</strong> &mdash; Services that help us analyse website traffic and user behaviour to improve our platform and product offerings</li>
+                            <li><strong class="text-navy-900">Marketing Platforms</strong> &mdash; Email service providers and advertising partners that help us deliver relevant content, only with your consent</li>
+                        </ul>
+                        <p class="text-gray-600 leading-relaxed mt-4">We do not sell, trade, or rent your personal information to third parties for their independent marketing purposes. We may disclose your information if required by law or in good faith belief that such action is necessary to comply with legal processes.</p>
+                    </div>
+
+                    <div id="your-rights" class="mb-10 scroll-mt-28">
+                        <h3 class="font-playfair text-xl sm:text-2xl font-semibold text-navy-900 mb-4">Your Rights</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">You have the following rights regarding your personal data. We are committed to facilitating the exercise of these rights:</p>
+                        <div class="space-y-3">
+                            <div class="flex items-start space-x-3">
+                                <span class="w-6 h-6 bg-navy-900 text-white rounded flex items-center justify-center flex-shrink-0 text-xs font-bold">1</span>
+                                <div><strong class="text-navy-900">Access</strong> <span class="text-gray-600">&mdash; Request a copy of all personal data we hold about you.</span></div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="w-6 h-6 bg-navy-900 text-white rounded flex items-center justify-center flex-shrink-0 text-xs font-bold">2</span>
+                                <div><strong class="text-navy-900">Correction</strong> <span class="text-gray-600">&mdash; Request correction of any inaccurate or incomplete personal data.</span></div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="w-6 h-6 bg-navy-900 text-white rounded flex items-center justify-center flex-shrink-0 text-xs font-bold">3</span>
+                                <div><strong class="text-navy-900">Deletion</strong> <span class="text-gray-600">&mdash; Request deletion of your personal data, subject to legal retention requirements.</span></div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="w-6 h-6 bg-navy-900 text-white rounded flex items-center justify-center flex-shrink-0 text-xs font-bold">4</span>
+                                <div><strong class="text-navy-900">Opt-Out</strong> <span class="text-gray-600">&mdash; Unsubscribe from marketing communications at any time via the link in our emails.</span></div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="w-6 h-6 bg-navy-900 text-white rounded flex items-center justify-center flex-shrink-0 text-xs font-bold">5</span>
+                                <div><strong class="text-navy-900">Portability</strong> <span class="text-gray-600">&mdash; Request your data in a structured, commonly used, machine-readable format.</span></div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mt-4">To exercise any of these rights, please contact us using the details provided at the bottom of this policy. We will respond to your request within 30 days.</p>
+                    </div>
+
+                    <div id="data-retention" class="mb-10 scroll-mt-28">
+                        <h3 class="font-playfair text-xl sm:text-2xl font-semibold text-navy-900 mb-4">Data Retention</h3>
+                        <p class="text-gray-600 leading-relaxed">We retain your personal information only as long as necessary to fulfil the purposes outlined in this policy, typically for the duration of your customer relationship and up to 7 years for legal and accounting purposes. When your data is no longer required, we securely delete or anonymize it in accordance with our data retention policies.</p>
+                    </div>
+
+                    <div id="childrens-privacy" class="mb-10 scroll-mt-28">
+                        <h3 class="font-playfair text-xl sm:text-2xl font-semibold text-navy-900 mb-4">Childrens Privacy</h3>
+                        <p class="text-gray-600 leading-relaxed">Our website is not intended for children under 13. We do not knowingly collect personal information from children. If we become aware that we have collected personal data from a child under 13 without verification of parental consent, we take steps to remove that information from our servers promptly.</p>
+                    </div>
+
+                    <div id="changes" class="mb-10 scroll-mt-28">
+                        <h3 class="font-playfair text-xl sm:text-2xl font-semibold text-navy-900 mb-4">Changes to This Policy</h3>
+                        <p class="text-gray-600 leading-relaxed">We may update this privacy policy from time to time. We will notify you of any material changes by posting the new policy on this page with an updated revision date. We encourage you to review this policy periodically to stay informed about how we are protecting your data.</p>
+                    </div>
+
+                    <div id="contact-us" class="mb-10 scroll-mt-28">
+                        <h3 class="font-playfair text-xl sm:text-2xl font-semibold text-navy-900 mb-4">Contact Us</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">For any questions about this privacy policy, please contact us at:</p>
+                        <div class="bg-gray-50 rounded-lg p-6 border border-gray-100">
+                            <p class="text-navy-900 font-semibold mb-2">F.S. Enterprises</p>
+                            <div class="space-y-2 text-gray-600 text-sm">
+                                <p class="flex items-center space-x-2">
+                                    <svg class="w-4 h-4 text-navy-800 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <a href="mailto:info@plungefaucets.in" class="hover:text-navy-900 transition-colors">info@plungefaucets.in</a>
+                                </p>
+                                <p class="flex items-center space-x-2">
+                                    <svg class="w-4 h-4 text-navy-800 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <a href="tel:+9118001234567" class="hover:text-navy-900 transition-colors">+91 1800 123 4567</a>
+                                </p>
+                                <p class="flex items-start space-x-2">
+                                    <svg class="w-4 h-4 text-navy-800 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <span>Industrial Estate, New Delhi, India</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 text-chrome-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="inline-block mb-5">
+                        <span class="font-playfair text-2xl font-bold text-white tracking-wider">PLUNGE</span>
+                        <span class="block text-[10px] text-chrome-500 tracking-[0.3em] uppercase -mt-1">Luxury Fixtures</span>
+                    </a>
+                    <p class="text-sm leading-relaxed text-chrome-500 mb-6">Curating the world finest luxury bathroom fixtures and design accessories for discerning spaces.</p>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="w-9 h-9 rounded-full border border-chrome-500/30 flex items-center justify-center text-chrome-500 hover:text-white hover:border-white transition-all" aria-label="Instagram">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full border border-chrome-500/30 flex items-center justify-center text-chrome-500 hover:text-white hover:border-white transition-all" aria-label="Facebook">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full border border-chrome-500/30 flex items-center justify-center text-chrome-500 hover:text-white hover:border-white transition-all" aria-label="Pinterest">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-playfair text-sm font-semibold text-white uppercase tracking-widest mb-5">Collections</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="collections.html" class="hover:text-white transition-colors">Faucets</a></li>
+                        <li><a href="collections.html" class="hover:text-white transition-colors">Shower Systems</a></li>
+                        <li><a href="collections.html" class="hover:text-white transition-colors">Basins and Sinks</a></li>
+                        <li><a href="collections.html" class="hover:text-white transition-colors">Bathtubs</a></li>
+                        <li><a href="collections.html" class="hover:text-white transition-colors">Accessories</a></li>
+                        <li><a href="collections.html" class="hover:text-white transition-colors">Complete Suites</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-playfair text-sm font-semibold text-white uppercase tracking-widest mb-5">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="faq.html" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition-colors">Terms and Conditions</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-playfair text-sm font-semibold text-white uppercase tracking-widest mb-5">Contact</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start space-x-3">
+                            <svg class="w-4 h-4 text-chrome-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>Industrial Estate<br>New Delhi, India</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-4 h-4 text-chrome-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <a href="tel:+9118001234567" class="hover:text-white transition-colors">+91 1800 123 4567</a>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-4 h-4 text-chrome-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <a href="mailto:info@plungefaucets.in" class="hover:text-white transition-colors">info@plungefaucets.in</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between text-xs text-chrome-500">
+                <p>&copy; 2026 PLUNGE by F.S. Enterprises. All rights reserved.</p>
+                <div class="flex items-center space-x-4 mt-3 sm:mt-0">
+                    <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <span class="text-white/10">|</span>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button id="back-to-top" class="back-to-top fixed bottom-6 right-6 w-12 h-12 bg-navy-900 text-white rounded-full shadow-lg shadow-black/20 flex items-center justify-center hover:bg-navy-800 transition-all z-50" aria-label="Back to top">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        var tocLinks = document.querySelectorAll('.toc-link');
+        var sections = document.querySelectorAll('.policy-content div[id]');
+
+        function updateTOC() {
+            var scrollPos = window.scrollY + 120;
+            sections.forEach(function(section) {
+                var top = section.offsetTop;
+                var height = section.offsetHeight;
+                var id = section.getAttribute('id');
+                if (scrollPos >= top && scrollPos < top + height) {
+                    tocLinks.forEach(function(link) {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateTOC);
+        updateTOC();
+    </script>
+</body>
+</html>

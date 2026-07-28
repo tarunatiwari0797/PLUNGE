@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart | PLUNGE - Luxury Faucets</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              800: '#1a2235',
+              900: '#0f1423',
+              950: '#080b14',
+            },
+            chrome: {
+              300: '#e2e8f0',
+              400: '#cbd5e1',
+              500: '#94a3b8',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="font-sans bg-white text-gray-800 antialiased pt-24">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 w-full bg-navy-950 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex-shrink-0">
+          <span class="font-serif text-2xl md:text-3xl font-bold text-white tracking-wider">PLUNGE</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a href="index.html" class="text-chrome-400 hover:text-white text-sm font-medium transition-colors duration-300">Home</a>
+          <a href="collections.html" class="text-chrome-400 hover:text-white text-sm font-medium transition-colors duration-300">Collections</a>
+          <a href="gallery.html" class="text-chrome-400 hover:text-white text-sm font-medium transition-colors duration-300">Gallery</a>
+          <a href="about.html" class="text-chrome-400 hover:text-white text-sm font-medium transition-colors duration-300">About</a>
+          <a href="faq.html" class="text-chrome-400 hover:text-white text-sm font-medium transition-colors duration-300">FAQ</a>
+          <a href="contact.html" class="text-chrome-400 hover:text-white text-sm font-medium transition-colors duration-300">Contact</a>
+          <a href="contact.html" class="text-sm font-semibold text-navy-950 bg-white hover:bg-chrome-300 px-5 py-2.5 rounded transition-colors duration-300 uppercase tracking-wider">Enquire</a>
+        </nav>
+
+        <!-- Desktop Icons -->
+        <div class="hidden lg:flex items-center space-x-5">
+          <!-- Search -->
+          <button aria-label="Search" class="text-chrome-400 hover:text-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+          <!-- Wishlist -->
+          <a href="wishlist.html" aria-label="Wishlist" class="relative text-chrome-400 hover:text-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span class="absolute -top-2 -right-2 bg-white text-navy-950 text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
+          </a>
+          <!-- Cart -->
+          <a href="cart.html" aria-label="Shopping Cart" class="relative text-white transition-colors duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            <span class="absolute -top-2 -right-2 bg-white text-navy-950 text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">3</span>
+          </a>
+        </div>
+
+        <!-- Mobile Icons Row -->
+        <div class="flex lg:hidden items-center space-x-4">
+          <a href="cart.html" aria-label="Cart" class="relative text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            <span class="absolute -top-2 -right-2 bg-white text-navy-950 text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">3</span>
+          </a>
+          <button id="hamburger-btn" aria-label="Open menu" class="text-chrome-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-overlay" class="mobile-overlay"></div>
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="flex items-center justify-between px-6 py-5 border-b border-navy-800">
+      <span class="font-serif text-xl font-bold text-white tracking-wider">PLUNGE</span>
+      <button id="mobile-close" aria-label="Close menu" class="text-chrome-400 hover:text-white transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col py-6">
+      <a href="index.html" class="mobile-nav-link px-6 py-3 text-chrome-400 hover:text-white hover:bg-navy-800 transition-colors text-sm font-medium">Home</a>
+      <a href="collections.html" class="mobile-nav-link px-6 py-3 text-chrome-400 hover:text-white hover:bg-navy-800 transition-colors text-sm font-medium">Collections</a>
+      <a href="gallery.html" class="mobile-nav-link px-6 py-3 text-chrome-400 hover:text-white hover:bg-navy-800 transition-colors text-sm font-medium">Gallery</a>
+      <a href="about.html" class="mobile-nav-link px-6 py-3 text-chrome-400 hover:text-white hover:bg-navy-800 transition-colors text-sm font-medium">About</a>
+      <a href="faq.html" class="mobile-nav-link px-6 py-3 text-chrome-400 hover:text-white hover:bg-navy-800 transition-colors text-sm font-medium">FAQ</a>
+      <a href="contact.html" class="mobile-nav-link px-6 py-3 text-chrome-400 hover:text-white hover:bg-navy-800 transition-colors text-sm font-medium">Contact</a>
+      <div class="px-6 pt-4">
+        <a href="contact.html" class="mobile-nav-link block text-center bg-white text-navy-950 px-5 py-3 rounded text-sm font-semibold uppercase tracking-wider hover:bg-chrome-300 transition-colors">Enquire</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-white py-10 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-4">
+        <a href="index.html" class="hover:text-navy-900 transition-colors">Home</a>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        <span class="text-navy-900 font-medium">Shopping Cart</span>
+      </nav>
+      <h1 class="font-serif text-3xl font-semibold text-navy-950">Shopping Cart</h1>
+    </div>
+  </section>
+
+  <!-- CART CONTENT -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+
+        <!-- LEFT: Cart Items -->
+        <div class="lg:w-2/3">
+          <h2 class="text-lg font-semibold text-navy-950 mb-6">3 items in your cart</h2>
+
+          <!-- Cart Item 1 -->
+          <div class="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 mb-6">
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <!-- Image -->
+              <div class="flex-shrink-0">
+                <img
+                  src="assets/images/faucet-product.svg"
+                  alt="Diamond Bib Cock"
+                  class="w-24 h-24 object-cover rounded bg-gray-100"
+                />
+              </div>
+              <!-- Details -->
+              <div class="flex-1 min-w-0">
+                <h3 class="text-base font-semibold text-navy-950 mb-1">Diamond Bib Cock</h3>
+                <p class="text-sm text-gray-500 mb-1">Product Code: <span class="text-gray-700">DI-FS-01</span></p>
+                <p class="text-sm text-gray-500 mb-1">Finish: <span class="text-gray-700">Chrome</span></p>
+                <p class="text-sm font-semibold text-navy-900">₹780</p>
+              </div>
+              <!-- Quantity / Subtotal / Remove -->
+              <div class="flex flex-row sm:flex-col items-start sm:items-end justify-between sm:justify-start gap-3 sm:gap-4">
+                <!-- Quantity -->
+                <div class="flex items-center border border-gray-300 rounded overflow-hidden">
+                  <button type="button" class="qty-btn-minus px-3 py-1.5 text-gray-600 hover:bg-gray-100 transition-colors text-sm font-medium" aria-label="Decrease quantity">&#8722;</button>
+                  <input type="number" value="2" min="1" class="w-10 text-center text-sm text-navy-950 font-medium border-l border-r border-gray-300 outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" readonly />
+                  <button type="button" class="qty-btn-plus px-3 py-1.5 text-gray-600 hover:bg-gray-100 transition-colors text-sm font-medium" aria-label="Increase quantity">+</button>
+                </div>
+                <!-- Subtotal -->
+                <p class="text-sm font-semibold text-navy-950">₹1,560</p>
+                <!-- Remove -->
+                <button type="button" class="text-gray-400 hover:text-red-500 transition-colors" aria-label="Remove item">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cart Item 2 -->
+          <div class="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 mb-6">
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <!-- Image -->
+              <div class="flex-shrink-0">
+                <img
+                  src="assets/images/shower-system.svg"
+                  alt="Diamond Long Body"
+                  class="w-24 h-24 object-cover rounded bg-gray-100"
+                />
+              </div>
+              <!-- Details -->
+              <div class="flex-1 min-w-0">
+                <h3 class="text-base font-semibold text-navy-950 mb-1">Diamond Long Body</h3>
+                <p class="text-sm text-gray-500 mb-1">Product Code: <span class="text-gray-700">DI-FS-02</span></p>
+                <p class="text-sm text-gray-500 mb-1">Finish: <span class="text-gray-700">Chrome</span></p>
+                <p class="text-sm font-semibold text-navy-900">₹850</p>
+              </div>
+              <!-- Quantity / Subtotal / Remove -->
+              <div class="flex flex-row sm:flex-col items-start sm:items-end justify-between sm:justify-start gap-3 sm:gap-4">
+                <div class="flex items-center border border-gray-300 rounded overflow-hidden">
+                  <button type="button" class="qty-btn-minus px-3 py-1.5 text-gray-600 hover:bg-gray-100 transition-colors text-sm font-medium" aria-label="Decrease quantity">&#8722;</button>
+                  <input type="number" value="1" min="1" class="w-10 text-center text-sm text-navy-950 font-medium border-l border-r border-gray-300 outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" readonly />
+                  <button type="button" class="qty-btn-plus px-3 py-1.5 text-gray-600 hover:bg-gray-100 transition-colors text-sm font-medium" aria-label="Increase quantity">+</button>
+                </div>
+                <p class="text-sm font-semibold text-navy-950">₹850</p>
+                <button type="button" class="text-gray-400 hover:text-red-500 transition-colors" aria-label="Remove item">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cart Item 3 -->
+          <div class="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 mb-6">
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <!-- Image -->
+              <div class="flex-shrink-0">
+                <img
+                  src="assets/images/hero-bathroom.svg"
+                  alt="Cosmo Sink Mixer"
+                  class="w-24 h-24 object-cover rounded bg-gray-100"
+                />
+              </div>
+              <!-- Details -->
+              <div class="flex-1 min-w-0">
+                <h3 class="text-base font-semibold text-navy-950 mb-1">Cosmo Sink Mixer</h3>
+                <p class="text-sm text-gray-500 mb-1">Product Code: <span class="text-gray-700">CO-FS-01</span></p>
+                <p class="text-sm text-gray-500 mb-1">Finish: <span class="text-gray-700">Matte Black</span></p>
+                <p class="text-sm font-semibold text-navy-900">₹2,500</p>
+              </div>
+              <!-- Quantity / Subtotal / Remove -->
+              <div class="flex flex-row sm:flex-col items-start sm:items-end justify-between sm:justify-start gap-3 sm:gap-4">
+                <div class="flex items-center border border-gray-300 rounded overflow-hidden">
+                  <button type="button" class="qty-btn-minus px-3 py-1.5 text-gray-600 hover:bg-gray-100 transition-colors text-sm font-medium" aria-label="Decrease quantity">&#8722;</button>
+                  <input type="number" value="1" min="1" class="w-10 text-center text-sm text-navy-950 font-medium border-l border-r border-gray-300 outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" readonly />
+                  <button type="button" class="qty-btn-plus px-3 py-1.5 text-gray-600 hover:bg-gray-100 transition-colors text-sm font-medium" aria-label="Increase quantity">+</button>
+                </div>
+                <p class="text-sm font-semibold text-navy-950">₹2,500</p>
+                <button type="button" class="text-gray-400 hover:text-red-500 transition-colors" aria-label="Remove item">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Continue Shopping -->
+          <a href="collections.html" class="inline-flex items-center text-sm font-medium text-navy-900 hover:text-navy-800 transition-colors mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Continue Shopping
+          </a>
+        </div>
+
+        <!-- RIGHT: Order Summary -->
+        <div class="lg:w-1/3">
+          <div class="bg-white border border-gray-200 rounded-lg p-6 lg:sticky lg:top-32">
+            <h2 class="text-lg font-semibold text-navy-950 mb-6 pb-4 border-b border-gray-200">Order Summary</h2>
+
+            <!-- Subtotal -->
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-600">Subtotal (3 items)</span>
+              <span class="text-sm font-medium text-navy-950">₹4,910</span>
+            </div>
+
+            <!-- Shipping -->
+            <div class="flex items-center justify-between mb-5">
+              <span class="text-sm text-gray-600">Shipping</span>
+              <span class="text-sm font-medium text-green-600">Free</span>
+            </div>
+
+            <!-- Coupon -->
+            <div class="mb-5">
+              <label for="coupon-input" class="block text-sm font-medium text-gray-700 mb-2">Coupon Code</label>
+              <div class="flex">
+                <input
+                  id="coupon-input"
+                  type="text"
+                  placeholder="Enter coupon"
+                  class="flex-1 border border-gray-300 border-r-0 rounded-l px-3 py-2 text-sm outline-none focus:border-navy-800 transition-colors"
+                />
+                <button
+                  type="button"
+                  class="bg-navy-900 text-white px-4 py-2 text-sm font-semibold rounded-r hover:bg-navy-800 transition-colors"
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+
+            <!-- Discount -->
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-sm text-gray-600">Discount</span>
+              <span class="text-sm font-medium text-gray-500">-₹0</span>
+            </div>
+
+            <!-- Tax -->
+            <div class="flex items-center justify-between mb-5">
+              <span class="text-sm text-gray-600">Estimated Tax</span>
+              <span class="text-sm font-medium text-gray-500">₹0</span>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-200 mb-5"></div>
+
+            <!-- Total -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-base font-semibold text-navy-950">Total</span>
+              <span class="text-xl font-bold text-navy-950">₹4,910</span>
+            </div>
+
+            <!-- Checkout Button -->
+            <a
+              href="checkout.html"
+              class="block w-full text-center bg-chrome-400 text-navy-900 uppercase font-semibold text-sm py-3.5 rounded hover:bg-chrome-300 transition-colors mb-3 tracking-wider"
+            >
+              Proceed to Checkout
+            </a>
+
+            <!-- Continue Shopping Button -->
+            <a
+              href="collections.html"
+              class="block w-full text-center border border-navy-900 text-navy-900 uppercase font-semibold text-sm py-3.5 rounded hover:bg-navy-900 hover:text-white transition-colors tracking-wider"
+            >
+              Continue Shopping
+            </a>
+
+            <!-- Trust Badges -->
+            <div class="mt-6 pt-6 border-t border-gray-200 space-y-4">
+              <!-- Secure Checkout -->
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-navy-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                </div>
+                <span class="text-xs text-gray-600">Secure Checkout</span>
+              </div>
+              <!-- Free Shipping -->
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-navy-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <span class="text-xs text-gray-600">Free Shipping on ₹2,000+</span>
+              </div>
+              <!-- Easy Returns -->
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-navy-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg>
+                </div>
+                <span class="text-xs text-gray-600">30-Day Easy Returns</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- YOU MAY ALSO LIKE -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-serif text-2xl md:text-3xl font-semibold text-navy-950 text-center mb-10">You May Also Like</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Product 1 -->
+        <a href="product-details.html" class="product-card group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <div class="relative overflow-hidden">
+            <img
+              src="assets/images/bathroom-interior.svg"
+              alt="Opal Prime Bib Cock"
+              class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-navy-950/0 group-hover:bg-navy-950/40 transition-all duration-300 flex items-center justify-center">
+              <span class="opacity-0 group-hover:opacity-100 bg-white text-navy-950 text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded transform translate-y-3 group-hover:translate-y-0 transition-all duration-300">Enquire Now</span>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-semibold text-navy-950 mb-1">Opal Prime Bib Cock</h3>
+            <p class="text-xs text-gray-500 mb-2">OP-FS-01</p>
+            <p class="text-sm font-bold text-navy-900">₹820</p>
+          </div>
+        </a>
+
+        <!-- Product 2 -->
+        <a href="product-details.html" class="product-card group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <div class="relative overflow-hidden">
+            <img
+              src="assets/images/faucet-product.svg"
+              alt="Diamond Angle Cock"
+              class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-navy-950/0 group-hover:bg-navy-950/40 transition-all duration-300 flex items-center justify-center">
+              <span class="opacity-0 group-hover:opacity-100 bg-white text-navy-950 text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded transform translate-y-3 group-hover:translate-y-0 transition-all duration-300">Enquire Now</span>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-semibold text-navy-950 mb-1">Diamond Angle Cock</h3>
+            <p class="text-xs text-gray-500 mb-2">DI-FS-04</p>
+            <p class="text-sm font-bold text-navy-900">₹550</p>
+          </div>
+        </a>
+
+        <!-- Product 3 -->
+        <a href="product-details.html" class="product-card group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <div class="relative overflow-hidden">
+            <img
+              src="assets/images/hero-bathroom.svg"
+              alt="Diamond Sink Cock"
+              class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-navy-950/0 group-hover:bg-navy-950/40 transition-all duration-300 flex items-center justify-center">
+              <span class="opacity-0 group-hover:opacity-100 bg-white text-navy-950 text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded transform translate-y-3 group-hover:translate-y-0 transition-all duration-300">Enquire Now</span>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-semibold text-navy-950 mb-1">Diamond Sink Cock</h3>
+            <p class="text-xs text-gray-500 mb-2">DI-FS-03</p>
+            <p class="text-sm font-bold text-navy-900">₹1,200</p>
+          </div>
+        </a>
+
+        <!-- Product 4 -->
+        <a href="product-details.html" class="product-card group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <div class="relative overflow-hidden">
+            <img
+              src="assets/images/shower-system.svg"
+              alt="Cosmo Shower Head"
+              class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div class="absolute inset-0 bg-navy-950/0 group-hover:bg-navy-950/40 transition-all duration-300 flex items-center justify-center">
+              <span class="opacity-0 group-hover:opacity-100 bg-white text-navy-950 text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded transform translate-y-3 group-hover:translate-y-0 transition-all duration-300">Enquire Now</span>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-semibold text-navy-950 mb-1">Cosmo Shower Head</h3>
+            <p class="text-xs text-gray-500 mb-2">CO-FS-03</p>
+            <p class="text-sm font-bold text-navy-900">₹1,500</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-950 text-chrome-400 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Brand -->
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-white tracking-wider mb-4">PLUNGE</h3>
+          <p class="text-sm leading-relaxed mb-6">Crafting luxury bathroom fixtures that blend timeless elegance with modern precision. Every piece is a statement of refined taste.</p>
+          <div class="flex space-x-4">
+            <a href="#" aria-label="Facebook" class="w-9 h-9 border border-chrome-500 rounded-full flex items-center justify-center text-chrome-500 hover:bg-white hover:text-navy-950 transition-all duration-300">
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="w-9 h-9 border border-chrome-500 rounded-full flex items-center justify-center text-chrome-500 hover:bg-white hover:text-navy-950 transition-all duration-300">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="w-9 h-9 border border-chrome-500 rounded-full flex items-center justify-center text-chrome-500 hover:bg-white hover:text-navy-950 transition-all duration-300">
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#080b14"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2.5">
+            <li><a href="collections.html" class="text-sm hover:text-white transition-colors duration-300">Collections</a></li>
+            <li><a href="gallery.html" class="text-sm hover:text-white transition-colors duration-300">Gallery</a></li>
+            <li><a href="about.html" class="text-sm hover:text-white transition-colors duration-300">About Us</a></li>
+            <li><a href="faq.html" class="text-sm hover:text-white transition-colors duration-300">FAQ</a></li>
+            <li><a href="contact.html" class="text-sm hover:text-white transition-colors duration-300">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div>
+          <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Customer Service</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#" class="text-sm hover:text-white transition-colors duration-300">Shipping Policy</a></li>
+            <li><a href="#" class="text-sm hover:text-white transition-colors duration-300">Return Policy</a></li>
+            <li><a href="#" class="text-sm hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+            <li><a href="#" class="text-sm hover:text-white transition-colors duration-300">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Get in Touch</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start space-x-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 flex-shrink-0 text-chrome-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="text-sm">Luxury Faucets HQ, Mumbai, India</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 flex-shrink-0 text-chrome-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <span class="text-sm">+91 98765 43210</span>
+            </li>
+            <li class="flex items-start space-x-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 flex-shrink-0 text-chrome-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span class="text-sm">info@plunge.in</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-navy-800 pt-8">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <p class="text-xs text-chrome-500">&copy; 2026 PLUNGE. All rights reserved.</p>
+          <div class="flex items-center space-x-4 mt-4 md:mt-0">
+            <svg class="h-8 w-auto text-chrome-500" viewBox="0 0 48 32" fill="currentColor"><rect width="48" height="32" rx="4" fill="currentColor" opacity="0.2"/><text x="24" y="20" text-anchor="middle" font-size="10" fill="currentColor">VISA</text></svg>
+            <svg class="h-8 w-auto text-chrome-500" viewBox="0 0 48 32" fill="currentColor"><rect width="48" height="32" rx="4" fill="currentColor" opacity="0.2"/><text x="24" y="20" text-anchor="middle" font-size="10" fill="currentColor">MC</text></svg>
+            <svg class="h-8 w-auto text-chrome-500" viewBox="0 0 48 32" fill="currentColor"><rect width="48" height="32" rx="4" fill="currentColor" opacity="0.2"/><text x="24" y="20" text-anchor="middle" font-size="10" fill="currentColor">UPI</text></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button
+    id="back-to-top"
+    class="fixed bottom-6 right-6 w-10 h-10 bg-navy-900 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-navy-800 z-40"
+    aria-label="Back to top"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

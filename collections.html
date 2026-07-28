@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Collections | PLUNGE by F.S. Enterprises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a2235',
+                            900: '#0f1423',
+                            950: '#080b14',
+                        },
+                        chrome: {
+                            300: '#e2e8f0',
+                            400: '#cbd5e1',
+                            500: '#94a3b8',
+                        },
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 320px;
+            max-width: 85vw;
+            height: 100vh;
+            background: #080b14;
+            z-index: 9999;
+            transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .mobile-menu.active { left: 0; }
+        .mobile-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 9998;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .mobile-overlay.active { opacity: 1; pointer-events: all; }
+        .mobile-nav-link {
+            display: block;
+            padding: 14px 24px;
+            color: #cbd5e1;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+        }
+        .mobile-nav-link:hover, .mobile-nav-link.active {
+            color: #ffffff;
+            background: rgba(255,255,255,0.05);
+            border-left-color: #cbd5e1;
+        }
+
+        /* Product Card */
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        .product-img {
+            overflow: hidden;
+            position: relative;
+        }
+        .product-img img {
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .product-card:hover .product-img img {
+            transform: scale(1.08);
+        }
+        .quick-action-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(8, 11, 20, 0.65);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .product-card:hover .quick-action-overlay {
+            opacity: 1;
+        }
+
+        /* Sidebar */
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            color: #94a3b8;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            border-left: 3px solid transparent;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .sidebar-link:hover {
+            color: #cbd5e1;
+            background: rgba(255,255,255,0.03);
+        }
+        .sidebar-link.active {
+            color: #0f1423;
+            font-weight: 600;
+            border-left-color: #0f1423;
+        }
+
+        /* Tab Panes */
+        .tab-pane { display: none; }
+        .tab-pane.active { display: block; }
+
+        /* Scrollbar */
+        .mobile-menu::-webkit-scrollbar { width: 4px; }
+        .mobile-menu::-webkit-scrollbar-track { background: #0f1423; }
+        .mobile-menu::-webkit-scrollbar-thumb { background: #1a2235; border-radius: 4px; }
+
+        /* Custom focus */
+        input:focus, select:focus { outline: none; }
+
+        /* Badge pulse */
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body class="bg-white font-inter text-gray-900 pt-24 antialiased">
+
+    <!-- ==================== HEADER ==================== -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-navy-950 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <svg width="36" height="36" viewBox="0 0 40 40" fill="none" class="transition-transform duration-300 group-hover:scale-110">
+                        <path d="M20 2C20 2 8 18 8 26C8 32.627 13.373 38 20 38C26.627 38 32 32.627 32 26C32 18 20 2 20 2Z" fill="url(#dropGrad)" stroke="#cbd5e1" stroke-width="1.5"/>
+                        <path d="M16 26C16 23 18 19 20 15" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+                        <defs>
+                            <linearGradient id="dropGrad" x1="20" y1="2" x2="20" y2="38" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#94a3b8"/>
+                                <stop offset="1" stop-color="#475569"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div>
+                        <span class="text-white font-playfair text-xl font-bold tracking-widest">PLUNGE</span>
+                        <span class="block text-[9px] text-chrome-500 tracking-[0.3em] uppercase -mt-1">by F.S. Enterprises</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-1">
+                    <a href="index.html" class="px-4 py-2 text-sm text-chrome-400 hover:text-white transition-colors duration-200 tracking-wide">Home</a>
+                    <a href="collections.html" class="px-4 py-2 text-sm text-white border-b-2 border-chrome-400 tracking-wide font-medium">Collections</a>
+                    <a href="gallery.html" class="px-4 py-2 text-sm text-chrome-400 hover:text-white transition-colors duration-200 tracking-wide">Gallery</a>
+                    <a href="about.html" class="px-4 py-2 text-sm text-chrome-400 hover:text-white transition-colors duration-200 tracking-wide">About</a>
+                    <a href="faq.html" class="px-4 py-2 text-sm text-chrome-400 hover:text-white transition-colors duration-200 tracking-wide">FAQ</a>
+                    <a href="contact.html" class="px-4 py-2 text-sm text-chrome-400 hover:text-white transition-colors duration-200 tracking-wide">Contact</a>
+                    <a href="contact.html#enquiry" class="ml-2 px-5 py-2 text-sm border border-chrome-500 text-chrome-300 hover:bg-white hover:text-navy-950 transition-all duration-300 tracking-wide rounded-sm">Enquire</a>
+                </nav>
+
+                <!-- Right Icons -->
+                <div class="flex items-center gap-3 sm:gap-4">
+                    <!-- Search -->
+                    <button class="text-chrome-400 hover:text-white transition-colors duration-200 p-2" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="M21 21l-4.35-4.35" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+
+                    <!-- Wishlist -->
+                    <a href="wishlist.html" class="relative text-chrome-400 hover:text-white transition-colors duration-200 p-2" aria-label="Wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="absolute -top-0.5 -right-0.5 bg-chrome-400 text-navy-950 text-[10px] font-bold w-4.5 h-4.5 flex items-center justify-center rounded-full leading-none" style="width:18px;height:18px;">2</span>
+                    </a>
+
+                    <!-- Cart -->
+                    <a href="cart.html" class="relative text-chrome-400 hover:text-white transition-colors duration-200 p-2" aria-label="Cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="3" y1="6" x2="21" y2="6" stroke-linecap="round"/>
+                            <path d="M16 10a4 4 0 01-8 0" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="absolute -top-0.5 -right-0.5 bg-chrome-400 text-navy-950 text-[10px] font-bold w-4.5 h-4.5 flex items-center justify-center rounded-full leading-none" style="width:18px;height:18px;">3</span>
+                    </a>
+
+                    <!-- Hamburger -->
+                    <button id="hamburger-btn" class="lg:hidden text-chrome-400 hover:text-white transition-colors duration-200 p-2" aria-label="Menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                            <line x1="3" y1="6" x2="21" y2="6" stroke-linecap="round"/>
+                            <line x1="3" y1="12" x2="21" y2="12" stroke-linecap="round"/>
+                            <line x1="3" y1="18" x2="21" y2="18" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== MOBILE MENU ==================== -->
+    <div id="mobile-overlay" class="mobile-overlay"></div>
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="flex items-center justify-between p-5 border-b border-white/10">
+            <div class="flex items-center gap-2">
+                <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+                    <path d="M20 2C20 2 8 18 8 26C8 32.627 13.373 38 20 38C26.627 38 32 32.627 32 26C32 18 20 2 20 2Z" fill="url(#dropGrad2)" stroke="#cbd5e1" stroke-width="1.5"/>
+                    <defs>
+                        <linearGradient id="dropGrad2" x1="20" y1="2" x2="20" y2="38">
+                            <stop stop-color="#94a3b8"/>
+                            <stop offset="1" stop-color="#475569"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="text-white font-playfair text-lg font-bold tracking-widest">PLUNGE</span>
+            </div>
+            <button id="mobile-close" class="text-chrome-400 hover:text-white p-2 transition-colors" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18" stroke-linecap="round"/>
+                    <line x1="6" y1="6" x2="18" y2="18" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+        <nav class="py-4">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="collections.html" class="mobile-nav-link active">Collections</a>
+            <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="faq.html" class="mobile-nav-link">FAQ</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <div class="border-t border-white/10 mt-4 pt-4 px-6">
+                <a href="contact.html#enquiry" class="block text-center py-3 border border-chrome-500 text-chrome-300 hover:bg-white hover:text-navy-950 transition-all duration-300 text-sm tracking-wide">Enquire Now</a>
+            </div>
+        </nav>
+        <div class="p-6 border-t border-white/10 mt-auto">
+            <p class="text-chrome-500 text-xs tracking-wide">by F.S. Enterprises</p>
+        </div>
+    </div>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <section class="bg-white pt-10 pb-6 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-2 text-sm text-chrome-500 mb-6">
+                <a href="index.html" class="hover:text-navy-900 transition-colors">Home</a>
+                <span>/</span>
+                <span class="text-navy-900 font-medium">Collections</span>
+            </nav>
+
+            <!-- Title & Description -->
+            <div class="mb-8">
+                <h1 class="font-playfair text-3xl sm:text-4xl lg:text-5xl text-navy-950 font-bold tracking-tight mb-4">Our Collections</h1>
+                <p class="text-chrome-500 text-base sm:text-lg max-w-2xl leading-relaxed">Explore our curated range of premium faucets and fittings. Each collection is crafted with precision, designed for luxury, and built to last.</p>
+            </div>
+
+            <!-- Search & Sort -->
+            <div class="flex flex-col sm:flex-row gap-3">
+                <div class="relative flex-1 max-w-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-chrome-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search products..." class="w-full pl-10 pr-4 py-3 border border-gray-200 text-sm bg-gray-50 focus:bg-white focus:border-navy-900 focus:ring-1 focus:ring-navy-900/20 transition-all duration-200 rounded-sm">
+                </div>
+                <select id="sortSelect" class="px-4 py-3 border border-gray-200 text-sm text-gray-700 bg-gray-50 focus:bg-white focus:border-navy-900 focus:ring-1 focus:ring-navy-900/20 transition-all duration-200 rounded-sm sm:w-52 cursor-pointer appearance-none bg-no-repeat bg-right" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-size: 16px;">
+                    <option value="">Sort by: Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name-az">Name: A to Z</option>
+                    <option value="name-za">Name: Z to A</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+        <div class="flex flex-col md:flex-row gap-8 lg:gap-12">
+
+            <!-- ===== LEFT SIDEBAR ===== -->
+            <aside class="w-full md:w-1/4 lg:w-1/5 flex-shrink-0">
+                <div class="md:sticky md:top-32">
+                    <!-- Mobile: horizontal scroll -->
+                    <div class="md:hidden overflow-x-auto -mx-4 px-4 pb-2">
+                        <div class="flex gap-2 min-w-max">
+                            <button data-tab="diamond" class="sidebar-link active whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-navy-950 text-white">Diamond</button>
+                            <button data-tab="opal-prime" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-chrome-500 hover:border-navy-950 hover:text-navy-950">Opal Prime</button>
+                            <button data-tab="cosmo" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-chrome-500 hover:border-navy-950 hover:text-navy-950">Cosmo</button>
+                            <button data-tab="quba" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-chrome-500 hover:border-navy-950 hover:text-navy-950">Quba</button>
+                            <button data-tab="topaz" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-chrome-500 hover:border-navy-950 hover:text-navy-950">Topaz</button>
+                            <button data-tab="vignet" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-chrome-500 hover:border-navy-950 hover:text-navy-950">Vignet</button>
+                            <button data-tab="mini-opal" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-chrome-500 hover:border-navy-950 hover:text-navy-950">Mini Opal</button>
+                            <button data-tab="accessories" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-chrome-500 hover:border-navy-950 hover:text-navy-950">Accessories</button>
+                        </div>
+                    </div>
+
+                    <!-- Desktop: vertical list -->
+                    <div class="hidden md:block bg-gray-50 rounded-lg p-4 border border-gray-100">
+                        <h3 class="font-playfair text-lg font-semibold text-navy-950 mb-4 px-4">Collections</h3>
+                        <nav class="space-y-1">
+                            <button data-tab="diamond" class="sidebar-link active w-full text-left">Diamond</button>
+                            <button data-tab="opal-prime" class="sidebar-link w-full text-left">Opal Prime</button>
+                            <button data-tab="cosmo" class="sidebar-link w-full text-left">Cosmo</button>
+                            <button data-tab="quba" class="sidebar-link w-full text-left">Quba</button>
+                            <button data-tab="topaz" class="sidebar-link w-full text-left">Topaz</button>
+                            <button data-tab="vignet" class="sidebar-link w-full text-left">Vignet</button>
+                            <button data-tab="mini-opal" class="sidebar-link w-full text-left">Mini Opal</button>
+                            <button data-tab="accessories" class="sidebar-link w-full text-left">Accessories</button>
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ===== RIGHT CONTENT ===== -->
+            <div class="w-full md:w-3/4 lg:w-4/5">
+
+                <!-- ========= DIAMOND TAB ========= -->
+                <div id="diamond" class="tab-pane active">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-navy-950">Diamond</h2>
+                            <span class="text-sm text-chrome-500 font-medium">4 Products</span>
+                        </div>
+                        <p class="text-chrome-500 text-sm leading-relaxed max-w-xl">The Diamond collection represents the pinnacle of faucet design. Sharp lines, flawless chrome finishing, and ergonomic handles make these fixtures a statement in any bathroom or kitchen.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- Product 1 -->
+                        <a href="product-details.html" class="product-card block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img src="assets/images/faucet-product.svg" alt="Diamond Bib Cock" class="w-full h-full object-cover">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-navy-950 px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-navy-950 hover:text-white transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span class="text-[11px] text-chrome-500 font-medium tracking-wider uppercase">DI-FS-01</span>
+                                <h3 class="text-navy-950 font-semibold text-base mt-1 mb-2 group-hover:text-navy-800 transition-colors">Diamond Bib Cock</h3>
+                                <p class="text-navy-900 font-bold text-sm">MRP ₹780</p>
+                            </div>
+                        </a>
+
+                        <!-- Product 2 -->
+                        <a href="product-details.html" class="product-card block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img src="assets/images/shower-system.svg" alt="Diamond Long Body" class="w-full h-full object-cover">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-navy-950 px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-navy-950 hover:text-white transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span class="text-[11px] text-chrome-500 font-medium tracking-wider uppercase">DI-FS-02</span>
+                                <h3 class="text-navy-950 font-semibold text-base mt-1 mb-2 group-hover:text-navy-800 transition-colors">Diamond Long Body</h3>
+                                <p class="text-navy-900 font-bold text-sm">MRP ₹850</p>
+                            </div>
+                        </a>
+
+                        <!-- Product 3 -->
+                        <a href="product-details.html" class="product-card block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img src="assets/images/hero-bathroom.svg" alt="Diamond Sink Cock" class="w-full h-full object-cover">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-navy-950 px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-navy-950 hover:text-white transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span class="text-[11px] text-chrome-500 font-medium tracking-wider uppercase">DI-FS-03</span>
+                                <h3 class="text-navy-950 font-semibold text-base mt-1 mb-2 group-hover:text-navy-800 transition-colors">Diamond Sink Cock</h3>
+                                <p class="text-navy-900 font-bold text-sm">MRP ₹1,200</p>
+                            </div>
+                        </a>
+
+                        <!-- Product 4 -->
+                        <a href="product-details.html" class="product-card block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img src="assets/images/faucet-product.svg" alt="Diamond Angle Cock" class="w-full h-full object-cover">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-navy-950 px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-navy-950 hover:text-white transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span class="text-[11px] text-chrome-500 font-medium tracking-wider uppercase">DI-FS-04</span>
+                                <h3 class="text-navy-950 font-semibold text-base mt-1 mb-2 group-hover:text-navy-800 transition-colors">Diamond Angle Cock</h3>
+                                <p class="text-navy-900 font-bold text-sm">MRP ₹550</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- ========= OPAL PRIME TAB ========= -->
+                <div id="opal-prime" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-navy-950">Opal Prime</h2>
+                            <span class="text-sm text-chrome-500 font-medium">3 Products</span>
+                        </div>
+                        <p class="text-chrome-500 text-sm leading-relaxed max-w-xl">The Opal Prime series blends elegance with everyday functionality. Featuring smooth curves and a premium chrome finish, these faucets bring a refined touch to modern spaces.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- Product 1 -->
+                        <a href="product-details.html" class="product-card block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img src="assets/images/faucet-product.svg" alt="Opal Prime Bib Cock" class="w-full h-full object-cover">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-navy-950 px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-navy-950 hover:text-white transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span class="text-[11px] text-chrome-500 font-medium tracking-wider uppercase">OP-FS-01</span>
+                                <h3 class="text-navy-950 font-semibold text-base mt-1 mb-2 group-hover:text-navy-800 transition-colors">Opal Prime Bib Cock</h3>
+                                <p class="text-navy-900 font-bold text-sm">MRP ₹820</p>
+                            </div>
+                        </a>
+
+                        <!-- Product 2 -->
+                        <a href="product-details.html" class="product-card block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img src="assets/images/faucet-product.svg" alt="Opal Prime Long Body" class="w-full h-full object-cover">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-navy-950 px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-navy-950 hover:text-white transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span class="text-[11px] text-chrome-500 font-medium tracking-wider uppercase">OP-FS-02</span>
+                                <h3 class="text-navy-950 font-semibold text-base mt-1 mb-2 group-hover:text-navy-800 transition-colors">Opal Prime Long Body</h3>
+                                <p class="text-navy-900 font-bold text-sm">MRP ₹900</p>
+                            </div>
+                        </a>
+
+                        <!-- Product 3 -->
+                        <a href="product-details.html" class="product-card block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img src="assets/images/faucet-product.svg" alt="Opal Prime Pillar Cock" class="w-full h-full object-cover">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-navy-950 px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-navy-950 hover:text-white transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span class="text-[11px] text-chrome-500 font-medium tracking-wider uppercase">OP-FS-03</span>
+                                <h3 class="text-navy-950 font-semibold text-base mt-1 mb-2 group-hover:text-navy-800 transition-colors">Opal Prime Pillar Cock</h3>
+                                <p class="text-navy-900 font-bold text-sm">MRP ₹1,100</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- ========= COSMO TAB ========= -->
+                <div id="cosmo" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-navy-950">Cosmo</h2>
+                            <span class="text-sm text-chrome-500 font-medium">3 Products</span>
+                        </div>
+                        <p class="text-chrome-500 text-sm leading-relaxed max-w-xl">The Cosmo range is for those who appreciate contemporary aesthetics. With bold forms and superior water flow engineering, this collection redefines luxury bathing experiences.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- Product 1 -->
+                        <a href="product-details.html" class="product-card block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img src="assets/images/hero-bathroom.svg" alt="Cosmo Sink Mixer" class="w-full h-full object-cover">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-navy-950 px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-navy-950 hover:text-white transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span class="text-[11px] text-chrome-500 font-medium tracking-wider uppercase">CO-FS-01</span>
+                                <h3 class="text-navy-950 font-semibold text-base mt-1 mb-2 group-hover:text-navy-800 transition-colors">Cosmo Sink Mixer</h3>
+                                <p class="text-navy-900 font-bold text-sm">MRP ₹2,500</p>
+                            </div>
+                        </a>
+
+                        <!-- Product 2 -->
+                        <a href="product-details.html" class="product-card block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img src="assets/images/faucet-product.svg" alt="Cosmo Wall Mixer" class="w-full h-full object-cover">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-navy-950 px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-navy-950 hover:text-white transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span class="text-[11px] text-chrome-500 font-medium tracking-wider uppercase">CO-FS-02</span>
+                                <h3 class="text-navy-950 font-semibold text-base mt-1 mb-2 group-hover:text-navy-800 transition-colors">Cosmo Wall Mixer</h3>
+                                <p class="text-navy-900 font-bold text-sm">MRP ₹3,200</p>
+                            </div>
+                        </a>
+
+                        <!-- Product 3 -->
+                        <a href="product-details.html" class="product-card block bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img src="assets/images/shower-system.svg" alt="Cosmo Shower Head" class="w-full h-full object-cover">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-navy-950 px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-navy-950 hover:text-white transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span class="text-[11px] text-chrome-500 font-medium tracking-wider uppercase">CO-FS-03</span>
+                                <h3 class="text-navy-950 font-semibold text-base mt-1 mb-2 group-hover:text-navy-800 transition-colors">Cosmo Shower Head</h3>
+                                <p class="text-navy-900 font-bold text-sm">MRP ₹1,500</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- ========= QUBA TAB ========= -->
+                <div id="quba" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-navy-950">Quba</h2>
+                            <span class="text-sm text-chrome-500 font-medium">0 Products</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center py-20 bg-gray-50 rounded-lg border border-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-chrome-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                            <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                        <p class="text-chrome-500 text-sm font-medium">Products for this collection are being updated.</p>
+                    </div>
+                </div>
+
+                <!-- ========= TOPAZ TAB ========= -->
+                <div id="topaz" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-navy-950">Topaz</h2>
+                            <span class="text-sm text-chrome-500 font-medium">0 Products</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center py-20 bg-gray-50 rounded-lg border border-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-chrome-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                            <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                        <p class="text-chrome-500 text-sm font-medium">Products for this collection are being updated.</p>
+                    </div>
+                </div>
+
+                <!-- ========= VIGNET TAB ========= -->
+                <div id="vignet" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-navy-950">Vignet</h2>
+                            <span class="text-sm text-chrome-500 font-medium">0 Products</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center py-20 bg-gray-50 rounded-lg border border-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-chrome-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                            <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                        <p class="text-chrome-500 text-sm font-medium">Products for this collection are being updated.</p>
+                    </div>
+                </div>
+
+                <!-- ========= MINI OPAL TAB ========= -->
+                <div id="mini-opal" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-navy-950">Mini Opal</h2>
+                            <span class="text-sm text-chrome-500 font-medium">0 Products</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center py-20 bg-gray-50 rounded-lg border border-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-chrome-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                            <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                        <p class="text-chrome-500 text-sm font-medium">Products for this collection are being updated.</p>
+                    </div>
+                </div>
+
+                <!-- ========= ACCESSORIES TAB ========= -->
+                <div id="accessories" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-navy-950">Accessories</h2>
+                            <span class="text-sm text-chrome-500 font-medium">0 Products</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center py-20 bg-gray-50 rounded-lg border border-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-chrome-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                            <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                        <p class="text-chrome-500 text-sm font-medium">Products for this collection are being updated.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-navy-950 text-chrome-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+
+                <!-- Column 1: Brand -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-5">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 2C20 2 8 18 8 26C8 32.627 13.373 38 20 38C26.627 38 32 32.627 32 26C32 18 20 2 20 2Z" fill="url(#dropGradF)" stroke="#cbd5e1" stroke-width="1.5"/>
+                            <path d="M16 26C16 23 18 19 20 15" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="dropGradF" x1="20" y1="2" x2="20" y2="38">
+                                    <stop stop-color="#94a3b8"/>
+                                    <stop offset="1" stop-color="#475569"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div>
+                            <span class="text-white font-playfair text-lg font-bold tracking-widest">PLUNGE</span>
+                            <span class="block text-[9px] text-chrome-500 tracking-[0.3em] uppercase -mt-1">by F.S. Enterprises</span>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed text-chrome-500 mb-6 max-w-xs">Crafting premium luxury faucets that blend timeless design with engineering excellence. Every piece tells a story of quality.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-chrome-500 hover:text-white hover:border-white/30 transition-all duration-300" aria-label="Facebook">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-chrome-500 hover:text-white hover:border-white/30 transition-all duration-300" aria-label="Instagram">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-chrome-500 hover:text-white hover:border-white/30 transition-all duration-300" aria-label="Pinterest">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 4.99 3.657 9.128 8.438 9.878-.117-.949-.223-2.406.047-3.441.243-.937 1.573-6.664 1.573-6.664s-.402-.803-.402-1.989c0-1.863 1.08-3.25 2.425-3.25 1.143 0 1.694.858 1.694 1.887 0 1.15-.731 2.868-1.108 4.464-.316 1.338.669 2.426 1.986 2.426 2.384 0 4.213-2.514 4.213-6.14 0-3.212-2.308-5.459-5.605-5.459-3.817 0-6.057 2.863-6.057 5.832 0 1.154.444 2.391.999 3.063.11.133.126.25.093.385-.102.425-.327 1.338-.372 1.525-.059.243-.195.294-.448.177-1.667-.776-2.707-3.216-2.707-5.178 0-4.217 3.064-8.087 8.842-8.087 4.643 0 8.25 3.306 8.25 7.724 0 4.61-2.903 8.32-6.932 8.32-1.355 0-2.626-.707-3.064-1.542l-.834 3.182c-.302 1.16-1.118 2.617-1.664 3.502A12.014 12.014 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Collections -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-5">Collections</h4>
+                    <ul class="space-y-3">
+                        <li><a href="collections.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">Diamond</a></li>
+                        <li><a href="collections.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">Opal Prime</a></li>
+                        <li><a href="collections.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">Cosmo</a></li>
+                        <li><a href="collections.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">Quba</a></li>
+                        <li><a href="collections.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">Topaz</a></li>
+                        <li><a href="collections.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">Vignet</a></li>
+                        <li><a href="collections.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">Mini Opal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-5">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">About Us</a></li>
+                        <li><a href="gallery.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">Gallery</a></li>
+                        <li><a href="faq.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">FAQ</a></li>
+                        <li><a href="contact.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">Contact</a></li>
+                        <li><a href="wishlist.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">Wishlist</a></li>
+                        <li><a href="cart.html" class="text-sm text-chrome-500 hover:text-white transition-colors duration-200">Cart</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-5">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5 text-chrome-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span class="text-sm text-chrome-500 leading-relaxed">F.S. Enterprises<br>Mumbai, Maharashtra, India</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-chrome-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                            <span class="text-sm text-chrome-500">+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-chrome-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span class="text-sm text-chrome-500">info@plunge.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="border-t border-white/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-chrome-500">&copy; 2026 PLUNGE by F.S. Enterprises. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="text-xs text-chrome-500 hover:text-white transition-colors duration-200">Privacy Policy</a>
+                    <a href="#" class="text-xs text-chrome-500 hover:text-white transition-colors duration-200">Terms of Service</a>
+                    <a href="#" class="text-xs text-chrome-500 hover:text-white transition-colors duration-200">Shipping Info</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // ===== SORT (basic client-side) =====
+        const sortSelect = document.getElementById('sortSelect');
+        if (sortSelect) {
+            sortSelect.addEventListener('change', function() {
+                const activePane = document.querySelector('.tab-pane.active');
+                if (!activePane) return;
+                const grid = activePane.querySelector('.grid');
+                if (!grid) return;
+                const cards = Array.from(grid.querySelectorAll('.product-card'));
+                const order = this.value;
+
+                if (!order) return;
+
+                cards.sort((a, b) => {
+                    const priceA = parseInt((a.querySelector('p')?.textContent || '').replace(/[^0-9]/g, ''));
+                    const priceB = parseInt((b.querySelector('p')?.textContent || '').replace(/[^0-9]/g, ''));
+                    const nameA = (a.querySelector('h3')?.textContent || '').toLowerCase();
+                    const nameB = (b.querySelector('h3')?.textContent || '').toLowerCase();
+
+                    switch(order) {
+                        case 'price-low': return priceA - priceB;
+                        case 'price-high': return priceB - priceA;
+                        case 'name-az': return nameA.localeCompare(nameB);
+                        case 'name-za': return nameB.localeCompare(nameA);
+                        default: return 0;
+                    }
+                });
+
+                cards.forEach(card => grid.appendChild(card));
+            });
+        }
+    </script>
+</body>
+</html>

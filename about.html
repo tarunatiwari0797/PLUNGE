@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — PLUNGE | F.S. Enterprises</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1a2235',
+                            900: '#0f1423',
+                            950: '#080b14',
+                        },
+                        chrome: {
+                            300: '#e2e8f0',
+                            400: '#cbd5e1',
+                            500: '#94a3b8',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+
+        .reveal, .reveal-left, .reveal-right, .reveal-up {
+            opacity: 0;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal-left { transform: translateX(-60px); }
+        .reveal-right { transform: translateX(60px); }
+        .reveal-up { transform: translateY(40px); }
+        .reveal.revealed, .reveal-left.revealed, .reveal-right.revealed, .reveal-up.revealed {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        .pattern-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23cbd5e1' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 1;
+        }
+
+        .parallax-bg {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, #cbd5e1, #cbd5e1, transparent);
+        }
+        @media (max-width: 767px) {
+            .timeline-line {
+                left: 20px;
+            }
+        }
+
+        .stat-glow {
+            box-shadow: 0 0 60px rgba(148, 163, 184, 0.08);
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        .mobile-overlay {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease;
+        }
+        .mobile-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .header-scrolled {
+            background: #080b14 !important;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #cbd5e1;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .card-lift {
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+        .card-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .advantage-card:hover .adv-icon {
+            background-color: #0f1423;
+        }
+        .advantage-card:hover .adv-icon svg {
+            stroke: #e2e8f0;
+        }
+        .adv-icon {
+            transition: background-color 0.35s ease;
+        }
+        .adv-icon svg {
+            transition: stroke 0.35s ease;
+        }
+
+        .award-badge {
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+        .award-badge:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased pt-24">
+
+    <!-- ===== HEADER ===== -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 bg-navy-950 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <svg class="w-8 h-8 text-chrome-400 group-hover:text-white transition-colors" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4C20 4 8 18 8 26C8 32.627 13.373 38 20 38C26.627 38 32 32.627 32 26C32 18 20 4 20 4Z" fill="currentColor" opacity="0.2"/>
+                        <path d="M20 4C20 4 8 18 8 26C8 32.627 13.373 38 20 38C26.627 38 32 32.627 32 26C32 18 20 4 20 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20 12V28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M14 20C14 20 17 23 20 23C23 23 26 20 26 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span class="text-xl font-bold tracking-[0.2em] text-white font-sans">PLUNGE</span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="nav-link text-sm font-medium text-chrome-500 hover:text-white transition-colors tracking-wide">Home</a>
+                    <a href="collections.html" class="nav-link text-sm font-medium text-chrome-500 hover:text-white transition-colors tracking-wide">Collections</a>
+                    <a href="gallery.html" class="nav-link text-sm font-medium text-chrome-500 hover:text-white transition-colors tracking-wide">Gallery</a>
+                    <a href="about.html" class="nav-link active text-sm font-medium text-white border-b-2 border-chrome-400 pb-1 tracking-wide">About</a>
+                    <a href="faq.html" class="nav-link text-sm font-medium text-chrome-500 hover:text-white transition-colors tracking-wide">FAQ</a>
+                    <a href="contact.html" class="nav-link text-sm font-medium text-chrome-500 hover:text-white transition-colors tracking-wide">Contact</a>
+                    <a href="contact.html#enquire" class="text-sm font-medium text-chrome-500 hover:text-white transition-colors tracking-wide">Enquire</a>
+                </nav>
+
+                <!-- Desktop Icons -->
+                <div class="hidden lg:flex items-center gap-5">
+                    <button aria-label="Search" class="text-chrome-500 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="m21 21-4.35-4.35"/></svg>
+                    </button>
+                    <a href="wishlist.html" class="relative text-chrome-500 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                        <span class="absolute -top-2 -right-2 bg-chrome-300 text-navy-950 text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
+                    </a>
+                    <a href="cart.html" class="relative text-chrome-500 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                        <span class="absolute -top-2 -right-2 bg-chrome-300 text-navy-950 text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">3</span>
+                    </a>
+                </div>
+
+                <!-- Hamburger -->
+                <button id="hamburger-btn" class="lg:hidden text-chrome-400 hover:text-white transition-colors" aria-label="Open menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/60 z-[60]"></div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-navy-950 z-[70] flex flex-col">
+        <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
+            <span class="text-sm font-semibold tracking-[0.2em] text-white">MENU</span>
+            <button id="mobile-close" class="text-chrome-500 hover:text-white transition-colors" aria-label="Close menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-1 px-6 py-6 flex-1 overflow-y-auto">
+            <a href="index.html" class="mobile-nav-link py-3 text-sm font-medium text-chrome-500 hover:text-white transition-colors border-b border-white/5">Home</a>
+            <a href="collections.html" class="mobile-nav-link py-3 text-sm font-medium text-chrome-500 hover:text-white transition-colors border-b border-white/5">Collections</a>
+            <a href="gallery.html" class="mobile-nav-link py-3 text-sm font-medium text-chrome-500 hover:text-white transition-colors border-b border-white/5">Gallery</a>
+            <a href="about.html" class="mobile-nav-link py-3 text-sm font-medium text-white border-b border-white/5">About</a>
+            <a href="faq.html" class="mobile-nav-link py-3 text-sm font-medium text-chrome-500 hover:text-white transition-colors border-b border-white/5">FAQ</a>
+            <a href="contact.html" class="mobile-nav-link py-3 text-sm font-medium text-chrome-500 hover:text-white transition-colors border-b border-white/5">Contact</a>
+            <a href="contact.html#enquire" class="mobile-nav-link py-3 text-sm font-medium text-chrome-500 hover:text-white transition-colors">Enquire</a>
+        </nav>
+        <div class="px-6 py-5 border-t border-white/10">
+            <div class="flex items-center gap-5 mb-4">
+                <a href="wishlist.html" class="text-chrome-500 hover:text-white transition-colors relative">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                    <span class="absolute -top-2 -right-2 bg-chrome-300 text-navy-950 text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
+                </a>
+                <a href="cart.html" class="text-chrome-500 hover:text-white transition-colors relative">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+                    <span class="absolute -top-2 -right-2 bg-chrome-300 text-navy-950 text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">3</span>
+                </a>
+            </div>
+            <p class="text-xs text-chrome-500">&copy; 2025 PLUNGE by F.S. Enterprises</p>
+        </div>
+    </div>
+
+    <!-- ===== 1. BRAND STORY ===== -->
+    <section class="py-20 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Left Text -->
+                <div class="reveal-left">
+                    <span class="inline-block text-xs font-semibold tracking-[0.3em] uppercase text-chrome-500 mb-4">The Legacy</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-[3.4rem] leading-tight font-serif font-medium text-navy-900 mb-8">
+                        <span class="italic">F.S. Enterprises proudly introduces</span><br>Plunge.
+                    </h1>
+                    <div class="space-y-5 text-gray-500 leading-relaxed">
+                        <p>
+                            Born from a legacy of craftsmanship and an unwavering commitment to quality, F.S. Enterprises has spent years perfecting the art of premium bathroom fixtures. With decades of industry expertise, we understand that a faucet is not merely a functional element — it is the centerpiece of a bathroom's identity.
+                        </p>
+                        <p>
+                            Plunge was conceived with a singular obsession: to create faucets that marry engineering precision with sculptural beauty. Every curve, every finish, every mechanism is meticulously designed to deliver an experience that transcends the ordinary. We believe that luxury is found in the details — in the smoothness of a lever's turn, in the consistency of water flow, in the mirror-like perfection of our chrome plating.
+                        </p>
+                        <p>
+                            Our philosophy is rooted in transforming bathrooms into modern sanctuaries. A Plunge faucet does not just deliver water — it delivers a moment of calm, a touch of elegance, a statement of refined taste. From contemporary minimalist designs to timeless classics, each piece in our collection is crafted to elevate the everyday into the extraordinary.
+                        </p>
+                    </div>
+                </div>
+                <!-- Right Image -->
+                <div class="reveal-right relative">
+                    <div class="absolute inset-0 bg-chrome-300/40 rounded-2xl translate-x-4 translate-y-4"></div>
+                    <img src="assets/images/faucet-bathroom.svg" alt="Premium bathroom design" class="relative rounded-2xl w-full h-[420px] md:h-[520px] object-cover shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 2. OUR PROMISE ===== -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="assets/images/water-texture.svg" alt="" class="w-full h-full object-cover opacity-20 mix-blend-luminosity">
+            <div class="absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-900/95 to-navy-900"></div>
+        </div>
+        <div class="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
+            <div class="reveal-up">
+                <div class="w-16 h-16 mx-auto mb-8 rounded-full bg-white/10 flex items-center justify-center">
+                    <svg class="w-8 h-8 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+                    </svg>
+                </div>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-tight mb-8">
+                    <span class="italic">Built on Trust</span> and Honesty.
+                </h2>
+                <p class="text-chrome-500 text-lg leading-relaxed max-w-2xl mx-auto">
+                    "Every Plunge product is a promise — a promise of uncompromising quality, transparent practices, and a dedication to creating fixtures that stand the test of time. We don't just build faucets; we build relationships rooted in trust, delivering excellence that our customers can see, feel, and depend on."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 3. MISSION, VISION, VALUES ===== -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-up">
+                <span class="text-xs font-semibold tracking-[0.3em] uppercase text-chrome-500 mb-4 block">What Drives Us</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-navy-900">Mission, Vision & Values</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Mission -->
+                <div class="card-lift bg-gray-50 rounded-2xl p-8 md:p-10 text-center reveal-up">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-7 h-7 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy-900 mb-4">Our Mission</h3>
+                    <p class="text-gray-500 leading-relaxed">To redefine modern bathroom aesthetics by delivering premium-quality faucets that blend innovative design with lasting durability, making luxury accessible to every home.</p>
+                </div>
+                <!-- Vision -->
+                <div class="card-lift bg-gray-50 rounded-2xl p-8 md:p-10 text-center reveal-up" style="transition-delay:0.1s">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-7 h-7 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy-900 mb-4">Our Vision</h3>
+                    <p class="text-gray-500 leading-relaxed">To become the most trusted name in premium bathroom fixtures across India and beyond, setting global benchmarks for quality, design, and customer satisfaction.</p>
+                </div>
+                <!-- Values -->
+                <div class="card-lift bg-gray-50 rounded-2xl p-8 md:p-10 text-center reveal-up" style="transition-delay:0.2s">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-7 h-7 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy-900 mb-4">Core Values</h3>
+                    <p class="text-gray-500 leading-relaxed">Integrity, Innovation, and Excellence form the foundation of everything we do. We are committed to ethical practices, continuous improvement, and delivering nothing but the best.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4. COMPANY TIMELINE ===== -->
+    <section class="py-24 bg-gray-50 pattern-overlay relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 reveal-up">
+                <span class="text-xs font-semibold tracking-[0.3em] uppercase text-chrome-500 mb-4 block">Milestones</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-navy-900">Our Journey</h2>
+            </div>
+            <div class="relative">
+                <div class="timeline-line hidden md:block"></div>
+                <div class="space-y-12 md:space-y-0">
+
+                    <!-- 2015 -->
+                    <div class="md:grid md:grid-cols-2 md:gap-x-20 mb-12 reveal-up">
+                        <div class="md:text-right md:pr-12 md:border-r-0 md:border-b-0 relative">
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-navy-900 text-white text-sm font-semibold mb-3">2015</span>
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">F.S. Enterprises Founded</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">A vision took shape. F.S. Enterprises was established with a mission to bring world-class bathroom fixtures to the Indian market, combining traditional craftsmanship with modern innovation.</p>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+
+                    <!-- 2017 -->
+                    <div class="md:grid md:grid-cols-2 md:gap-x-20 mb-12 reveal-up">
+                        <div class="hidden md:block"></div>
+                        <div class="md:pl-12 relative">
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-navy-900 text-white text-sm font-semibold mb-3">2017</span>
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">Plunge Brand Launched</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">The Plunge brand was born — a dedicated luxury faucets line designed to redefine bathroom elegance. The first collection of 15 premium designs hit the market to widespread acclaim.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2019 -->
+                    <div class="md:grid md:grid-cols-2 md:gap-x-20 mb-12 reveal-up">
+                        <div class="md:text-right md:pr-12 relative">
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-navy-900 text-white text-sm font-semibold mb-3">2019</span>
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">Expanded to 50+ Products</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Riding the wave of success, Plunge expanded its portfolio to over 50 products — covering basin mixers, shower systems, kitchen faucets, and accessories across multiple finish options.</p>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+
+                    <!-- 2021 -->
+                    <div class="md:grid md:grid-cols-2 md:gap-x-20 mb-12 reveal-up">
+                        <div class="hidden md:block"></div>
+                        <div class="md:pl-12 relative">
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-navy-900 text-white text-sm font-semibold mb-3">2021</span>
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">State-of-the-Art Facility</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">A new 10,000 sq. ft. manufacturing facility was inaugurated, equipped with advanced CNC machinery, automated electroplating lines, and in-house testing laboratories.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="md:grid md:grid-cols-2 md:gap-x-20 mb-12 reveal-up">
+                        <div class="md:text-right md:pr-12 relative">
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-navy-900 text-white text-sm font-semibold mb-3">2023</span>
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">1000+ Happy Customers</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">A landmark milestone — Plunge celebrated serving over 1,000 satisfied customers across residential and commercial projects, earning a reputation for reliability and excellence.</p>
+                        </div>
+                        <div class="hidden md:block"></div>
+                    </div>
+
+                    <!-- 2025 -->
+                    <div class="md:grid md:grid-cols-2 md:gap-x-20 reveal-up">
+                        <div class="hidden md:block"></div>
+                        <div class="md:pl-12 relative">
+                            <span class="inline-block px-4 py-1.5 rounded-full bg-navy-900 text-white text-sm font-semibold mb-3">2025</span>
+                            <h4 class="text-lg font-semibold text-navy-900 mb-2">International Expansion</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Plunge marks a new chapter — expanding into international markets, bringing Indian-made luxury fixtures to a global stage with distributors and partners across multiple countries.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 5. WHY CHOOSE US ===== -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-up">
+                <span class="text-xs font-semibold tracking-[0.3em] uppercase text-chrome-500 mb-4 block">Why Us</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-navy-900">The Plunge Advantage</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1 -->
+                <div class="advantage-card group p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300 reveal-up">
+                    <div class="adv-icon w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-navy-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-navy-900 mb-2">A Value Brand</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Premium quality at honest prices. We believe luxury shouldn't be exclusive — every Plunge product delivers exceptional value without compromise.</p>
+                </div>
+                <!-- 2 -->
+                <div class="advantage-card group p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300 reveal-up" style="transition-delay:0.1s">
+                    <div class="adv-icon w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-navy-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.384 3.18A1.125 1.125 0 014.5 17.357V6.643a1.125 1.125 0 011.536-1.013l5.384 3.18m0 6.36zm0-6.36l5.384 3.18A1.125 1.125 0 0119.5 10.643V6.643m0 10.714V10.643m0 4.527l1.536.888A1.125 1.125 0 0021 15.048v-6.096a1.125 1.125 0 00-1.536-1.013l-1.536.888"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-navy-900 mb-2">Highly Durable</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Built to last generations. Our faucets undergo rigorous testing for durability, corrosion resistance, and performance longevity that exceeds industry standards.</p>
+                </div>
+                <!-- 3 -->
+                <div class="advantage-card group p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300 reveal-up" style="transition-delay:0.2s">
+                    <div class="adv-icon w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-navy-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-navy-900 mb-2">Premium Brass Used</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">We use only the highest-grade brass alloys for our faucet bodies — ensuring superior strength, natural antibacterial properties, and a premium weight in hand.</p>
+                </div>
+                <!-- 4 -->
+                <div class="advantage-card group p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300 reveal-up">
+                    <div class="adv-icon w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-navy-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-navy-900 mb-2">High Quality</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Every faucet passes through 12+ quality checkpoints. From multi-layer chrome plating to ceramic disc cartridges, quality is woven into every component.</p>
+                </div>
+                <!-- 5 -->
+                <div class="advantage-card group p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300 reveal-up" style="transition-delay:0.1s">
+                    <div class="adv-icon w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-navy-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L12 12.75l-5.571-3m11.142 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l4.179 2.25"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-navy-900 mb-2">Wide Range of Products</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">From single-lever basin mixers to thermostatic shower systems, our extensive collection caters to every bathroom style and configuration imaginable.</p>
+                </div>
+                <!-- 6 -->
+                <div class="advantage-card group p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300 reveal-up" style="transition-delay:0.2s">
+                    <div class="adv-icon w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-navy-900" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-navy-900 mb-2">Trusted Customer Service</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Our dedicated support team ensures a seamless experience from selection to installation and beyond — because your satisfaction is our greatest achievement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 6. MANUFACTURING EXCELLENCE ===== -->
+    <section class="py-32 lg:py-48 parallax-bg relative overflow-hidden" style="background-image: url('assets/images/factory.svg');">
+        <div class="absolute inset-0 bg-navy-950/85"></div>
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <div class="reveal-up">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-snug mb-6">
+                    State-of-the-art<br>
+                    <span class="italic text-chrome-300">Manufacturing and R&D Setup</span>
+                </h2>
+                <div class="w-24 h-px bg-chrome-500 mx-auto mt-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 7. QUALITY ASSURANCE ===== -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Left Text -->
+                <div class="reveal-left order-2 lg:order-1">
+                    <span class="text-xs font-semibold tracking-[0.3em] uppercase text-chrome-500 mb-4 block">Quality First</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-navy-900 mb-8">Uncompromising Quality Assurance</h2>
+                    <div class="space-y-5 text-gray-500 leading-relaxed">
+                        <p>
+                            At Plunge, quality isn't a department — it's a culture. Every faucet undergoes a rigorous multi-stage testing process before it earns the Plunge name. Our commitment begins with raw material selection and continues through every stage of manufacturing.
+                        </p>
+                        <p>
+                            Our multi-layer chrome plating process involves electro-deposition of copper, nickel, and chromium layers to achieve a finish that resists tarnishing, scratching, and corrosion — maintaining its mirror-like brilliance for years.
+                        </p>
+                        <p>
+                            We use precision-engineered ceramic disc cartridges sourced from industry leaders, ensuring drip-free operation and smooth lever action rated for over 500,000 cycles. Each unit undergoes high-pressure water testing at 16 bar — double the standard operating pressure — to guarantee leak-proof performance.
+                        </p>
+                        <p>
+                            Our products are also subjected to 48-hour salt spray testing in accordance with international standards, validating their resilience against the harshest environmental conditions. This relentless pursuit of perfection is what makes every Plunge faucet a benchmark in the industry.
+                        </p>
+                    </div>
+                </div>
+                <!-- Right Image -->
+                <div class="reveal-right order-1 lg:order-2">
+                    <img src="assets/images/faucet-bathroom.svg" alt="Quality manufacturing process" class="rounded-2xl w-full h-[400px] md:h-[480px] object-cover shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 8. INFRASTRUCTURE ===== -->
+    <section class="py-24 bg-gray-50 pattern-overlay relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-up">
+                <span class="text-xs font-semibold tracking-[0.3em] uppercase text-chrome-500 mb-4 block">Our Setup</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-navy-900">Our Infrastructure</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Manufacturing Unit -->
+                <div class="card-lift bg-white rounded-2xl p-8 text-center shadow-sm reveal-up">
+                    <div class="w-14 h-14 mx-auto mb-6 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-navy-900 mb-3">Manufacturing Unit</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">A 10,000 sq. ft. state-of-the-art facility with advanced CNC machines, automated die-casting, and precision engineering capabilities.</p>
+                </div>
+                <!-- R&D Laboratory -->
+                <div class="card-lift bg-white rounded-2xl p-8 text-center shadow-sm reveal-up" style="transition-delay:0.1s">
+                    <div class="w-14 h-14 mx-auto mb-6 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-navy-900 mb-3">R&D Laboratory</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">An in-house research and development lab equipped with advanced testing equipment for flow dynamics, pressure endurance, and finish analysis.</p>
+                </div>
+                <!-- Quality Control -->
+                <div class="card-lift bg-white rounded-2xl p-8 text-center shadow-sm reveal-up" style="transition-delay:0.2s">
+                    <div class="w-14 h-14 mx-auto mb-6 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-navy-900 mb-3">Quality Control</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">ISO-certified quality control processes with 12+ inspection checkpoints ensuring every product meets the highest international standards.</p>
+                </div>
+                <!-- Warehousing -->
+                <div class="card-lift bg-white rounded-2xl p-8 text-center shadow-sm reveal-up" style="transition-delay:0.3s">
+                    <div class="w-14 h-14 mx-auto mb-6 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+                    </div>
+                    <h4 class="text-lg font-semibold text-navy-900 mb-3">Warehousing</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Climate-controlled storage facilities ensuring product integrity, with organized inventory management for swift order fulfillment and delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 9. AWARDS & CERTIFICATES ===== -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-up">
+                <span class="text-xs font-semibold tracking-[0.3em] uppercase text-chrome-500 mb-4 block">Accolades</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-navy-900">Recognition & Certifications</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1 -->
+                <div class="award-badge flex items-center gap-4 p-6 rounded-2xl border border-gray-100 bg-gray-50 reveal-up">
+                    <div class="w-12 h-12 flex-shrink-0 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-navy-900">ISO 9001:2015 Certified</h5>
+                        <p class="text-gray-500 text-sm">Quality management system certified</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="award-badge flex items-center gap-4 p-6 rounded-2xl border border-gray-100 bg-gray-50 reveal-up" style="transition-delay:0.1s">
+                    <div class="w-12 h-12 flex-shrink-0 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0116.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228m0 0a6.003 6.003 0 01-4.02 1.487M13.73 9.728a6.003 6.003 0 01-4.02-1.487m0 0A6.02 6.02 0 019.73 8.242m4 1.487a6.02 6.02 0 014.02 1.487"/></svg>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-navy-900">ISI Mark Certified</h5>
+                        <p class="text-gray-500 text-sm">Bureau of Indian Standards approved</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="award-badge flex items-center gap-4 p-6 rounded-2xl border border-gray-100 bg-gray-50 reveal-up" style="transition-delay:0.2s">
+                    <div class="w-12 h-12 flex-shrink-0 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0116.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228m0 0a6.003 6.003 0 01-4.02 1.487M13.73 9.728a6.003 6.003 0 01-4.02-1.487m0 0A6.02 6.02 0 019.73 8.242m4 1.487a6.02 6.02 0 014.02 1.487"/></svg>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-navy-900">Best Bathroom Brand 2024</h5>
+                        <p class="text-gray-500 text-sm">Industry excellence award</p>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="award-badge flex items-center gap-4 p-6 rounded-2xl border border-gray-100 bg-gray-50 reveal-up">
+                    <div class="w-12 h-12 flex-shrink-0 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-navy-900">Excellence in Manufacturing</h5>
+                        <p class="text-gray-500 text-sm">Recognized for manufacturing prowess</p>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="award-badge flex items-center gap-4 p-6 rounded-2xl border border-gray-100 bg-gray-50 reveal-up" style="transition-delay:0.1s">
+                    <div class="w-12 h-12 flex-shrink-0 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-navy-900">Green Building Council Member</h5>
+                        <p class="text-gray-500 text-sm">Sustainable building practices</p>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="award-badge flex items-center gap-4 p-6 rounded-2xl border border-gray-100 bg-gray-50 reveal-up" style="transition-delay:0.2s">
+                    <div class="w-12 h-12 flex-shrink-0 rounded-full bg-navy-900 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5"/></svg>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-navy-900">Make in India Champion</h5>
+                        <p class="text-gray-500 text-sm">Proudly manufactured in India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 10. STATISTICS ===== -->
+    <section class="py-20 bg-navy-950 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-chrome-400/5 blur-3xl"></div>
+        </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+                <div class="text-center reveal-up">
+                    <div class="stat-glow rounded-2xl p-6">
+                        <span class="block text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-2">10+</span>
+                        <span class="text-chrome-500 text-sm tracking-wide uppercase">Years of Excellence</span>
+                    </div>
+                </div>
+                <div class="text-center reveal-up" style="transition-delay:0.1s">
+                    <div class="stat-glow rounded-2xl p-6">
+                        <span class="block text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-2">50+</span>
+                        <span class="text-chrome-500 text-sm tracking-wide uppercase">Premium Products</span>
+                    </div>
+                </div>
+                <div class="text-center reveal-up" style="transition-delay:0.2s">
+                    <div class="stat-glow rounded-2xl p-6">
+                        <span class="block text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-2">1000+</span>
+                        <span class="text-chrome-500 text-sm tracking-wide uppercase">Happy Customers</span>
+                    </div>
+                </div>
+                <div class="text-center reveal-up" style="transition-delay:0.3s">
+                    <div class="stat-glow rounded-2xl p-6">
+                        <span class="block text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-2">100%</span>
+                        <span class="text-chrome-500 text-sm tracking-wide uppercase">Satisfaction Rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 11. TRUST BADGES ===== -->
+    <section class="py-24 bg-navy-950 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <div class="reveal-up">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 mb-12">
+                    <!-- Made in India -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+                        </div>
+                        <span class="text-chrome-300 font-semibold tracking-wide">Made in India</span>
+                    </div>
+                    <!-- Divider -->
+                    <div class="hidden sm:block w-px h-12 bg-white/10"></div>
+                    <div class="block sm:hidden w-12 h-px bg-white/10"></div>
+                    <!-- 100% Satisfaction -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-chrome-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
+                        </div>
+                        <span class="text-chrome-300 font-semibold tracking-wide">100% Satisfaction</span>
+                    </div>
+                </div>
+                <div class="w-16 h-px bg-chrome-500/30 mx-auto mb-8"></div>
+                <p class="font-serif italic text-2xl md:text-3xl text-chrome-400 leading-relaxed">
+                    "Enroute to Service and Eminence"
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 12. CTA ===== -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center reveal-up">
+            <h2 class="text-3xl md:text-4xl font-serif text-navy-900 mb-4">Experience the Plunge Difference</h2>
+            <p class="text-gray-500 mb-10 max-w-xl mx-auto">Discover why architects, interior designers, and homeowners across the country choose Plunge for their most important projects.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="collections.html" class="inline-flex items-center px-8 py-3.5 bg-navy-900 text-white text-sm font-semibold rounded-full hover:bg-navy-800 transition-colors tracking-wide">
+                    Explore Our Collections
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                </a>
+                <a href="contact.html" class="inline-flex items-center px-8 py-3.5 border-2 border-navy-900 text-navy-900 text-sm font-semibold rounded-full hover:bg-navy-900 hover:text-white transition-colors tracking-wide">
+                    Get in Touch
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 13. FOOTER ===== -->
+    <footer class="bg-navy-950 text-chrome-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+                <!-- Brand -->
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 mb-6 group">
+                        <svg class="w-7 h-7 text-chrome-400 group-hover:text-white transition-colors" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4C20 4 8 18 8 26C8 32.627 13.373 38 20 38C26.627 38 32 32.627 32 26C32 18 20 4 20 4Z" fill="currentColor" opacity="0.2"/>
+                            <path d="M20 4C20 4 8 18 8 26C8 32.627 13.373 38 20 38C26.627 38 32 32.627 32 26C32 18 20 4 20 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 12V28" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M14 20C14 20 17 23 20 23C23 23 26 20 26 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <span class="text-lg font-bold tracking-[0.2em] text-white">PLUNGE</span>
+                    </a>
+                    <p class="text-sm leading-relaxed mb-6">Premium luxury faucets by F.S. Enterprises. Redefining bathroom elegance with precision-crafted fixtures that blend form and function.</p>
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors" aria-label="Facebook">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors" aria-label="YouTube">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Collections -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-6">Collections</h4>
+                    <ul class="space-y-3">
+                        <li><a href="collections.html" class="text-sm hover:text-white transition-colors">Basin Mixers</a></li>
+                        <li><a href="collections.html" class="text-sm hover:text-white transition-colors">Kitchen Faucets</a></li>
+                        <li><a href="collections.html" class="text-sm hover:text-white transition-colors">Shower Systems</a></li>
+                        <li><a href="collections.html" class="text-sm hover:text-white transition-colors">Bath Accessories</a></li>
+                        <li><a href="collections.html" class="text-sm hover:text-white transition-colors">Angle Valves</a></li>
+                        <li><a href="collections.html" class="text-sm hover:text-white transition-colors">Diverters</a></li>
+                    </ul>
+                </div>
+                <!-- Company -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-sm hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="gallery.html" class="text-sm hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="faq.html" class="text-sm hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="contact.html" class="text-sm hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="contact.html#enquire" class="text-sm hover:text-white transition-colors">Enquiry</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm tracking-wider uppercase mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+                            <span class="text-sm">F.S. Enterprises<br>India</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+                            <span class="text-sm">+91 XXXXX XXXXX</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                            <span class="text-sm">info@plunge.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom bar -->
+        <div class="border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <p class="text-xs text-chrome-500">&copy; 2025 PLUNGE by F.S. Enterprises. All rights reserved.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="text-xs hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-xs hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
