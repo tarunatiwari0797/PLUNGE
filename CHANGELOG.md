@@ -35,6 +35,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Lazy loading (loading="lazy") on all non-hero images across all pages
 
 ### Fixed
+- **Grid Card Button Alignment:** Fixed button positioning in product grid cards across index.html (Featured Categories, Product Highlights), collections.html, cart.html (You May Also Like), product-details.html (Related Products), and wishlist.html. Changed card layout to `flex flex-col h-full` with `mt-auto` on price/button elements so buttons always align at bottom regardless of content length.
+- **Product Data Corrections:** Cross-checked all product data against official Plunge_Product_List.xlsx. Fixed incorrect product codes, names, and prices across 8 pages (collections.html, index.html, cart.html, checkout.html, wishlist.html, product-details.html, search.html, plunge_collections.html, plunge_luxury_faucets.html). Major corrections include:
+  - Collections page: All 8 category tabs updated (Diamond, Opal Prime, Cosmo, Quba, Topaz, Vignet, Mini Opal, Accessories) with correct codes (TOP-, VIP-, MIP- prefixes), accurate prices, and proper product names
+  - Product Highlights: Corrected Opal Prime Bib Cock ₹820→₹780, Diamond Long Body ₹850→₹840, Cosmo Bib Cock CO-FS-01 ₹950
+  - Cart/Checkout subtotals recalculated to match corrected prices
+  - Search JS product array rewritten with accurate data
+- **Quantity Minus Character:** Fixed corrupted `ˆ’` character to proper minus sign `−` in product-details.html quantity button
+- **Meta Title Separator:** Changed `|` to `-` in og:title and twitter:title for consistency with `<title>` tag
 - **Mobile Menu Bug (cart.html):** Added missing `fixed` positioning and sizing classes to `#mobile-menu` and `#mobile-overlay` elements
 - **Search Modal JS Bug:** Fixed broken template literals in performSearch() - the entire search results HTML was rendering as empty `<p>` tags due to missing backtick delimiters. Rewrote template to use string concatenation.
 - **Mobile Menu ID Inconsistency:** main.js now checks for both `hamburger-btn` and `mobile-menu-btn` IDs, fixing mobile menu on product-details.html

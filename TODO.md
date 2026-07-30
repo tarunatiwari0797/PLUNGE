@@ -12,6 +12,17 @@ All pending tasks for the PLUNGE E-Commerce Website.
 - [x] Fix mobile menu ID inconsistency (hamburger-btn vs mobile-menu-btn)
 - [x] Fix double-encoded UTF-8 characters (rupee symbol and others) across 10 files
 - [x] Fix variable name conflicts in main.js (searchInput collision)
+- [x] Fix grid card button alignment (flex layout with mt-auto) across all pages
+- [x] Fix corrupted minus sign character in quantity button (product-details.html)
+- [x] Fix meta title separator consistency (| → -)
+
+### Product Data Verification
+- [x] Cross-check all product data against Plunge_Product_List.xlsx
+- [x] Correct product codes, names, and prices on collections.html (all 8 category tabs)
+- [x] Fix product data on index.html, cart.html, checkout.html, wishlist.html
+- [x] Fix product data on product-details.html related products
+- [x] Rewrite search.js product array with accurate data
+- [x] Update plunge_collections.html and plunge_luxury_faucets.html with correct data
 
 ### Phase 2: Search
 - [x] Create search modal with animations, backdrop blur, ESC close, focus trap

@@ -3,6 +3,60 @@
    Premium E-Commerce Website
    ======================================== */
 
+/* ---- Page Status & Client Preview Controller ---- */
+(function() {
+    var page = window.location.pathname.split('/').pop() || 'index.html';
+    var ready = ['index.html', 'product-details.html', 'collections.html', 'cart.html', 'wishlist.html'];
+
+    // Redirect incomplete pages to homepage
+    if (ready.indexOf(page) === -1 && page.indexOf('.html') !== -1) {
+        window.location.replace('index.html');
+        return;
+    }
+
+    // Show preview badge on completed pages
+    document.addEventListener('DOMContentLoaded', function() {
+        var badge = document.createElement('div');
+        badge.id = 'preview-badge';
+        Object.assign(badge.style, {
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            zIndex: '9999',
+            background: 'rgba(15,23,42,0.92)',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            color: '#fff',
+            fontSize: '11px',
+            padding: '10px 16px',
+            borderRadius: '10px',
+            boxShadow: '0 4px 24px rgba(0,0,0,0.2)',
+            maxWidth: '280px',
+            lineHeight: '1.5',
+            cursor: 'pointer',
+            transition: 'all 0.3s',
+            border: '1px solid rgba(255,255,255,0.06)',
+            fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif'
+        });
+        badge.innerHTML = '<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><span style="width:5px;height:5px;border-radius:50%;background:#22c55e;flex-shrink:0;animation:badge-pulse 1.5s infinite"></span><span style="font-weight:600;font-size:10px;letter-spacing:1px;opacity:0.6">UNDER DEVELOPMENT</span></div><div style="font-size:11px;color:rgba(255,255,255,0.75)">Progress preview &mdash; QA and finishing touches underway. Your feedback is welcome!</div>';
+        document.body.appendChild(badge);
+
+        badge.addEventListener('click', function() {
+            badge.style.opacity = '0';
+            badge.style.transform = 'translateY(8px) scale(0.96)';
+            setTimeout(function() { badge.remove(); }, 300);
+        });
+
+        // Inject keyframe if not already present
+        if (!document.getElementById('badge-keyframes')) {
+            var s = document.createElement('style');
+            s.id = 'badge-keyframes';
+            s.textContent = '@keyframes badge-pulse{0%,100%{opacity:1}50%{opacity:0.3}}';
+            document.head.appendChild(s);
+        }
+    });
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ---- Scroll Reveal Animations ---- */
@@ -338,12 +392,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const targetId = link.dataset.tab;
                 tabPanes.forEach(function(pane) {
                     if (pane.id === targetId) {
-                        pane.classList.remove('hidden');
-                        void pane.offsetWidth;
+                        pane.classList.add('active');
                         pane.classList.remove('opacity-0');
                         pane.classList.add('opacity-100');
                     } else {
-                        pane.classList.add('hidden', 'opacity-0');
+                        pane.classList.remove('active');
+                        pane.classList.add('opacity-0');
                         pane.classList.remove('opacity-100');
                     }
                 });
