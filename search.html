@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -14,8 +14,12 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: { 800: '#1a2235', 900: '#0f1423', 950: '#080b14' },
-                        chrome: { 300: '#e2e8f0', 400: '#cbd5e1', 500: '#94a3b8' }
+                        brand: '#01773D',
+                        gold: '#C9A227',
+                        ivory: '#F5F0E6',
+                        charcoal: '#1A1A1A',
+                        beige: '#E8DCC8',
+                        navy: '#0B2545'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -42,32 +46,30 @@
     <a href="#main-content" class="skip-nav">Skip to main content</a>
 
     <!-- HEADER -->
-    <header id="main-content" role="banner" class="fixed top-0 left-0 right-0 bg-navy-950 z-50 transition-all duration-300">
+    <header id="main-content" role="banner" class="fixed top-0 left-0 right-0 bg-ivory z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center gap-2.5">
-                    <svg class="w-8 h-8 text-chrome" viewBox="0 0 40 40" fill="none">
-                        <path d="M20 2C20 2 6 18 6 26C6 33.732 12.268 38 20 38C27.732 38 34 33.732 34 26C34 18 20 2 20 2Z" fill="url(#dropGrad)" stroke="currentColor" stroke-width="1.5"/>
-                        <defs><linearGradient id="dropGrad" x1="20" y1="2" x2="20" y2="38" gradientUnits="userSpaceOnUse"><stop stop-color="#cbd5e1"/><stop offset="1" stop-color="#0f1423"/></linearGradient></defs>
-                    </svg>
-                    <span class="font-serif text-2xl font-bold tracking-wider text-white">PLUNGE</span>
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-110 text-charcoal" viewBox="0 0 40 40" fill="none"><path d="M20 2C20 2 6 18 6 26C6 33.732 12.268 38 20 38C27.732 38 34 33.732 34 26C34 18 20 2 20 2Z" fill="#01773D" stroke="currentColor" stroke-width="1.5"/><path d="M20 8C20 8 12 20 12 25C12 29.418 15.582 32 20 32" stroke="#C9A227" stroke-width="1" stroke-linecap="round"/></svg>
+                    <span class="font-serif text-xl font-bold tracking-wider text-charcoal">PLUNGE</span>
                 </a>
                 <nav class="hidden lg:flex items-center gap-8">
-                    <a href="index.html" class="text-sm font-medium text-chrome-400 hover:text-white transition-colors">Home</a>
-                    <a href="collections.html" class="text-sm font-medium text-chrome-400 hover:text-white transition-colors">Collections</a>
-                    <a href="gallery.html" class="text-sm font-medium text-chrome-400 hover:text-white transition-colors">Gallery</a>
-                    <a href="about.html" class="text-sm font-medium text-chrome-400 hover:text-white transition-colors">About</a>
-                    <a href="faq.html" class="text-sm font-medium text-chrome-400 hover:text-white transition-colors">FAQ</a>
-                    <a href="contact.html" class="text-sm font-medium text-chrome-400 hover:text-white transition-colors">Contact</a>
+                    <a href="index.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Home</a>
+                    <a href="collections.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Collections</a>
+                    <a href="gallery.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Gallery</a>
+                    <a href="about.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">About</a>
+                    <a href="faq.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">FAQ</a>
+                    <a href="contact.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Contact</a>
                 </nav>
                 <div class="flex items-center gap-4">
-                    <a href="wishlist.html" class="relative text-chrome-400 hover:text-white transition-colors" aria-label="Wishlist">
+                    <a href="wishlist.html" class="relative text-gray-600 hover:text-charcoal transition-colors" aria-label="Wishlist">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </a>
-                    <a href="cart.html" class="relative text-chrome-400 hover:text-white transition-colors" aria-label="Cart">
+                    <a href="cart.html" class="relative text-gray-600 hover:text-charcoal transition-colors" aria-label="Cart">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
                     </a>
-                    <button id="hamburger-btn" class="lg:hidden text-chrome-400 hover:text-white transition-colors" aria-label="Menu">
+                    <a href="contact.html#enquire" class="hidden md:inline-flex items-center justify-center px-5 py-2 bg-brand text-white text-xs font-semibold uppercase tracking-wider rounded border border-gold/60 hover:bg-navy transition-colors duration-300">Enquire</a>
+                    <button id="hamburger-btn" class="lg:hidden text-gray-600 hover:text-charcoal transition-colors" aria-label="Menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
                     </button>
                 </div>
@@ -76,27 +78,24 @@
     </header>
 
     <!-- MOBILE MENU -->
-    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/60 z-[60]"></div>
-    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 bg-navy-950 z-[70] p-8 overflow-y-auto no-scrollbar">
+    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/40 z-[60]"></div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-ivory z-[70] p-8 overflow-y-auto no-scrollbar">
         <div class="flex items-center justify-between mb-10">
             <a href="index.html" class="flex items-center gap-2">
-                <svg class="w-7 h-7 text-chrome" viewBox="0 0 40 40" fill="none">
-                    <path d="M20 2C20 2 6 18 6 26C6 33.732 12.268 38 20 38C27.732 38 34 33.732 34 26C34 18 20 2 20 2Z" fill="url(#dropGrad2)" stroke="currentColor" stroke-width="1.5"/>
-                    <defs><linearGradient id="dropGrad2" x1="20" y1="2" x2="20" y2="38" gradientUnits="userSpaceOnUse"><stop stop-color="#cbd5e1"/><stop offset="1" stop-color="#0f1423"/></linearGradient></defs>
-                </svg>
-                <span class="font-serif text-xl font-bold text-white">PLUNGE</span>
+                <svg class="w-7 h-7 transition-transform duration-300 group-hover:scale-110 text-charcoal" viewBox="0 0 40 40" fill="none"><path d="M20 2C20 2 6 18 6 26C6 33.732 12.268 38 20 38C27.732 38 34 33.732 34 26C34 18 20 2 20 2Z" fill="#01773D" stroke="currentColor" stroke-width="1.5"/><path d="M20 8C20 8 12 20 12 25C12 29.418 15.582 32 20 32" stroke="#C9A227" stroke-width="1" stroke-linecap="round"/></svg>
+                <span class="font-serif text-xl font-bold text-charcoal">PLUNGE</span>
             </a>
-            <button id="mobile-close" class="text-white/60 hover:text-white transition-colors" aria-label="Close menu">
+            <button id="mobile-close" class="text-charcoal/60 hover:text-charcoal transition-colors" aria-label="Close menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
         </div>
         <nav class="flex flex-col gap-1">
-            <a href="index.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-all">Home</a>
-            <a href="collections.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-all">Collections</a>
-            <a href="gallery.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-all">Gallery</a>
-            <a href="about.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-all">About</a>
-            <a href="faq.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-all">FAQ</a>
-            <a href="contact.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-all">Contact</a>
+            <a href="index.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-charcoal/80 hover:text-charcoal hover:bg-beige rounded-lg transition-all">Home</a>
+            <a href="collections.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-charcoal/80 hover:text-charcoal hover:bg-beige rounded-lg transition-all">Collections</a>
+            <a href="gallery.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-charcoal/80 hover:text-charcoal hover:bg-beige rounded-lg transition-all">Gallery</a>
+            <a href="about.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-charcoal/80 hover:text-charcoal hover:bg-beige rounded-lg transition-all">About</a>
+            <a href="faq.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-charcoal/80 hover:text-charcoal hover:bg-beige rounded-lg transition-all">FAQ</a>
+            <a href="contact.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-charcoal/80 hover:text-charcoal hover:bg-beige rounded-lg transition-all">Contact</a>
         </nav>
     </div>
 
@@ -104,9 +103,9 @@
     <section class="bg-white border-b border-gray-100 pt-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <nav class="flex items-center gap-2 text-sm text-gray-500" aria-label="Breadcrumb">
-                <a href="index.html" class="hover:text-navy-900 transition-colors">Home</a>
+                <a href="index.html" class="hover:text-charcoal transition-colors">Home</a>
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
-                <span class="text-navy-900 font-medium">Search</span>
+                <span class="text-charcoal font-medium">Search</span>
             </nav>
         </div>
     </section>
@@ -115,13 +114,13 @@
     <section class="py-12 lg:py-16">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
-                <h1 class="font-serif text-3xl lg:text-4xl font-bold text-navy-950 mb-3">Search Our Collection</h1>
+                <h1 class="font-serif text-3xl lg:text-4xl font-bold text-charcoal mb-3">Search Our Collection</h1>
                 <p class="text-gray-500 font-light">Find premium faucets, bathroom fixtures, and kitchen accessories</p>
             </div>
 
             <!-- Search Input -->
             <div class="relative mb-8">
-                <div class="flex items-center bg-white border-2 border-gray-200 rounded-2xl overflow-hidden focus-within:border-navy-900 transition-colors shadow-sm">
+                <div class="flex items-center bg-white border-2 border-gray-200 rounded-2xl overflow-hidden focus-within:border-gray-300 transition-colors shadow-sm">
                     <svg class="w-5 h-5 text-gray-400 ml-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="m21 21-4.35-4.35"/></svg>
                     <input id="searchPageInput" type="text" placeholder="Search by product name, collection, or category..." class="w-full px-4 py-5 text-lg bg-transparent text-gray-800 placeholder-gray-400 focus:outline-none" autocomplete="off" autofocus>
                     <button id="clearSearch" class="hidden px-4 py-5 text-gray-400 hover:text-gray-600 transition-colors" aria-label="Clear search">
@@ -132,12 +131,12 @@
 
             <!-- Filter Tags -->
             <div class="flex flex-wrap gap-2 mb-8 justify-center">
-                <button class="search-filter-tag active px-4 py-2 text-xs font-semibold rounded-full border border-gray-200 bg-navy-900 text-white transition-all hover:bg-navy-800" data-filter="all">All Products</button>
-                <button class="search-filter-tag px-4 py-2 text-xs font-semibold rounded-full border border-gray-200 bg-white text-gray-600 hover:border-navy-900 hover:text-navy-900 transition-all" data-filter="Diamond">Diamond Series</button>
-                <button class="search-filter-tag px-4 py-2 text-xs font-semibold rounded-full border border-gray-200 bg-white text-gray-600 hover:border-navy-900 hover:text-navy-900 transition-all" data-filter="Opal Prime">Opal Prime</button>
-                <button class="search-filter-tag px-4 py-2 text-xs font-semibold rounded-full border border-gray-200 bg-white text-gray-600 hover:border-navy-900 hover:text-navy-900 transition-all" data-filter="Cosmo">Cosmo</button>
-                <button class="search-filter-tag px-4 py-2 text-xs font-semibold rounded-full border border-gray-200 bg-white text-gray-600 hover:border-navy-900 hover:text-navy-900 transition-all" data-filter="Bathroom">Bathroom</button>
-                <button class="search-filter-tag px-4 py-2 text-xs font-semibold rounded-full border border-gray-200 bg-white text-gray-600 hover:border-navy-900 hover:text-navy-900 transition-all" data-filter="Kitchen">Kitchen</button>
+                <button class="search-filter-tag active px-4 py-2 text-xs font-semibold rounded-full border border-gray-200 bg-brand text-white transition-all hover:bg-navy" data-filter="all">All Products</button>
+                <button class="search-filter-tag px-4 py-2 text-xs font-semibold rounded-full border border-gray-200 bg-white text-gray-600 hover:border-brand hover:text-charcoal transition-all" data-filter="Diamond">Diamond Series</button>
+                <button class="search-filter-tag px-4 py-2 text-xs font-semibold rounded-full border border-gray-200 bg-white text-gray-600 hover:border-brand hover:text-charcoal transition-all" data-filter="Opal Prime">Opal Prime</button>
+                <button class="search-filter-tag px-4 py-2 text-xs font-semibold rounded-full border border-gray-200 bg-white text-gray-600 hover:border-brand hover:text-charcoal transition-all" data-filter="Cosmo">Cosmo</button>
+                <button class="search-filter-tag px-4 py-2 text-xs font-semibold rounded-full border border-gray-200 bg-white text-gray-600 hover:border-brand hover:text-charcoal transition-all" data-filter="Bathroom">Bathroom</button>
+                <button class="search-filter-tag px-4 py-2 text-xs font-semibold rounded-full border border-gray-200 bg-white text-gray-600 hover:border-brand hover:text-charcoal transition-all" data-filter="Kitchen">Kitchen</button>
             </div>
 
             <!-- Results Count -->
@@ -153,7 +152,7 @@
                 <svg class="w-20 h-20 mx-auto mb-6 text-gray-200" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="m21 21-4.35-4.35"/></svg>
                 <h3 class="font-serif text-xl font-semibold text-gray-400 mb-2">No products found</h3>
                 <p class="text-sm text-gray-400 mb-6">Try adjusting your search or filter criteria</p>
-                <a href="collections.html" class="inline-flex items-center gap-2 px-6 py-3 bg-navy-900 text-white text-sm font-semibold rounded-lg hover:bg-navy-800 transition-colors">
+                <a href="collections.html" class="inline-flex items-center gap-2 px-6 py-3 bg-brand text-white text-sm font-semibold rounded-lg hover:bg-navy transition-colors">
                     Browse All Collections
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 12h14m-7-7 7 7-7 7"/></svg>
                 </a>
@@ -169,52 +168,49 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-navy-950 border-t border-white/5 mt-16">
+    <footer class="bg-ivory border-t border-gray-200 mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
                 <div class="lg:col-span-2">
                     <a href="index.html" class="flex items-center gap-2.5 mb-5">
-                        <svg class="w-7 h-7 text-chrome" viewBox="0 0 40 40" fill="none">
-                            <path d="M20 2C20 2 6 18 6 26C6 33.732 12.268 38 20 38C27.732 38 34 33.732 34 26C34 18 20 2 20 2Z" fill="url(#dropGrad3)" stroke="currentColor" stroke-width="1.5"/>
-                            <defs><linearGradient id="dropGrad3" x1="20" y1="2" x2="20" y2="38" gradientUnits="userSpaceOnUse"><stop stop-color="#cbd5e1"/><stop offset="1" stop-color="#0f1423"/></linearGradient></defs>
-                        </svg>
-                        <span class="font-serif text-xl font-bold text-white tracking-wider">PLUNGE</span>
+                        <svg class="w-7 h-7 transition-transform duration-300 group-hover:scale-110 text-charcoal" viewBox="0 0 40 40" fill="none"><path d="M20 2C20 2 6 18 6 26C6 33.732 12.268 38 20 38C27.732 38 34 33.732 34 26C34 18 20 2 20 2Z" fill="#01773D" stroke="currentColor" stroke-width="1.5"/><path d="M20 8C20 8 12 20 12 25C12 29.418 15.582 32 20 32" stroke="#C9A227" stroke-width="1" stroke-linecap="round"/></svg>
+                        <span class="font-serif text-xl font-bold text-charcoal tracking-wider">PLUNGE</span>
                     </a>
-                    <p class="text-sm text-chrome-500 font-light leading-relaxed max-w-sm mb-5">Premium luxury faucets and bathroom fixtures by F.S. Enterprises. Crafted with precision, designed for elegance.</p>
+                    <p class="text-sm text-gray-500 font-light leading-relaxed max-w-sm mb-5">Premium luxury faucets and bathroom fixtures by F.S. Enterprises. Crafted with precision, designed for elegance.</p>
                 </div>
                 <div>
-                    <h4 class="font-serif font-semibold text-white mb-5">Quick Links</h4>
+                    <h4 class="font-serif font-semibold text-charcoal mb-5">Quick Links</h4>
                     <nav class="flex flex-col gap-2.5">
-                        <a href="collections.html" class="text-sm text-chrome-500 hover:text-white transition-colors">Collections</a>
-                        <a href="gallery.html" class="text-sm text-chrome-500 hover:text-white transition-colors">Gallery</a>
-                        <a href="about.html" class="text-sm text-chrome-500 hover:text-white transition-colors">About Us</a>
-                        <a href="faq.html" class="text-sm text-chrome-500 hover:text-white transition-colors">FAQ</a>
-                        <a href="contact.html" class="text-sm text-chrome-500 hover:text-white transition-colors">Contact</a>
+                        <a href="collections.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors">Collections</a>
+                        <a href="gallery.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors">Gallery</a>
+                        <a href="about.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors">About Us</a>
+                        <a href="faq.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors">FAQ</a>
+                        <a href="contact.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors">Contact</a>
                     </nav>
                 </div>
                 <div>
-                    <h4 class="font-serif font-semibold text-white mb-5">Contact Us</h4>
+                    <h4 class="font-serif font-semibold text-charcoal mb-5">Contact Us</h4>
                     <div class="space-y-3">
-                        <a href="mailto:info@plungefaucets.in" class="text-sm text-chrome-500 hover:text-white transition-colors block">info@plungefaucets.in</a>
-                        <a href="tel:+9118001234567" class="text-sm text-chrome-500 hover:text-white transition-colors block">+91 1800 123 4567</a>
-                        <p class="text-sm text-chrome-500">Industrial Estate, New Delhi, India</p>
+                        <a href="mailto:info@plungefaucets.in" class="text-sm text-gray-500 hover:text-charcoal transition-colors block">info@plungefaucets.in</a>
+                        <a href="tel:+9118001234567" class="text-sm text-gray-500 hover:text-charcoal transition-colors block">+91 1800 123 4567</a>
+                        <p class="text-sm text-gray-500">Industrial Estate, New Delhi, India</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="border-t border-white/5">
+        <div class="border-t border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p class="text-xs text-chrome-500/60">&copy; 2026 PLUNGE by F.S. Enterprises. All rights reserved.</p>
+                <p class="text-xs text-gray-500/60">&copy; 2026 PLUNGE by F.S. Enterprises. All rights reserved.</p>
                 <div class="flex items-center gap-6">
-                    <a href="privacy-policy.html" class="text-xs text-chrome-500/60 hover:text-chrome-400 transition-colors">Privacy Policy</a>
-                    <a href="terms.html" class="text-xs text-chrome-500/60 hover:text-chrome-400 transition-colors">Terms of Service</a>
+                    <a href="privacy-policy.html" class="text-xs text-gray-500/60 hover:text-charcoal transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="text-xs text-gray-500/60 hover:text-charcoal transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- BACK TO TOP -->
-    <button id="back-to-top" class="back-to-top fixed bottom-8 right-8 z-50 w-12 h-12 bg-navy-900 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-navy-800 transition-colors" aria-label="Back to top">
+    <button id="back-to-top" class="back-to-top fixed bottom-8 right-8 z-50 w-12 h-12 bg-brand text-white rounded-full shadow-lg flex items-center justify-center hover:bg-navy transition-colors" aria-label="Back to top">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
     </button>
 
@@ -267,8 +263,8 @@
                 var descHtml = p.description;
                 if (query) {
                     var re = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
-                    nameHtml = p.name.replace(re, '<mark class="bg-chrome-300/50 text-navy-900 rounded px-0.5">$1</mark>');
-                    descHtml = p.description.replace(re, '<mark class="bg-chrome-300/50 text-navy-900 rounded px-0.5">$1</mark>');
+                    nameHtml = p.name.replace(re, '<mark class="bg-ivory/50 text-charcoal rounded px-0.5">$1</mark>');
+                    descHtml = p.description.replace(re, '<mark class="bg-ivory/50 text-charcoal rounded px-0.5">$1</mark>');
                 }
                 return '<a href="' + p.url + '" class="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-500">' +
                     '<div class="relative overflow-hidden bg-gray-100">' +
@@ -276,18 +272,18 @@
                             '<img loading="lazy" src="' + p.image + '" alt="' + p.name + '" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110">' +
                         '</div>' +
                         '<div class="absolute top-3 left-3">' +
-                            '<span class="px-3 py-1 bg-navy-950/80 backdrop-blur text-white text-[10px] font-semibold rounded-full uppercase tracking-wider">' + p.collection + '</span>' +
+                            '<span class="px-3 py-1 bg-ivory/80 backdrop-blur text-charcoal text-[10px] font-semibold rounded-full uppercase tracking-wider">' + p.collection + '</span>' +
                         '</div>' +
                         '<div class="absolute top-3 right-3">' +
-                            '<span class="px-3 py-1 bg-white/90 backdrop-blur text-navy-900 text-[10px] font-semibold rounded-full">' + p.category + '</span>' +
+                            '<span class="px-3 py-1 bg-white/90 backdrop-blur text-charcoal text-[10px] font-semibold rounded-full">' + p.category + '</span>' +
                         '</div>' +
                     '</div>' +
                     '<div class="p-5">' +
                         '<p class="text-[10px] text-gray-400 font-medium tracking-wider uppercase mb-1">' + p.code + '</p>' +
-                        '<h3 class="font-serif text-lg font-semibold text-navy-950 mb-1 group-hover:text-navy-800 transition-colors">' + nameHtml + '</h3>' +
+                        '<h3 class="font-serif text-lg font-semibold text-charcoal mb-1 group-hover:text-charcoal transition-colors">' + nameHtml + '</h3>' +
                         '<p class="text-xs text-gray-500 font-light mb-3 line-clamp-2">' + descHtml + '</p>' +
                         '<div class="flex items-center gap-2">' +
-                            '<span class="text-lg font-bold text-navy-900">' + p.price + '</span>' +
+                            '<span class="text-lg font-bold text-charcoal">' + p.price + '</span>' +
                             '<span class="text-sm text-gray-400 line-through">' + p.oldPrice + '</span>' +
                         '</div>' +
                     '</div>' +
@@ -359,10 +355,10 @@
         filterTags.forEach(function(tag) {
             tag.addEventListener('click', function() {
                 filterTags.forEach(function(t) {
-                    t.classList.remove('bg-navy-900', 'text-white', 'active');
+                    t.classList.remove('bg-ivory', 'text-charcoal', 'active');
                     t.classList.add('bg-white', 'text-gray-600');
                 });
-                tag.classList.add('bg-navy-900', 'text-white', 'active');
+                tag.classList.add('bg-ivory', 'text-charcoal', 'active');
                 tag.classList.remove('bg-white', 'text-gray-600');
                 activeFilter = tag.dataset.filter;
                 doFilter();

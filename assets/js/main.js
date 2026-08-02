@@ -1,18 +1,19 @@
-﻿/* ========================================
+/* ========================================
    PLUNGE - Shared JavaScript
    Premium E-Commerce Website
    ======================================== */
 
 /* ---- Page Status & Client Preview Controller ---- */
 (function() {
-    var page = window.location.pathname.split('/').pop() || 'index.html';
-    var ready = ['index.html', 'product-details.html', 'collections.html', 'cart.html', 'wishlist.html'];
-
-    // Redirect incomplete pages to homepage
-    if (ready.indexOf(page) === -1 && page.indexOf('.html') !== -1) {
-        window.location.replace('index.html');
-        return;
-    }
+    // [COMMENTED OUT] Page access guard — was redirecting non-whitelisted pages to index.html
+    // var page = window.location.pathname.split('/').pop() || 'index.html';
+    // var ready = ['index.html', 'product-details.html', 'collections.html', 'cart.html', 'wishlist.html'];
+    //
+    // // Redirect incomplete pages to homepage
+    // if (ready.indexOf(page) === -1 && page.indexOf('.html') !== -1) {
+    //     window.location.replace('index.html');
+    //     return;
+    // }
 
     // Show preview badge on completed pages
     document.addEventListener('DOMContentLoaded', function() {
@@ -38,7 +39,7 @@
             border: '1px solid rgba(255,255,255,0.06)',
             fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif'
         });
-        badge.innerHTML = '<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><span style="width:5px;height:5px;border-radius:50%;background:#22c55e;flex-shrink:0;animation:badge-pulse 1.5s infinite"></span><span style="font-weight:600;font-size:10px;letter-spacing:1px;opacity:0.6">UNDER DEVELOPMENT</span></div><div style="font-size:11px;color:rgba(255,255,255,0.75)">Progress preview &mdash; QA and finishing touches underway. Your feedback is welcome!</div>';
+        badge.innerHTML = '<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><span style="width:5px;height:5px;border-radius:50%;background:#01773D;flex-shrink:0;animation:badge-pulse 1.5s infinite"></span><span style="font-weight:600;font-size:10px;letter-spacing:1px;opacity:0.6">UNDER DEVELOPMENT</span></div><div style="font-size:11px;color:rgba(255,255,255,0.75)">Progress preview &mdash; QA and finishing touches underway. Your feedback is welcome!</div>';
         document.body.appendChild(badge);
 
         badge.addEventListener('click', function() {
@@ -195,17 +196,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 searchNoResults.classList.add('hidden');
                 searchResultsList.classList.remove('hidden');
                 searchResultsList.innerHTML = results.map(product =>
-                    '<a href="' + product.url + '" class="search-result-item flex items-center gap-4 p-3 rounded-lg hover:bg-white/5 transition-colors group">' +
-                        '<div class="w-14 h-14 bg-navy-800 rounded-lg flex items-center justify-center flex-shrink-0">' +
-                            '<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-chrome-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>' +
+                    '<a href="' + product.url + '" class="search-result-item flex items-center gap-4 p-3 rounded-lg hover:bg-beige transition-colors group">' +
+                        '<div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center flex-shrink-0">' +
+                            '<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>' +
                         '</div>' +
                         '<div class="flex-1 min-w-0">' +
-                            '<p class="text-sm font-medium text-white group-hover:text-chrome-300 transition-colors truncate">' + product.name + '</p>' +
-                            '<p class="text-xs text-chrome-500 truncate">' + product.collection + ' Collection &middot; ' + product.category + '</p>' +
+                            '<p class="text-sm font-medium text-charcoal group-hover:text-charcoal transition-colors truncate">' + product.name + '</p>' +
+                            '<p class="text-xs text-gray-500 truncate">' + product.collection + ' Collection &middot; ' + product.category + '</p>' +
                         '</div>' +
                         '<div class="text-right flex-shrink-0">' +
-                            '<p class="text-sm font-semibold text-chrome-300">' + product.price + '</p>' +
-                            '<p class="text-[10px] text-chrome-500">' + product.code + '</p>' +
+                            '<p class="text-sm font-semibold text-gray-700">' + product.price + '</p>' +
+                            '<p class="text-[10px] text-gray-500">' + product.code + '</p>' +
                         '</div>' +
                     '</a>'
                 ).join('');
@@ -247,18 +248,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (e.key === 'ArrowDown') {
                 e.preventDefault();
-                results.forEach(r => r.classList.remove('search-result-item-focused', 'bg-white/5'));
+                results.forEach(r => r.classList.remove('search-result-item-focused', 'bg-beige'));
                 const nextIndex = currentIndex < results.length - 1 ? currentIndex + 1 : 0;
                 if (results[nextIndex]) {
-                    results[nextIndex].classList.add('search-result-item-focused', 'bg-white/5');
+                    results[nextIndex].classList.add('search-result-item-focused', 'bg-beige');
                     results[nextIndex].scrollIntoView({ block: 'nearest' });
                 }
             } else if (e.key === 'ArrowUp') {
                 e.preventDefault();
-                results.forEach(r => r.classList.remove('search-result-item-focused', 'bg-white/5'));
+                results.forEach(r => r.classList.remove('search-result-item-focused', 'bg-beige'));
                 const prevIndex = currentIndex > 0 ? currentIndex - 1 : results.length - 1;
                 if (results[prevIndex]) {
-                    results[prevIndex].classList.add('search-result-item-focused', 'bg-white/5');
+                    results[prevIndex].classList.add('search-result-item-focused', 'bg-beige');
                     results[prevIndex].scrollIntoView({ block: 'nearest' });
                 }
             } else if (e.key === 'Enter') {
@@ -274,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showToast(message, type) {
         type = type || 'success';
         const toast = document.createElement('div');
-        var bgColor = type === 'success' ? 'bg-emerald-600' : type === 'error' ? 'bg-red-600' : 'bg-navy-900';
+        var bgColor = type === 'success' ? 'bg-brand' : type === 'error' ? 'bg-red-600' : 'bg-charcoal';
         toast.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 z-[200] flex items-center gap-3 px-6 py-3 rounded-xl shadow-2xl text-white text-sm font-medium transition-all duration-500 translate-y-20 opacity-0 ' + bgColor;
         toast.setAttribute('role', 'alert');
         toast.setAttribute('aria-live', 'polite');
@@ -354,8 +355,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (thumbs.length > 0 && mainImage) {
         thumbs.forEach(function(thumb) {
             thumb.addEventListener('click', function() {
-                thumbs.forEach(function(t) { t.classList.remove('thumb-active', 'border-navy-900'); t.classList.add('border-gray-200'); });
-                thumb.classList.add('thumb-active', 'border-navy-900');
+                thumbs.forEach(function(t) { t.classList.remove('thumb-active', 'border-gray-300'); t.classList.add('border-gray-200'); });
+                thumb.classList.add('thumb-active', 'border-gray-300');
                 thumb.classList.remove('border-gray-200');
                 if (thumb.dataset.src) mainImage.src = thumb.dataset.src;
             });
@@ -368,8 +369,8 @@ document.addEventListener('DOMContentLoaded', () => {
     tabBtns.forEach(function(btn) {
         btn.addEventListener('click', function() {
             const target = btn.dataset.tab;
-            tabBtns.forEach(function(b) { b.classList.remove('border-navy-900', 'text-navy-900'); b.classList.add('border-transparent', 'text-gray-500'); });
-            btn.classList.add('border-navy-900', 'text-navy-900');
+            tabBtns.forEach(function(b) { b.classList.remove('border-gray-300', 'text-charcoal'); b.classList.add('border-transparent', 'text-gray-500'); });
+            btn.classList.add('border-gray-300', 'text-charcoal');
             btn.classList.remove('border-transparent', 'text-gray-500');
             tabContents.forEach(function(tc) { tc.classList.remove('active'); tc.style.display = 'none'; });
             const targetEl = document.getElementById(target);
@@ -384,10 +385,10 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebarLinks.forEach(function(link) {
             link.addEventListener('click', function() {
                 sidebarLinks.forEach(function(l) {
-                    l.classList.remove('active', 'text-navy-900', 'border-navy-900', 'bg-gray-50', 'font-semibold');
+                    l.classList.remove('active', 'text-charcoal', 'border-gray-300', 'bg-gray-50', 'font-semibold');
                     l.classList.add('text-gray-500', 'border-transparent', 'font-medium');
                 });
-                link.classList.add('active', 'text-navy-900', 'border-navy-900', 'bg-gray-50', 'font-semibold');
+                link.classList.add('active', 'text-charcoal', 'border-gray-300', 'bg-gray-50', 'font-semibold');
                 link.classList.remove('text-gray-500', 'border-transparent', 'font-medium');
                 const targetId = link.dataset.tab;
                 tabPanes.forEach(function(pane) {
@@ -472,10 +473,10 @@ document.addEventListener('DOMContentLoaded', () => {
         faqTabs.forEach(function(tab) {
             tab.addEventListener('click', function() {
                 faqTabs.forEach(function(t) {
-                    t.classList.remove('bg-navy-900', 'text-white');
+                    t.classList.remove('bg-gray-800', 'text-white');
                     t.classList.add('bg-gray-100', 'text-gray-600');
                 });
-                tab.classList.add('bg-navy-900', 'text-white');
+                tab.classList.add('bg-gray-800', 'text-white');
                 tab.classList.remove('bg-gray-100', 'text-gray-600');
                 var category = tab.dataset.category;
                 faqSections.forEach(function(section) {
@@ -496,10 +497,10 @@ document.addEventListener('DOMContentLoaded', () => {
         filterTabs.forEach(function(tab) {
             tab.addEventListener('click', function() {
                 filterTabs.forEach(function(t) {
-                    t.classList.remove('bg-navy-900', 'text-white');
+                    t.classList.remove('bg-gray-800', 'text-white');
                     t.classList.add('bg-gray-100', 'text-gray-600');
                 });
-                tab.classList.add('bg-navy-900', 'text-white');
+                tab.classList.add('bg-gray-800', 'text-white');
                 tab.classList.remove('bg-gray-100', 'text-gray-600');
                 var filter = tab.dataset.filter;
                 galleryItems.forEach(function(item) {
@@ -535,8 +536,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const swatches = document.querySelectorAll('.finish-swatch');
     swatches.forEach(function(swatch) {
         swatch.addEventListener('click', function() {
-            swatches.forEach(function(s) { s.classList.remove('ring-2', 'ring-offset-2', 'ring-navy-900'); s.classList.add('ring-transparent'); });
-            swatch.classList.add('ring-2', 'ring-offset-2', 'ring-navy-900');
+            swatches.forEach(function(s) { s.classList.remove('ring-2', 'ring-offset-2', 'ring-brand'); s.classList.add('ring-transparent'); });
+            swatch.classList.add('ring-2', 'ring-offset-2', 'ring-brand');
             swatch.classList.remove('ring-transparent');
         });
     });

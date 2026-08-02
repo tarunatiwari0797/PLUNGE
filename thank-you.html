@@ -14,8 +14,12 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: { 800: '#1a2235', 900: '#0f1423', 950: '#080b14' },
-                        chrome: { 300: '#e2e8f0', 400: '#cbd5e1', 500: '#94a3b8' }
+                        brand: '#01773D',
+                        gold: '#C9A227',
+                        ivory: '#F5F0E6',
+                        charcoal: '#1A1A1A',
+                        beige: '#E8DCC8',
+                        navy: '#0B2545'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -40,22 +44,24 @@
 <body class="font-sans text-gray-800 bg-white antialiased">
 
     <!-- HEADER -->
-    <header id="main-header" class="fixed top-0 left-0 right-0 bg-navy-950 z-50">
+    <header id="main-header" class="fixed top-0 left-0 right-0 bg-ivory z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center gap-2.5">
-                    <svg class="w-8 h-8 text-chrome" viewBox="0 0 40 40" fill="none">
-                        <path d="M20 2C20 2 6 18 6 26C6 33.732 12.268 38 20 38C27.732 38 34 33.732 34 26C34 18 20 2 20 2Z" fill="url(#tg)" stroke="currentColor" stroke-width="1.5"/>
-                        <defs><linearGradient id="tg" x1="20" y1="2" x2="20" y2="38" gradientUnits="userSpaceOnUse"><stop stop-color="#cbd5e1"/><stop offset="1" stop-color="#0f1423"/></linearGradient></defs>
-                    </svg>
-                    <span class="font-serif text-2xl font-bold tracking-wider text-white">PLUNGE</span>
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-110 text-charcoal" viewBox="0 0 40 40" fill="none"><path d="M20 2C20 2 6 18 6 26C6 33.732 12.268 38 20 38C27.732 38 34 33.732 34 26C34 18 20 2 20 2Z" fill="#01773D" stroke="currentColor" stroke-width="1.5"/><path d="M20 8C20 8 12 20 12 25C12 29.418 15.582 32 20 32" stroke="#C9A227" stroke-width="1" stroke-linecap="round"/></svg>
+                    <span class="font-serif text-xl font-bold tracking-wider text-charcoal">PLUNGE</span>
                 </a>
                 <nav class="hidden lg:flex items-center gap-8">
-                    <a href="index.html" class="text-sm font-medium text-chrome-400 hover:text-white transition-colors">Home</a>
-                    <a href="collections.html" class="text-sm font-medium text-chrome-400 hover:text-white transition-colors">Collections</a>
-                    <a href="about.html" class="text-sm font-medium text-chrome-400 hover:text-white transition-colors">About</a>
-                    <a href="contact.html" class="text-sm font-medium text-chrome-400 hover:text-white transition-colors">Contact</a>
+                    <a href="index.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Home</a>
+                    <a href="collections.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Collections</a>
+                    <a href="gallery.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Gallery</a>
+                    <a href="about.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">About</a>
+                    <a href="faq.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">FAQ</a>
+                    <a href="contact.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Contact</a>
                 </nav>
+                <div class="flex items-center gap-4">
+                    <a href="contact.html#enquire" class="hidden md:inline-flex items-center justify-center px-5 py-2 bg-brand text-white text-xs font-semibold uppercase tracking-wider rounded border border-gold/60 hover:bg-navy transition-colors duration-300">Enquire</a>
+                </div>
             </div>
         </div>
     </header>
@@ -66,42 +72,42 @@
     <main id="main-content" class="min-h-screen flex items-center justify-center px-4 pt-20">
         <div class="max-w-lg mx-auto text-center py-20">
             <!-- Success Icon -->
-            <div class="w-24 h-24 mx-auto mb-8 bg-emerald-50 rounded-full flex items-center justify-center">
-                <svg class="w-12 h-12 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <div class="w-24 h-24 mx-auto mb-8 bg-ivory rounded-full flex items-center justify-center">
+                <svg class="w-12 h-12 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
             </div>
 
-            <h1 class="font-serif text-3xl lg:text-4xl font-bold text-navy-950 mb-4">Thank You!</h1>
+            <h1 class="font-serif text-3xl lg:text-4xl font-bold text-charcoal mb-4">Thank You!</h1>
             <p class="text-gray-500 font-light leading-relaxed mb-3">
                 Your enquiry has been successfully submitted.
             </p>
             <p class="text-sm text-gray-400 mb-8">
-                Our sales team will get back to you within <strong class="text-navy-900">1 business day</strong>.
+                Our sales team will get back to you within <strong class="text-charcoal">1 business day</strong>.
             </p>
 
             <!-- What Happens Next -->
             <div class="bg-gray-50 rounded-2xl p-6 mb-8 text-left">
-                <h3 class="font-serif font-semibold text-navy-950 mb-4 text-center">What Happens Next?</h3>
+                <h3 class="font-serif font-semibold text-charcoal mb-4 text-center">What Happens Next?</h3>
                 <div class="space-y-4">
                     <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold">1</div>
+                        <div class="w-8 h-8 rounded-full bg-ivory text-charcoal flex items-center justify-center flex-shrink-0 text-xs font-bold">1</div>
                         <div>
-                            <p class="text-sm font-semibold text-navy-900">Confirmation Email</p>
+                            <p class="text-sm font-semibold text-charcoal">Confirmation Email</p>
                             <p class="text-xs text-gray-500">You will receive a confirmation email shortly.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold">2</div>
+                        <div class="w-8 h-8 rounded-full bg-ivory text-charcoal flex items-center justify-center flex-shrink-0 text-xs font-bold">2</div>
                         <div>
-                            <p class="text-sm font-semibold text-navy-900">Team Review</p>
+                            <p class="text-sm font-semibold text-charcoal">Team Review</p>
                             <p class="text-xs text-gray-500">Our team will review your requirements.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
-                        <div class="w-8 h-8 rounded-full bg-navy-900 text-white flex items-center justify-center flex-shrink-0 text-xs font-bold">3</div>
+                        <div class="w-8 h-8 rounded-full bg-ivory text-charcoal flex items-center justify-center flex-shrink-0 text-xs font-bold">3</div>
                         <div>
-                            <p class="text-sm font-semibold text-navy-900">Personal Response</p>
+                            <p class="text-sm font-semibold text-charcoal">Personal Response</p>
                             <p class="text-xs text-gray-500">A dedicated representative will contact you.</p>
                         </div>
                     </div>
@@ -110,11 +116,11 @@
 
             <!-- Actions -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-                <a href="index.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-chrome text-navy-950 text-sm font-semibold rounded hover:opacity-90 transition-opacity">
+                <a href="index.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-brand text-white text-sm font-semibold rounded hover:opacity-90 transition-opacity">
                     Back to Home
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 12h14m-7-7 7 7-7 7"/></svg>
                 </a>
-                <a href="collections.html" class="inline-flex items-center gap-2 px-8 py-3.5 border border-gray-200 text-navy-900 text-sm font-semibold rounded hover:border-navy-900 transition-colors">
+                <a href="collections.html" class="inline-flex items-center gap-2 px-8 py-3.5 border border-gray-200 text-charcoal text-sm font-semibold rounded hover:border-brand transition-colors">
                     Browse Collections
                 </a>
             </div>
@@ -122,7 +128,7 @@
             <!-- Contact Info -->
             <div class="mt-12 pt-8 border-t border-gray-100">
                 <p class="text-xs text-gray-400 mb-2">Need immediate assistance?</p>
-                <a href="tel:+9118001234567" class="text-sm font-semibold text-navy-900 hover:underline">+91 1800 123 4567</a>
+                <a href="tel:+9118001234567" class="text-sm font-semibold text-charcoal hover:underline">+91 1800 123 4567</a>
             </div>
         </div>
     </main>

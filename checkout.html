@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -14,19 +14,12 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: {
-                            300: '#e2e8f0',
-                            400: '#cbd5e1',
-                            500: '#94a3b8',
-                            800: '#1a2235',
-                            900: '#0f1423',
-                            950: '#080b14',
-                        },
-                        chrome: {
-                            300: '#e2e8f0',
-                            400: '#cbd5e1',
-                            500: '#94a3b8',
-                        },
+                        brand: '#01773D',
+                        gold: '#C9A227',
+                        ivory: '#F5F0E6',
+                        charcoal: '#1A1A1A',
+                        beige: '#E8DCC8',
+                        navy: '#0B2545'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -54,12 +47,12 @@
             visibility: visible;
         }
         input[type="radio"]:checked + .shipping-card {
-            border-color: #0f1423;
-            box-shadow: 0 0 0 1px #0f1423;
+            border-color: #01773D;
+            box-shadow: 0 0 0 1px #1A1A1A;
         }
         input[type="radio"]:checked + .payment-card {
-            border-color: #0f1423;
-            box-shadow: 0 0 0 1px #0f1423;
+            border-color: #01773D;
+            box-shadow: 0 0 0 1px #1A1A1A;
         }
         .payment-content {
             max-height: 0;
@@ -86,43 +79,44 @@
     <a href="#main-content" class="skip-nav">Skip to main content</a>
 
     <!-- HEADER -->
-    <header id="main-content" role="banner" class="fixed top-0 left-0 right-0 z-50 bg-navy-950 shadow-lg">
+    <header id="main-content" role="banner" class="fixed top-0 left-0 right-0 z-50 bg-ivory shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
-                <a href="index.html" class="flex-shrink-0">
-                    <span class="font-serif text-2xl md:text-3xl font-bold text-white tracking-wider">PLUNGE</span>
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-110 text-charcoal" viewBox="0 0 40 40" fill="none"><path d="M20 2C20 2 6 18 6 26C6 33.732 12.268 38 20 38C27.732 38 34 33.732 34 26C34 18 20 2 20 2Z" fill="#01773D" stroke="currentColor" stroke-width="1.5"/><path d="M20 8C20 8 12 20 12 25C12 29.418 15.582 32 20 32" stroke="#C9A227" stroke-width="1" stroke-linecap="round"/></svg>
+                    <span class="font-serif text-xl font-bold tracking-wider text-charcoal">PLUNGE</span>
                 </a>
 
                 <!-- Desktop Navigation -->
-                <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="text-chrome-300 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Home</a>
-                    <a href="collections.html" class="text-chrome-300 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Collections</a>
-                    <a href="gallery.html" class="text-chrome-300 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Gallery</a>
-                    <a href="about.html" class="text-chrome-300 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">About</a>
-                    <a href="faq.html" class="text-chrome-300 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">FAQ</a>
-                    <a href="contact.html" class="text-chrome-300 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Contact</a>
-                    <a href="#" class="text-chrome-300 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">Enquire</a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Home</a>
+                    <a href="collections.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Collections</a>
+                    <a href="gallery.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Gallery</a>
+                    <a href="about.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">About</a>
+                    <a href="faq.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">FAQ</a>
+                    <a href="contact.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Contact</a>
                 </nav>
 
                 <!-- Right Icons -->
                 <div class="flex items-center space-x-4 md:space-x-6">
                     <!-- Search -->
-                    <button class="text-chrome-300 hover:text-white transition-colors" aria-label="Search">
+                    <button class="text-gray-700 hover:text-charcoal transition-colors" aria-label="Search">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>
                     </button>
                     <!-- Wishlist -->
-                    <a href="wishlist.html" class="relative text-chrome-300 hover:text-white transition-colors" aria-label="Wishlist">
+                    <a href="wishlist.html" class="relative text-gray-700 hover:text-charcoal transition-colors" aria-label="Wishlist">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
-                        <span class="absolute -top-2 -right-2 bg-white text-navy-900 text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">2</span>
+                        <span class="absolute -top-2 -right-2 bg-white text-charcoal text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">2</span>
                     </a>
                     <!-- Cart -->
-                    <a href="cart.html" class="relative text-chrome-300 hover:text-white transition-colors" aria-label="Cart">
+                    <a href="cart.html" class="relative text-gray-700 hover:text-charcoal transition-colors" aria-label="Cart">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
-                        <span class="absolute -top-2 -right-2 bg-white text-navy-900 text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">3</span>
+                        <span class="absolute -top-2 -right-2 bg-white text-charcoal text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">3</span>
                     </a>
                     <!-- Hamburger -->
-                    <button id="hamburger-btn" class="lg:hidden text-chrome-300 hover:text-white transition-colors" aria-label="Menu">
+                    <a href="contact.html#enquire" class="hidden md:inline-flex items-center justify-center px-5 py-2 bg-brand text-white text-xs font-semibold uppercase tracking-wider rounded border border-gold/60 hover:bg-navy transition-colors duration-300">Enquire</a>
+                    <button id="hamburger-btn" class="lg:hidden text-gray-700 hover:text-charcoal transition-colors" aria-label="Menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
                     </button>
                 </div>
@@ -131,27 +125,30 @@
     </header>
 
     <!-- MOBILE MENU -->
-    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-50"></div>
-    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-80 max-w-[85vw] h-full bg-navy-950 z-50 p-8 overflow-y-auto">
+    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/40 z-50"></div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-80 max-w-[85vw] h-full bg-ivory z-50 p-8 overflow-y-auto">
         <div class="flex items-center justify-between mb-10">
-            <span class="font-serif text-2xl font-bold text-white tracking-wider">PLUNGE</span>
-            <button id="mobile-close" class="text-chrome-300 hover:text-white" aria-label="Close menu">
+            <a href="index.html" class="flex items-center gap-2">
+                <svg class="w-7 h-7 transition-transform duration-300 group-hover:scale-110 text-charcoal" viewBox="0 0 40 40" fill="none"><path d="M20 2C20 2 6 18 6 26C6 33.732 12.268 38 20 38C27.732 38 34 33.732 34 26C34 18 20 2 20 2Z" fill="#01773D" stroke="currentColor" stroke-width="1.5"/><path d="M20 8C20 8 12 20 12 25C12 29.418 15.582 32 20 32" stroke="#C9A227" stroke-width="1" stroke-linecap="round"/></svg>
+                <span class="font-serif text-xl font-bold text-charcoal">PLUNGE</span>
+            </a>
+            <button id="mobile-close" class="text-gray-700 hover:text-charcoal" aria-label="Close menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
         </div>
         <nav class="flex flex-col space-y-1">
-            <a href="index.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">Home</a>
-            <a href="collections.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">Collections</a>
-            <a href="gallery.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">Gallery</a>
-            <a href="about.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">About</a>
-            <a href="faq.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">FAQ</a>
-            <a href="contact.html" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">Contact</a>
-            <a href="#" class="mobile-nav-link text-chrome-300 hover:text-white hover:bg-navy-900 px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">Enquire</a>
+            <a href="index.html" class="mobile-nav-link text-gray-700 hover:text-charcoal hover:bg-beige px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">Home</a>
+            <a href="collections.html" class="mobile-nav-link text-gray-700 hover:text-charcoal hover:bg-beige px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">Collections</a>
+            <a href="gallery.html" class="mobile-nav-link text-gray-700 hover:text-charcoal hover:bg-beige px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">Gallery</a>
+            <a href="about.html" class="mobile-nav-link text-gray-700 hover:text-charcoal hover:bg-beige px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">About</a>
+            <a href="faq.html" class="mobile-nav-link text-gray-700 hover:text-charcoal hover:bg-beige px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">FAQ</a>
+            <a href="contact.html" class="mobile-nav-link text-gray-700 hover:text-charcoal hover:bg-beige px-4 py-3 rounded-sm text-sm font-medium tracking-wide transition-all duration-200">Contact</a>
+            <a href="contact.html#enquire" class="mobile-nav-link block w-full py-3 text-center bg-brand text-white text-sm font-semibold rounded-lg hover:bg-navy transition-colors">Enquire Now</a>
         </nav>
-        <div class="mt-10 pt-6 border-t border-navy-800">
-            <p class="text-chrome-500 text-xs tracking-wide mb-4">CONTACT</p>
-            <p class="text-chrome-300 text-sm">+91 1800-123-4567</p>
-            <p class="text-chrome-300 text-sm">info@plungefaucets.in</p>
+        <div class="mt-10 pt-6 border-t border-gray-200">
+            <p class="text-gray-500 text-xs tracking-wide mb-4">CONTACT</p>
+            <p class="text-gray-700 text-sm">+91 1800-123-4567</p>
+            <p class="text-gray-700 text-sm">info@plungefaucets.in</p>
         </div>
     </div>
 
@@ -160,29 +157,29 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Breadcrumb -->
             <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-4">
-                <a href="index.html" class="hover:text-navy-900 transition-colors">Home</a>
+                <a href="index.html" class="hover:text-charcoal transition-colors">Home</a>
                 <span>/</span>
-                <a href="cart.html" class="hover:text-navy-900 transition-colors">Cart</a>
+                <a href="cart.html" class="hover:text-charcoal transition-colors">Cart</a>
                 <span>/</span>
                 <span class="text-gray-800 font-medium">Checkout</span>
             </nav>
             <!-- Title -->
-            <h1 class="font-serif text-3xl font-semibold text-navy-900 mb-8">Checkout</h1>
+            <h1 class="font-serif text-3xl font-semibold text-charcoal mb-8">Checkout</h1>
             <!-- Progress Steps -->
             <div class="flex items-center justify-center max-w-lg mx-auto">
                 <!-- Step 1: Cart (Done) -->
                 <div class="flex items-center">
-                    <div class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center text-sm font-semibold">
+                    <div class="w-10 h-10 rounded-full bg-brand text-charcoal flex items-center justify-center text-sm font-semibold">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     </div>
-                    <span class="ml-2 text-sm font-medium text-green-600 hidden sm:block">Cart</span>
+                    <span class="ml-2 text-sm font-medium text-brand hidden sm:block">Cart</span>
                 </div>
                 <!-- Line -->
-                <div class="flex-1 h-0.5 bg-green-600 mx-3 min-w-[2rem]"></div>
+                <div class="flex-1 h-0.5 bg-brand mx-3 min-w-[2rem]"></div>
                 <!-- Step 2: Checkout (Active) -->
                 <div class="flex items-center">
-                    <div class="w-10 h-10 rounded-full bg-navy-900 text-white flex items-center justify-center text-sm font-semibold">2</div>
-                    <span class="ml-2 text-sm font-semibold text-navy-900 hidden sm:block">Checkout</span>
+                    <div class="w-10 h-10 rounded-full bg-ivory text-charcoal flex items-center justify-center text-sm font-semibold">2</div>
+                    <span class="ml-2 text-sm font-semibold text-charcoal hidden sm:block">Checkout</span>
                 </div>
                 <!-- Line -->
                 <div class="flex-1 h-0.5 bg-gray-200 mx-3 min-w-[2rem]"></div>
@@ -205,52 +202,52 @@
 
                     <!-- SHIPPING INFORMATION -->
                     <div class="bg-white rounded-sm shadow-sm p-6 md:p-8 mb-6">
-                        <h2 class="font-serif text-xl font-semibold text-navy-900 border-b border-gray-200 pb-4 mb-6">Shipping Information</h2>
+                        <h2 class="font-serif text-xl font-semibold text-charcoal border-b border-gray-200 pb-4 mb-6">Shipping Information</h2>
                         <form class="space-y-5" onsubmit="return false;">
                             <div class="md:flex md:gap-5">
                                 <div class="md:w-1/2 mb-5 md:mb-0">
                                     <label class="block text-sm font-medium text-gray-700 mb-1.5">First Name <span class="text-red-500">*</span></label>
-                                    <input type="text" placeholder="John" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                    <input type="text" placeholder="John" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                                 </div>
                                 <div class="md:w-1/2">
                                     <label class="block text-sm font-medium text-gray-700 mb-1.5">Last Name <span class="text-red-500">*</span></label>
-                                    <input type="text" placeholder="Doe" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                    <input type="text" placeholder="Doe" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                                 </div>
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1.5">Email Address <span class="text-red-500">*</span></label>
-                                <input type="email" placeholder="john@example.com" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                <input type="email" placeholder="john@example.com" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1.5">Phone Number <span class="text-red-500">*</span></label>
-                                <input type="tel" placeholder="+91 98765 43210" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                <input type="tel" placeholder="+91 98765 43210" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1.5">Address <span class="text-red-500">*</span></label>
-                                <input type="text" placeholder="Street address" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                <input type="text" placeholder="Street address" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1.5">Apartment, suite, etc. (optional)</label>
-                                <input type="text" placeholder="Apt, Suite, Unit, etc." class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                <input type="text" placeholder="Apt, Suite, Unit, etc." class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                             </div>
                             <div class="md:flex md:gap-5">
                                 <div class="md:w-1/2 mb-5 md:mb-0">
                                     <label class="block text-sm font-medium text-gray-700 mb-1.5">City <span class="text-red-500">*</span></label>
-                                    <input type="text" placeholder="Mumbai" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                    <input type="text" placeholder="Mumbai" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                                 </div>
                                 <div class="md:w-1/2">
                                     <label class="block text-sm font-medium text-gray-700 mb-1.5">State <span class="text-red-500">*</span></label>
-                                    <input type="text" placeholder="Maharashtra" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                    <input type="text" placeholder="Maharashtra" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                                 </div>
                             </div>
                             <div class="md:flex md:gap-5">
                                 <div class="md:w-1/2 mb-5 md:mb-0">
                                     <label class="block text-sm font-medium text-gray-700 mb-1.5">PIN Code <span class="text-red-500">*</span></label>
-                                    <input type="text" placeholder="400001" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                    <input type="text" placeholder="400001" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                                 </div>
                                 <div class="md:w-1/2">
                                     <label class="block text-sm font-medium text-gray-700 mb-1.5">Country <span class="text-red-500">*</span></label>
-                                    <select class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all text-gray-700 bg-white">
+                                    <select class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all text-gray-700 bg-white">
                                         <option value="IN" selected>India</option>
                                         <option value="AE">United Arab Emirates</option>
                                         <option value="US">United States</option>
@@ -261,27 +258,27 @@
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-gray-700 mb-1.5">Delivery Instructions (optional)</label>
-                                <textarea rows="3" placeholder="Gate code, building name, preferred delivery time..." class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400 resize-none"></textarea>
+                                <textarea rows="3" placeholder="Gate code, building name, preferred delivery time..." class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400 resize-none"></textarea>
                             </div>
                         </form>
                     </div>
 
                     <!-- SHIPPING METHOD -->
                     <div class="bg-white rounded-sm shadow-sm p-6 md:p-8 mb-6">
-                        <h2 class="font-serif text-xl font-semibold text-navy-900 border-b border-gray-200 pb-4 mb-6">Shipping Method</h2>
+                        <h2 class="font-serif text-xl font-semibold text-charcoal border-b border-gray-200 pb-4 mb-6">Shipping Method</h2>
                         <div class="space-y-3">
                             <!-- Standard -->
                             <label class="relative block cursor-pointer">
                                 <input type="radio" name="shipping" value="standard" checked class="sr-only peer">
-                                <div class="shipping-card border-2 border-navy-900 ring-1 ring-navy-900 rounded-sm p-4 md:p-5 flex items-center justify-between transition-all duration-200 peer-hover:border-navy-800">
+                                <div class="shipping-card border-2 border-gray-300 ring-1 ring-brand rounded-sm p-4 md:p-5 flex items-center justify-between transition-all duration-200 peer-hover:border-brand">
                                     <div class="flex items-center space-x-4">
-                                        <div class="w-5 h-5 rounded-full border-4 border-navy-900 flex-shrink-0"></div>
+                                        <div class="w-5 h-5 rounded-full border-4 border-gray-300 flex-shrink-0"></div>
                                         <div>
-                                            <p class="font-semibold text-navy-900 text-sm">Standard Shipping</p>
+                                            <p class="font-semibold text-charcoal text-sm">Standard Shipping</p>
                                             <p class="text-gray-500 text-xs mt-0.5">Estimated delivery in 5-7 business days</p>
                                         </div>
                                     </div>
-                                    <span class="font-semibold text-navy-900 text-sm">Free</span>
+                                    <span class="font-semibold text-charcoal text-sm">Free</span>
                                 </div>
                             </label>
                             <!-- Express -->
@@ -291,11 +288,11 @@
                                     <div class="flex items-center space-x-4">
                                         <div class="w-5 h-5 rounded-full border-2 border-gray-300 flex-shrink-0"></div>
                                         <div>
-                                            <p class="font-semibold text-navy-900 text-sm">Express Shipping</p>
+                                            <p class="font-semibold text-charcoal text-sm">Express Shipping</p>
                                             <p class="text-gray-500 text-xs mt-0.5">Estimated delivery in 2-3 business days</p>
                                         </div>
                                     </div>
-                                    <span class="font-semibold text-navy-900 text-sm">₹149</span>
+                                    <span class="font-semibold text-charcoal text-sm">₹149</span>
                                 </div>
                             </label>
                             <!-- Overnight -->
@@ -305,11 +302,11 @@
                                     <div class="flex items-center space-x-4">
                                         <div class="w-5 h-5 rounded-full border-2 border-gray-300 flex-shrink-0"></div>
                                         <div>
-                                            <p class="font-semibold text-navy-900 text-sm">Overnight Shipping</p>
+                                            <p class="font-semibold text-charcoal text-sm">Overnight Shipping</p>
                                             <p class="text-gray-500 text-xs mt-0.5">Next business day delivery</p>
                                         </div>
                                     </div>
-                                    <span class="font-semibold text-navy-900 text-sm">₹399</span>
+                                    <span class="font-semibold text-charcoal text-sm">₹399</span>
                                 </div>
                             </label>
                         </div>
@@ -317,18 +314,18 @@
 
                     <!-- PAYMENT METHOD -->
                     <div class="bg-white rounded-sm shadow-sm p-6 md:p-8 mb-6">
-                        <h2 class="font-serif text-xl font-semibold text-navy-900 border-b border-gray-200 pb-4 mb-6">Payment Method</h2>
+                        <h2 class="font-serif text-xl font-semibold text-charcoal border-b border-gray-200 pb-4 mb-6">Payment Method</h2>
                         <div class="space-y-3">
 
                             <!-- Credit/Debit Card -->
                             <div>
                                 <label class="relative block cursor-pointer">
                                     <input type="radio" name="payment" value="card" checked class="sr-only peer" onclick="showPayment('card')">
-                                    <div class="payment-card border-2 border-navy-900 ring-1 ring-navy-900 rounded-sm p-4 md:p-5 flex items-center space-x-4 transition-all duration-200 peer-hover:border-navy-800">
-                                        <div class="w-5 h-5 rounded-full border-4 border-navy-900 flex-shrink-0"></div>
-                                        <svg class="w-8 h-8 text-navy-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+                                    <div class="payment-card border-2 border-gray-300 ring-1 ring-brand rounded-sm p-4 md:p-5 flex items-center space-x-4 transition-all duration-200 peer-hover:border-brand">
+                                        <div class="w-5 h-5 rounded-full border-4 border-gray-300 flex-shrink-0"></div>
+                                        <svg class="w-8 h-8 text-charcoal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
                                         <div>
-                                            <p class="font-semibold text-navy-900 text-sm">Credit / Debit Card</p>
+                                            <p class="font-semibold text-charcoal text-sm">Credit / Debit Card</p>
                                             <p class="text-gray-500 text-xs mt-0.5">Visa, Mastercard, RuPay accepted</p>
                                         </div>
                                     </div>
@@ -336,20 +333,20 @@
                                 <div id="payment-card" class="payment-content active ml-0 md:ml-9 mt-4 space-y-4">
                                     <div>
                                         <label class="block text-sm font-medium text-gray-700 mb-1.5">Card Number</label>
-                                        <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                        <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                                     </div>
                                     <div>
                                         <label class="block text-sm font-medium text-gray-700 mb-1.5">Cardholder Name</label>
-                                        <input type="text" placeholder="John Doe" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                        <input type="text" placeholder="John Doe" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                                     </div>
                                     <div class="flex gap-4">
                                         <div class="w-1/2">
                                             <label class="block text-sm font-medium text-gray-700 mb-1.5">Expiry</label>
-                                            <input type="text" placeholder="MM/YY" maxlength="5" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                            <input type="text" placeholder="MM/YY" maxlength="5" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                                         </div>
                                         <div class="w-1/2">
                                             <label class="block text-sm font-medium text-gray-700 mb-1.5">CVV</label>
-                                            <input type="text" placeholder="123" maxlength="4" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                            <input type="text" placeholder="123" maxlength="4" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                                         </div>
                                     </div>
                                     <div class="flex items-center space-x-3 pt-1">
@@ -366,9 +363,9 @@
                                     <input type="radio" name="payment" value="upi" class="sr-only peer" onclick="showPayment('upi')">
                                     <div class="payment-card border border-gray-200 rounded-sm p-4 md:p-5 flex items-center space-x-4 transition-all duration-200 hover:border-gray-400">
                                         <div class="w-5 h-5 rounded-full border-2 border-gray-300 flex-shrink-0"></div>
-                                        <svg class="w-8 h-8 text-navy-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                        <svg class="w-8 h-8 text-charcoal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                                         <div>
-                                            <p class="font-semibold text-navy-900 text-sm">UPI</p>
+                                            <p class="font-semibold text-charcoal text-sm">UPI</p>
                                             <p class="text-gray-500 text-xs mt-0.5">Pay using any UPI app</p>
                                         </div>
                                     </div>
@@ -376,7 +373,7 @@
                                 <div id="payment-upi" class="payment-content ml-0 md:ml-9 mt-4 space-y-4">
                                     <div>
                                         <label class="block text-sm font-medium text-gray-700 mb-1.5">UPI ID</label>
-                                        <input type="text" placeholder="yourname@upi" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
+                                        <input type="text" placeholder="yourname@upi" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
                                     </div>
                                     <p class="text-xs text-gray-500">You can pay using Google Pay, PhonePe, Paytm, BHIM, or any other UPI app.</p>
                                 </div>
@@ -388,9 +385,9 @@
                                     <input type="radio" name="payment" value="netbanking" class="sr-only peer" onclick="showPayment('netbanking')">
                                     <div class="payment-card border border-gray-200 rounded-sm p-4 md:p-5 flex items-center space-x-4 transition-all duration-200 hover:border-gray-400">
                                         <div class="w-5 h-5 rounded-full border-2 border-gray-300 flex-shrink-0"></div>
-                                        <svg class="w-8 h-8 text-navy-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
+                                        <svg class="w-8 h-8 text-charcoal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
                                         <div>
-                                            <p class="font-semibold text-navy-900 text-sm">Net Banking</p>
+                                            <p class="font-semibold text-charcoal text-sm">Net Banking</p>
                                             <p class="text-gray-500 text-xs mt-0.5">Pay directly from your bank account</p>
                                         </div>
                                     </div>
@@ -398,7 +395,7 @@
                                 <div id="payment-netbanking" class="payment-content ml-0 md:ml-9 mt-4 space-y-4">
                                     <div>
                                         <label class="block text-sm font-medium text-gray-700 mb-1.5">Select Bank</label>
-                                        <select class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all text-gray-700 bg-white">
+                                        <select class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all text-gray-700 bg-white">
                                             <option value="" disabled selected>Choose your bank</option>
                                             <option>SBI - State Bank of India</option>
                                             <option>HDFC Bank</option>
@@ -416,8 +413,8 @@
 
                     <!-- ORDER NOTES -->
                     <div class="bg-white rounded-sm shadow-sm p-6 md:p-8">
-                        <h2 class="font-serif text-xl font-semibold text-navy-900 border-b border-gray-200 pb-4 mb-6">Order Notes</h2>
-                        <textarea rows="3" placeholder="Any special requests or notes about your order (optional)" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400 resize-none"></textarea>
+                        <h2 class="font-serif text-xl font-semibold text-charcoal border-b border-gray-200 pb-4 mb-6">Order Notes</h2>
+                        <textarea rows="3" placeholder="Any special requests or notes about your order (optional)" class="w-full border border-gray-300 rounded-sm px-4 py-3 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400 resize-none"></textarea>
                     </div>
 
                 </div>
@@ -425,7 +422,7 @@
                 <!-- RIGHT COLUMN: Order Summary -->
                 <div class="lg:w-1/3 mt-8 lg:mt-0">
                     <div class="bg-white rounded-sm shadow-sm p-6 md:p-8 lg:sticky lg:top-32">
-                        <h2 class="font-serif text-xl font-semibold text-navy-900 border-b border-gray-200 pb-4 mb-6">Order Summary</h2>
+                        <h2 class="font-serif text-xl font-semibold text-charcoal border-b border-gray-200 pb-4 mb-6">Order Summary</h2>
 
                         <!-- Items -->
                         <div class="space-y-5 mb-6">
@@ -435,10 +432,10 @@
                                     <img loading="lazy" src="assets/images/diamond/diamond bib cock copy.png" alt="Diamond Bib Cock" class="w-full h-full object-contain">
                                 </div>
                                 <div class="flex-1 min-w-0">
-                                    <p class="text-sm font-medium text-navy-900 truncate">Diamond Bib Cock</p>
+                                    <p class="text-sm font-medium text-charcoal truncate">Diamond Bib Cock</p>
                                     <p class="text-xs text-gray-500">Qty: 2</p>
                                 </div>
-                                <span class="text-sm font-semibold text-navy-900 whitespace-nowrap">₹1,560</span>
+                                <span class="text-sm font-semibold text-charcoal whitespace-nowrap">₹1,560</span>
                             </div>
                             <!-- Item 2 -->
                             <div class="flex items-center space-x-4">
@@ -446,10 +443,10 @@
                                     <img loading="lazy" src="assets/images/diamond/diamond long body copy.png" alt="Diamond Long Body" class="w-full h-full object-contain">
                                 </div>
                                 <div class="flex-1 min-w-0">
-                                    <p class="text-sm font-medium text-navy-900 truncate">Diamond Long Body</p>
+                                    <p class="text-sm font-medium text-charcoal truncate">Diamond Long Body</p>
                                     <p class="text-xs text-gray-500">Qty: 1</p>
                                 </div>
-                                <span class="text-sm font-semibold text-navy-900 whitespace-nowrap">₹840</span>
+                                <span class="text-sm font-semibold text-charcoal whitespace-nowrap">₹840</span>
                             </div>
                             <!-- Item 3 -->
                             <div class="flex items-center space-x-4">
@@ -457,18 +454,18 @@
                                     <img loading="lazy" src="assets/images/cosmos/3. Cosmo Sink Cock.png" alt="Cosmo Sink Mixer" class="w-full h-full object-contain">
                                 </div>
                                 <div class="flex-1 min-w-0">
-                                    <p class="text-sm font-medium text-navy-900 truncate">Cosmo Bib Cock</p>
+                                    <p class="text-sm font-medium text-charcoal truncate">Cosmo Bib Cock</p>
                                     <p class="text-xs text-gray-500">Qty: 1</p>
                                 </div>
-                                <span class="text-sm font-semibold text-navy-900 whitespace-nowrap">₹950</span>
+                                <span class="text-sm font-semibold text-charcoal whitespace-nowrap">₹950</span>
                             </div>
                         </div>
 
                         <!-- Coupon -->
                         <div class="mb-6">
                             <div class="flex gap-2">
-                                <input type="text" placeholder="Coupon code" class="flex-1 border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:border-navy-900 focus:ring-1 focus:ring-navy-900 outline-none transition-all placeholder-gray-400">
-                                <button class="bg-navy-900 text-white px-5 py-2.5 rounded-sm text-sm font-semibold hover:bg-navy-800 transition-colors whitespace-nowrap">Apply</button>
+                                <input type="text" placeholder="Coupon code" class="flex-1 border border-gray-300 rounded-sm px-4 py-2.5 text-sm focus:border-brand focus:ring-1 focus:ring-brand outline-none transition-all placeholder-gray-400">
+                                <button class="bg-brand text-white px-5 py-2.5 rounded-sm text-sm font-semibold hover:bg-navy transition-colors whitespace-nowrap">Apply</button>
                             </div>
                         </div>
 
@@ -476,24 +473,24 @@
                         <div class="space-y-3 mb-6 border-t border-gray-200 pt-6">
                             <div class="flex justify-between text-sm">
                                 <span class="text-gray-600">Subtotal</span>
-                                <span class="font-medium text-navy-900">₹3,350</span>
+                                <span class="font-medium text-charcoal">₹3,350</span>
                             </div>
                             <div class="flex justify-between text-sm">
                                 <span class="text-gray-600">Shipping</span>
-                                <span class="font-medium text-green-600">Free</span>
+                                <span class="font-medium text-brand">Free</span>
                             </div>
                             <div class="flex justify-between text-sm">
                                 <span class="text-gray-600">Tax</span>
-                                <span class="font-medium text-navy-900">₹0</span>
+                                <span class="font-medium text-charcoal">₹0</span>
                             </div>
                             <div class="flex justify-between text-lg font-bold pt-3 border-t border-gray-200">
-                                <span class="text-navy-900">Total</span>
-                                <span class="text-navy-900">₹3,350</span>
+                                <span class="text-charcoal">Total</span>
+                                <span class="text-charcoal">₹3,350</span>
                             </div>
                         </div>
 
                         <!-- Place Order Button -->
-                        <button class="w-full bg-chrome-300 text-navy-900 uppercase font-semibold py-4 rounded-sm text-sm tracking-widest hover:bg-chrome-400 transition-colors duration-200 mb-5">
+                        <button class="w-full bg-ivory text-charcoal uppercase font-semibold py-4 rounded-sm text-sm tracking-widest hover:bg-beige transition-colors duration-200 mb-5">
                             Place Order
                         </button>
 
@@ -506,15 +503,15 @@
                         <!-- Trust Icons -->
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-gray-200 pt-5">
                             <div class="text-center">
-                                <svg class="w-6 h-6 mx-auto mb-1.5 text-navy-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+                                <svg class="w-6 h-6 mx-auto mb-1.5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
                                 <p class="text-xs font-medium text-gray-600">Secure Checkout</p>
                             </div>
                             <div class="text-center">
-                                <svg class="w-6 h-6 mx-auto mb-1.5 text-navy-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+                                <svg class="w-6 h-6 mx-auto mb-1.5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
                                 <p class="text-xs font-medium text-gray-600">256-bit SSL</p>
                             </div>
                             <div class="text-center">
-                                <svg class="w-6 h-6 mx-auto mb-1.5 text-navy-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
+                                <svg class="w-6 h-6 mx-auto mb-1.5 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
                                 <p class="text-xs font-medium text-gray-600">100% Protected</p>
                             </div>
                         </div>
@@ -526,72 +523,72 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-navy-950 text-chrome-300 pt-20 pb-8">
+    <footer class="bg-ivory text-gray-700 pt-20 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Brand -->
                 <div>
                     <a href="index.html" class="inline-block mb-6">
-                        <span class="font-serif text-3xl font-bold text-white tracking-wider">PLUNGE</span>
+                        <span class="font-serif text-3xl font-bold text-charcoal tracking-wider">PLUNGE</span>
                     </a>
-                    <p class="text-sm leading-relaxed text-chrome-500 mb-6">Crafting luxury faucets that transform everyday moments into extraordinary experiences. Made with precision, designed with passion.</p>
+                    <p class="text-sm leading-relaxed text-gray-500 mb-6">Crafting luxury faucets that transform everyday moments into extraordinary experiences. Made with precision, designed with passion.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-chrome-500 hover:text-white transition-colors" aria-label="Instagram">
+                        <a href="#" class="text-gray-500 hover:text-charcoal transition-colors" aria-label="Instagram">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
                         </a>
-                        <a href="#" class="text-chrome-500 hover:text-white transition-colors" aria-label="Facebook">
+                        <a href="#" class="text-gray-500 hover:text-charcoal transition-colors" aria-label="Facebook">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         </a>
-                        <a href="#" class="text-chrome-500 hover:text-white transition-colors" aria-label="Pinterest">
+                        <a href="#" class="text-gray-500 hover:text-charcoal transition-colors" aria-label="Pinterest">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12.017 24c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641 0 12.017 0z"/></svg>
                         </a>
                     </div>
                 </div>
                 <!-- Collections -->
                 <div>
-                    <h4 class="text-white font-semibold text-sm uppercase tracking-widest mb-6">Collections</h4>
+                    <h4 class="text-charcoal font-semibold text-sm uppercase tracking-widest mb-6">Collections</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-sm text-chrome-500 hover:text-white transition-colors">Diamond</a></li>
-                        <li><a href="#" class="text-sm text-chrome-500 hover:text-white transition-colors">Opal Prime</a></li>
-                        <li><a href="#" class="text-sm text-chrome-500 hover:text-white transition-colors">Cosmo</a></li>
-                        <li><a href="#" class="text-sm text-chrome-500 hover:text-white transition-colors">Quba</a></li>
-                        <li><a href="#" class="text-sm text-chrome-500 hover:text-white transition-colors">Topaz</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-charcoal transition-colors">Diamond</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-charcoal transition-colors">Opal Prime</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-charcoal transition-colors">Cosmo</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-charcoal transition-colors">Quba</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-charcoal transition-colors">Topaz</a></li>
                     </ul>
                 </div>
                 <!-- Support -->
                 <div>
-                    <h4 class="text-white font-semibold text-sm uppercase tracking-widest mb-6">Support</h4>
+                    <h4 class="text-charcoal font-semibold text-sm uppercase tracking-widest mb-6">Support</h4>
                     <ul class="space-y-3">
-                        <li><a href="faq.html" class="text-sm text-chrome-500 hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="contact.html" class="text-sm text-chrome-500 hover:text-white transition-colors">Contact Us</a></li>
-                        <li><a href="#" class="text-sm text-chrome-500 hover:text-white transition-colors">Shipping Policy</a></li>
-                        <li><a href="#" class="text-sm text-chrome-500 hover:text-white transition-colors">Return Policy</a></li>
-                        <li><a href="#" class="text-sm text-chrome-500 hover:text-white transition-colors">Warranty</a></li>
+                        <li><a href="faq.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors">FAQ</a></li>
+                        <li><a href="contact.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-charcoal transition-colors">Shipping Policy</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-charcoal transition-colors">Return Policy</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-charcoal transition-colors">Warranty</a></li>
                     </ul>
                 </div>
                 <!-- Contact -->
                 <div>
-                    <h4 class="text-white font-semibold text-sm uppercase tracking-widest mb-6">Get in Touch</h4>
+                    <h4 class="text-charcoal font-semibold text-sm uppercase tracking-widest mb-6">Get in Touch</h4>
                     <ul class="space-y-3">
-                        <li class="text-sm text-chrome-500">+91 1800 123 4567</li>
-                        <li class="text-sm text-chrome-500">info@plungefaucets.in</li>
-                        <li class="text-sm text-chrome-500 leading-relaxed">F.S. Enterprises, Industrial Area, New Delhi, India</li>
+                        <li class="text-sm text-gray-500">+91 1800 123 4567</li>
+                        <li class="text-sm text-gray-500">info@plungefaucets.in</li>
+                        <li class="text-sm text-gray-500 leading-relaxed">F.S. Enterprises, Industrial Area, New Delhi, India</li>
                     </ul>
                 </div>
             </div>
             <!-- Bottom -->
-            <div class="border-t border-navy-800 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-chrome-500">
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500">
                 <p>&copy; 2026 PLUNGE. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-charcoal transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-charcoal transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- BACK TO TOP -->
-    <button id="back-to-top" class="fixed bottom-6 right-6 w-11 h-11 bg-navy-900 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-navy-800 transition-all duration-300 opacity-0 invisible z-40">
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-11 h-11 bg-brand text-white rounded-full shadow-lg flex items-center justify-center hover:bg-navy transition-all duration-300 opacity-0 invisible z-40">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
     </button>
 
@@ -608,39 +605,39 @@
 
   <!-- SEARCH MODAL -->
   <div id="search-modal" class="search-modal fixed inset-0 z-[100] flex items-start justify-center pt-[10vh] px-4" role="dialog" aria-modal="true" aria-label="Search products">
-    <div class="search-backdrop fixed inset-0 bg-black/70" id="search-backdrop"></div>
-    <div class="search-container relative w-full max-w-2xl bg-navy-950 border border-navy-800 rounded-xl shadow-2xl overflow-hidden">
+    <div class="search-backdrop fixed inset-0 bg-black/50" id="search-backdrop"></div>
+    <div class="search-container relative w-full max-w-2xl bg-ivory border border-gray-200 rounded-xl shadow-2xl overflow-hidden">
       <!-- Search Input -->
-      <div class="flex items-center border-b border-navy-800">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-chrome-500 ml-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input id="search-input" type="text" placeholder="Search products, collections..." class="w-full bg-transparent text-white px-4 py-5 text-lg focus:outline-none placeholder-chrome-500" autocomplete="off" />
-        <button id="search-close" class="text-chrome-400 hover:text-white p-5 transition-colors" aria-label="Close search">
-          <span class="text-xs font-medium bg-navy-800 px-2 py-1 rounded">ESC</span>
+      <div class="flex items-center border-b border-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 ml-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="search-input" type="text" placeholder="Search products, collections..." class="w-full bg-transparent text-charcoal px-4 py-5 text-lg focus:outline-none placeholder-gray-500" autocomplete="off" />
+        <button id="search-close" class="text-gray-600 hover:text-charcoal p-5 transition-colors" aria-label="Close search">
+          <span class="text-xs font-medium bg-white px-2 py-1 rounded">ESC</span>
         </button>
       </div>
       <!-- Search Results -->
       <div id="search-results" class="search-results p-4">
-        <div id="search-default" class="text-center py-8 text-chrome-500">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-3 text-chrome-500/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <div id="search-default" class="text-center py-8 text-gray-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-3 text-gray-500/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           <p class="text-sm">Type to search our collections</p>
-          <p class="text-xs text-chrome-500/60 mt-1">Diamond, Opal Prime, Cosmo, and more</p>
+          <p class="text-xs text-gray-500/60 mt-1">Diamond, Opal Prime, Cosmo, and more</p>
         </div>
         <div id="search-loading" class="hidden text-center py-8">
-          <div class="inline-block w-6 h-6 border-2 border-chrome-500 border-t-transparent rounded-full animate-spin"></div>
+          <div class="inline-block w-6 h-6 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
         </div>
-        <div id="search-no-results" class="hidden text-center py-8 text-chrome-500">
+        <div id="search-no-results" class="hidden text-center py-8 text-gray-500">
           <p class="text-sm">No products found</p>
-          <p class="text-xs text-chrome-500/60 mt-1">Try a different search term</p>
+          <p class="text-xs text-gray-500/60 mt-1">Try a different search term</p>
         </div>
         <div id="search-results-list" class="hidden space-y-2"></div>
       </div>
       <!-- Quick Links -->
-      <div class="border-t border-navy-800 px-5 py-3 flex items-center justify-between">
-        <div class="flex items-center space-x-3 text-xs text-chrome-500/60">
-          <span class="flex items-center"><kbd class="bg-navy-800 px-1.5 py-0.5 rounded text-chrome-500 mr-1">&uarr;&darr;</kbd> Navigate</span>
-          <span class="flex items-center"><kbd class="bg-navy-800 px-1.5 py-0.5 rounded text-chrome-500 mr-1">Enter</kbd> Select</span>
+      <div class="border-t border-gray-200 px-5 py-3 flex items-center justify-between">
+        <div class="flex items-center space-x-3 text-xs text-gray-500/60">
+          <span class="flex items-center"><kbd class="bg-white px-1.5 py-0.5 rounded text-gray-500 mr-1">&uarr;&darr;</kbd> Navigate</span>
+          <span class="flex items-center"><kbd class="bg-white px-1.5 py-0.5 rounded text-gray-500 mr-1">Enter</kbd> Select</span>
         </div>
-        <a href="collections.html" class="text-xs text-chrome-400 hover:text-white transition-colors">View all collections &rarr;</a>
+        <a href="collections.html" class="text-xs text-gray-600 hover:text-charcoal transition-colors">View all collections &rarr;</a>
       </div>
     </div>
   </div>
