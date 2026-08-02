@@ -439,12 +439,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (galleryImages.length > 0 && lightbox) {
         galleryImages.forEach(function(img, i) {
-            img.addEventListener('click', function() {
+            function openLightbox() {
                 currentLightboxIndex = i;
                 if (lightboxImg) lightboxImg.src = img.dataset.full || img.src;
                 lightbox.classList.add('active');
                 document.body.style.overflow = 'hidden';
-            });
+            }
+            img.addEventListener('click', openLightbox);
+            var item = img.closest('.gallery-item');
+            if (item) item.addEventListener('click', openLightbox);
         });
         if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
         if (lightbox) lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });

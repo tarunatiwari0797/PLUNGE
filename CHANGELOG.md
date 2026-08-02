@@ -56,6 +56,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 - Contact form and enquiry form now redirect to thank-you.html on submission
+- Wishlist/cart icon badges updated to brand green (`bg-brand text-white`) on about.html and contact.html for consistent branding
+- Hero and section image overlays softened for a lighter, more premium look: index.html hero gradient reduced to `/30 /10 /40`, manufacturing backgrounds changed from `bg-ivory/60` to `bg-ivory/30`, about.html "Our Promise" image opacity raised to 80 with a softer gradient overlay
+- Gallery filter and FAQ category tabs: removed `hover:bg-gray-200` on inactive tabs and changed the active tab state from `bg-charcoal` to `bg-gray-800` (styles updated in both HTML and main.js)
+- about.html "Our Promise" quote text color changed to charcoal for better readability
+- Manufacturing/R&D content on about.html and the Manufacturing section on index.html now sit inside a frosted ivory panel (`bg-ivory/90 backdrop-blur-sm rounded-2xl px-6 py-12 shadow-lg`) for a cleaner, premium look
+- index.html hero paragraph text color changed to charcoal; "Explore Collection" button now has a gold border (`border-gold/60`) and a deeper navy hover state
+- Section spacing tuned: faq.html and contact.html reduced top padding from `pt-24` to `pt-20`; the FAQ page header shadow/border removed; horizontal padding (`px-4 sm:px-6`) added to manufacturing and promise sections for better mobile presentation
+- index.html "Where Craftsmanship Meets Innovation" section: `reveal-left`/`reveal-right` slide animations disabled below 1024px via a new media query in style.css, and the text centers on small screens for readability
+- Home page "Our Gallery" preview links now render as block elements (`display: block`) so the entire tile is clickable
+
+### Improved
+- **Gallery Layout:** Replaced the masonry layout with a uniform responsive grid (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`), refined card styling (`rounded-lg`, white background, subtle border/shadow), and consistent `aspect-[4/3] object-cover` images with full width and height
+- **Hero Readability on Small Screens:** index.html hero text container now receives a frosted ivory background with backdrop blur, rounded corners, and padding below 1100px so text remains legible over imagery
+- **Gallery Lightbox Redesign:** Professional lightbox with a dark backdrop, white framed image container, smooth zoom-in animation, and clearly visible circular close/previous/next controls (keyboard shortcuts preserved)
+
+### Fixed
+- **Gallery Lightbox Not Opening:** The zoom icon on gallery cards did not open the lightbox because the hover overlay intercepted click events and the `hidden` utility kept the lightbox at `display: none` (the `.lightbox.active` rule never overrode it). Fixed by attaching the click handler to each `.gallery-item` card in addition to the image, and adding `display: flex` to `.lightbox.active` so it properly overrides the `hidden` class
+- **Contact Form Focus Border:** Restored the green focus border (`#01773D`) on form inputs with `outline: none` for a cleaner focus state
+
+### Removed
+- Two gallery items removed from gallery.html: "9. Opal wall mixer.png" and "9. Cosmo wall mixer.png"
 
 ---
 

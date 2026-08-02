@@ -137,6 +137,14 @@ html { overflow-x: hidden; }
     transform: translateX(0);
 }
 
+/* Disable left/right reveal animations on small screens */
+@media (max-width: 1023px) {
+    .reveal-left, .reveal-right {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
 /* Scale In */
 .reveal-scale {
     opacity: 0;
@@ -201,8 +209,22 @@ html { overflow-x: hidden; }
     transition: opacity 0.3s ease;
 }
 .lightbox.active {
+    display: flex;
     opacity: 1;
     pointer-events: auto;
+}
+.lightbox.active .lightbox-frame {
+    animation: lightbox-zoom 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes lightbox-zoom {
+    from {
+        transform: scale(0.92);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Search Modal */
