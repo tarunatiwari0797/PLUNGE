@@ -71,12 +71,33 @@ All pending tasks for the PLUNGE E-Commerce Website.
 - [x] Create IMAGE_MAPPING.md
 - [x] Create OPTIMIZATION_REPORT.md
 
+### Phase 9: Client Feedback Round (2026-08-03)
+- [x] Convert all non-functional purchase CTAs (Add to Cart / Buy Now / Proceed to Checkout / Place Order) to Enquiry links (`contact.html#enquire`) on product-details, wishlist, cart, checkout
+- [x] Remove "Buy Now" button on product-details.html
+- [x] Remove dead toast/add-to-cart/add-to-wishlist handlers from main.js
+- [x] Remove `preview-badge` client-preview controller from main.js
+- [x] Unify header across all 19 main pages (tagline, scroll effect, mobile menu/overlay)
+- [x] Remove Topaz / Vignet / Mini Opal from footers, collections tabs/panels, search page, plunge_collections
+- [x] Expand product index to full catalog (112 products: Diamond 11, Opal Prime 13, Cosmo 13, Quba 10, Accessories 65) in main.js + search.html
+- [x] Add real local product images + keywords + compare-at prices to search.html
+- [x] Add meta descriptions to 16 pages missing them
+- [x] Add footer + search modal + back-to-top to thank-you.html; search modal to search.html
+- [x] Fix duplicate ids (faq.html `#mobile-overlay`, thank-you.html `id="main-content"`)
+- [x] Replace dead `href="#"` policy links with real pages across 9 files
+- [x] Update homepage/about stats to 150+; remove manufacturing/R&D sections on index + about
+- [x] Correct collections.html per-tab product counts (11/13/13/10/65)
+- [x] Full automated audit: no broken links / images / assets / duplicate ids / missing meta
+
 ---
 
 ## Remaining Tasks (Post-Launch / Future)
 
+### Needs Client Input (Before Public Presentation)
+- [ ] Provide real URLs for the 76 remaining `href="#"` placeholders: social icons (Facebook ~13, Instagram ~13, Pinterest ~8, Twitter ~3), my-account demo links (Dashboard, Account Details, Addresses, Orders, Logout), login "Forgot password?", product-details (Diamond Series, Email, Cookies), order-tracking (Shipping, Privacy, Terms), collections (Shipping Info)
+- [ ] Decide fate of orphan legacy pages not linked in the nav: `plunge_about_us.html`, `plunge_collections.html`, `plunge_luxury_faucets.html`, `brand_color_palette_01773d.html`
+
 ### Low Priority
-- [ ] Replace placeholder SVG images with real product photography
+- [ ] Replace remaining placeholder SVG images with real photography
 - [ ] Add WebP image format support
 - [ ] Critical CSS inlining
 - [ ] JavaScript minification and bundling

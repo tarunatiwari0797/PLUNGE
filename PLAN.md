@@ -123,7 +123,7 @@ html files/
 4. **Featured Categories** - 3 category cards (Bathroom Faucets, Kitchen Fixtures, Shower Systems) with hover effects
 5. **Best Collections** - 3 flagship products (Diamond, Opal Prime, Cosmo) with prices, Quick View overlay, "View All" link
 6. **Why Choose Us** - 6-card grid (Value Brand, Highly Durable, Premium Brass, High Quality, Wide Range, Trusted Service)
-7. **Brand Story/Statistics** - Dark section with stats: 10+ Years, 50+ Products, 1000+ Customers, 100% Satisfaction
+7. **Brand Story/Statistics** - Dark section with stats: 10+ Years, 150+ Products, 1000+ Customers, 100% Satisfaction
 8. **Manufacturing Process** - Parallax-style section with "State-of-the-art Manufacturing and R&D Setup"
 9. **Product Highlights** - Featured products carousel/grid
 10. **Gallery Preview** - 4-6 images from gallery with hover zoom
@@ -152,7 +152,7 @@ html files/
 **Sections:**
 1. Page header with breadcrumb
 2. Search & filter bar
-3. Sidebar categories (Diamond, Opal Prime, Cosmo, Quba, Topaz, Vignet, Mini Opal, Accessories)
+3. Sidebar categories (Diamond, Opal Prime, Cosmo, Quba, Accessories) — Topaz, Vignet, Mini Opal removed per client feedback
 4. Product grid with cards (product code, image, title, short description, price, View Details, Enquire)
 5. Pagination (static)
 6. Footer
@@ -439,29 +439,42 @@ html files/
 
 ## Build Progress
 
+> Status as of August 3, 2026. All planned pages built. See CHANGELOG.md, TODO.md, and PROJECT_AUDIT.md for the full work log and current status.
+
 | # | Task | Status |
 |---|------|--------|
 | 1 | PLAN.md created | DONE |
-| 2 | Directory structure | PENDING |
-| 3 | assets/css/style.css | PENDING |
-| 4 | assets/js/main.js | PENDING |
-| 5 | index.html | PENDING |
-| 6 | collections.html | PENDING |
-| 7 | product-details.html | PENDING |
-| 8 | about.html | PENDING |
-| 9 | contact.html | PENDING |
-| 10 | gallery.html | PENDING |
-| 11 | faq.html | PENDING |
-| 12 | cart.html | PENDING |
-| 13 | checkout.html | PENDING |
-| 14 | login.html | PENDING |
-| 15 | register.html | PENDING |
-| 16 | my-account.html | PENDING |
-| 17 | order-tracking.html | PENDING |
-| 18 | wishlist.html | PENDING |
-| 19 | privacy-policy.html | PENDING |
-| 20 | terms.html | PENDING |
-| 21 | 404.html | PENDING |
+| 2 | Directory structure | DONE |
+| 3 | assets/css/style.css | DONE |
+| 4 | assets/js/main.js | DONE |
+| 5 | index.html | DONE |
+| 6 | collections.html | DONE |
+| 7 | product-details.html | DONE |
+| 8 | about.html | DONE |
+| 9 | contact.html | DONE |
+| 10 | gallery.html | DONE |
+| 11 | faq.html | DONE |
+| 12 | cart.html | DONE |
+| 13 | checkout.html | DONE |
+| 14 | login.html | DONE |
+| 15 | register.html | DONE |
+| 16 | my-account.html | DONE |
+| 17 | order-tracking.html | DONE |
+| 18 | wishlist.html | DONE |
+| 19 | privacy-policy.html | DONE |
+| 20 | terms.html | DONE |
+| 21 | 404.html | DONE |
+
+### Post-Plan Additions
+- **search.html** — standalone search page with filters (112 products)
+- **thank-you.html** — form submission success page (footer + search modal added)
+- **brand_color_palette_01773d.html** — brand color reference (not nav-linked)
+
+### Latest Round (Client Feedback, Aug 2026)
+- All purchase CTAs converted to Enquiry (`contact.html#enquire`)
+- Topaz / Vignet / Mini Opal removed from all public pages (catalog now Diamond, Opal Prime, Cosmo, Quba, Accessories)
+- Product index expanded to 112 products (header search + search.html)
+- Full automated audit passed (no broken links/images/assets/ids)
 
 ---
 
