@@ -205,6 +205,11 @@ header.bg-ivory\/80 {
     background-color: #ffffff !important;
 }
 
+header a[href="wishlist.html"],
+.mobile-menu a[href="wishlist.html"] {
+    display: none !important;
+}
+
 .header-scrolled {
     background: rgba(255,255,255,0.95) !important;
     box-shadow: 0 4px 30px rgba(0,0,0,0.08);
