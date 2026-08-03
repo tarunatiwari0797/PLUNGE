@@ -3,61 +3,6 @@
    Premium E-Commerce Website
    ======================================== */
 
-/* ---- Page Status & Client Preview Controller ---- */
-(function() {
-    // [COMMENTED OUT] Page access guard — was redirecting non-whitelisted pages to index.html
-    // var page = window.location.pathname.split('/').pop() || 'index.html';
-    // var ready = ['index.html', 'product-details.html', 'collections.html', 'cart.html', 'wishlist.html'];
-    //
-    // // Redirect incomplete pages to homepage
-    // if (ready.indexOf(page) === -1 && page.indexOf('.html') !== -1) {
-    //     window.location.replace('index.html');
-    //     return;
-    // }
-
-    // Show preview badge on completed pages
-    document.addEventListener('DOMContentLoaded', function() {
-        var badge = document.createElement('div');
-        badge.id = 'preview-badge';
-        Object.assign(badge.style, {
-            position: 'fixed',
-            bottom: '20px',
-            right: '20px',
-            zIndex: '9999',
-            background: 'rgba(15,23,42,0.92)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            color: '#fff',
-            fontSize: '11px',
-            padding: '10px 16px',
-            borderRadius: '10px',
-            boxShadow: '0 4px 24px rgba(0,0,0,0.2)',
-            maxWidth: '280px',
-            lineHeight: '1.5',
-            cursor: 'pointer',
-            transition: 'all 0.3s',
-            border: '1px solid rgba(255,255,255,0.06)',
-            fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif'
-        });
-        badge.innerHTML = '<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px"><span style="width:5px;height:5px;border-radius:50%;background:#01773D;flex-shrink:0;animation:badge-pulse 1.5s infinite"></span><span style="font-weight:600;font-size:10px;letter-spacing:1px;opacity:0.6">UNDER DEVELOPMENT</span></div><div style="font-size:11px;color:rgba(255,255,255,0.75)">Progress preview &mdash; QA and finishing touches underway. Your feedback is welcome!</div>';
-        document.body.appendChild(badge);
-
-        badge.addEventListener('click', function() {
-            badge.style.opacity = '0';
-            badge.style.transform = 'translateY(8px) scale(0.96)';
-            setTimeout(function() { badge.remove(); }, 300);
-        });
-
-        // Inject keyframe if not already present
-        if (!document.getElementById('badge-keyframes')) {
-            var s = document.createElement('style');
-            s.id = 'badge-keyframes';
-            s.textContent = '@keyframes badge-pulse{0%,100%{opacity:1}50%{opacity:0.3}}';
-            document.head.appendChild(s);
-        }
-    });
-})();
-
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ---- Scroll Reveal Animations ---- */
@@ -75,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ---- Header Scroll Effect ---- */
-    const header = document.getElementById('main-header');
+    const header = document.querySelector('header[data-scroll-effect="true"]');
     if (header && header.dataset.scrollEffect === 'true') {
         const handleScroll = () => {
             if (window.scrollY > 80) {
@@ -128,17 +73,119 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchButtons = document.querySelectorAll('[aria-label="Search"]');
 
     // Product index for search
-    const productIndex = [
-        { name: 'Diamond Bib Cock', collection: 'Diamond', code: 'DI-FS-01', price: '\u20B9780', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium single-lever bib cock with chrome finish' },
-        { name: 'Diamond Long Body', collection: 'Diamond', code: 'DI-FS-02', price: '\u20B9850', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Extended body design for deeper basins' },
-        { name: 'Diamond Angle Cock', collection: 'Diamond', code: 'DI-FS-03', price: '\u20B9550', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Quarter-turn angle cock for water supply' },
-        { name: 'Diamond Wall Mixer', collection: 'Diamond', code: 'DI-FS-04', price: '\u20B91,990', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Dual-control wall-mounted mixer' },
-        { name: 'Opal Prime Bib Cock', collection: 'Opal Prime', code: 'OP-FS-01', price: '\u20B9820', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Contemporary design with ergonomic handle' },
-        { name: 'Opal Prime Sink Mixer', collection: 'Opal Prime', code: 'OP-FS-02', price: '\u20B91,850', url: 'product-details.html', category: 'Kitchen Faucets', description: 'High-arc kitchen sink mixer' },
-        { name: 'Opal Prime Wall Mixer', collection: 'Opal Prime', code: 'OP-FS-03', price: '\u20B92,200', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium wall-mounted mixer with diverter' },
-        { name: 'Cosmo Sink Mixer', collection: 'Cosmo', code: 'CO-FS-01', price: '\u20B92,500', url: 'product-details.html', category: 'Kitchen Faucets', description: 'Modern pull-out kitchen faucet' },
-        { name: 'Cosmo Bib Cock', collection: 'Cosmo', code: 'CO-FS-02', price: '\u20B9690', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Compact design for small spaces' },
-        { name: 'Cosmo Wall Mixer', collection: 'Cosmo', code: 'CO-FS-03', price: '\u20B92,100', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Minimalist wall mixer with clean lines' },
+        const productIndex = [
+        { name: 'Diamond Bib Cock', collection: 'Diamond', code: 'DI-FS-01', price: '₹780', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Diamond Bib Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Diamond Long Body', collection: 'Diamond', code: 'DI-FS-02', price: '₹840', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Diamond Long Body by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Diamond Sink Cock', collection: 'Diamond', code: 'DI-FS-03', price: '₹1,205', url: 'product-details.html', category: 'Kitchen Faucets', description: 'Premium Diamond Sink Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Diamond Swan Neck', collection: 'Diamond', code: 'DI-FS-04', price: '₹1,300', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Diamond Swan Neck by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Diamond Pillar Cock', collection: 'Diamond', code: 'DI-FS-05', price: '₹1,047', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Diamond Pillar Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Diamond Angle Cock', collection: 'Diamond', code: 'DI-FS-06', price: '₹562', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Diamond Angle Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Diamond 2 in 1 Bib Cock', collection: 'Diamond', code: 'DI-FS-07', price: '₹1,205', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Diamond 2 in 1 Bib Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Diamond 2 in 1 Angle Cock', collection: 'Diamond', code: 'DI-FS-08', price: '₹1,205', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Diamond 2 in 1 Angle Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Diamond Wall Mixer', collection: 'Diamond', code: 'DI-FS-09', price: '₹4,037', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Diamond Wall Mixer by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Diamond Sink Mixer', collection: 'Diamond', code: 'DI-FS-10', price: '₹2,650', url: 'product-details.html', category: 'Kitchen Faucets', description: 'Premium Diamond Sink Mixer by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Diamond Concealed Valve', collection: 'Diamond', code: 'DI-FS-11', price: '₹1,000', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Diamond Concealed Valve by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime Bib Cock', collection: 'Opal Prime', code: 'OP-FS-01', price: '₹780', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Opal Prime Bib Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime Long Body', collection: 'Opal Prime', code: 'OP-FS-02', price: '₹840', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Opal Prime Long Body by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime Sink Cock', collection: 'Opal Prime', code: 'OP-FS-03', price: '₹1,205', url: 'product-details.html', category: 'Kitchen Faucets', description: 'Premium Opal Prime Sink Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime Swan Neck', collection: 'Opal Prime', code: 'OP-FS-04', price: '₹1,300', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Opal Prime Swan Neck by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime Pillar Cock', collection: 'Opal Prime', code: 'OP-FS-05', price: '₹1,063', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Opal Prime Pillar Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime Angle Cock', collection: 'Opal Prime', code: 'OP-FS-06', price: '₹562', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Opal Prime Angle Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime 2 in 1 Bib Cock', collection: 'Opal Prime', code: 'OP-FS-07', price: '₹1,265', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Opal Prime 2 in 1 Bib Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime 2 in 1 Angle Cock', collection: 'Opal Prime', code: 'OP-FS-08', price: '₹1,175', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Opal Prime 2 in 1 Angle Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime Wall Mixer', collection: 'Opal Prime', code: 'OP-FS-09', price: '₹4,125', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Opal Prime Wall Mixer by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime Sink Mixer', collection: 'Opal Prime', code: 'OP-FS-10', price: '₹2,650', url: 'product-details.html', category: 'Kitchen Faucets', description: 'Premium Opal Prime Sink Mixer by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime Concealed Valve', collection: 'Opal Prime', code: 'OP-FS-11', price: '₹1,000', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Opal Prime Concealed Valve by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime Table Top', collection: 'Opal Prime', code: 'OP-FS-12', price: '₹2,375', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Opal Prime Table Top by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Opal Prime Diverter', collection: 'Opal Prime', code: 'OP-FS-13', price: '₹6,125', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Opal Prime Diverter by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo Bib Cock', collection: 'Cosmo', code: 'CO-FS-01', price: '₹950', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Cosmo Bib Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo Long Body', collection: 'Cosmo', code: 'CO-FS-02', price: '₹1,065', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Cosmo Long Body by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo Sink Cock (U)', collection: 'Cosmo', code: 'CO-FS-03', price: '₹1,237', url: 'product-details.html', category: 'Kitchen Faucets', description: 'Premium Cosmo Sink Cock (U) by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo Swan Neck (U)', collection: 'Cosmo', code: 'CO-FS-04', price: '₹1,337', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Cosmo Swan Neck (U) by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo Pillar Cock', collection: 'Cosmo', code: 'CO-FS-05', price: '₹1,175', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Cosmo Pillar Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo Angle Cock', collection: 'Cosmo', code: 'CO-FS-06', price: '₹575', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Cosmo Angle Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo 2 in 1 Bib Cock', collection: 'Cosmo', code: 'CO-FS-07', price: '₹1,287', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Cosmo 2 in 1 Bib Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo 2 in 1 Angle Cock', collection: 'Cosmo', code: 'CO-FS-08', price: '₹1,212', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Cosmo 2 in 1 Angle Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo Wall Mixer', collection: 'Cosmo', code: 'CO-FS-09', price: '₹4,250', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Cosmo Wall Mixer by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo Sink Mixer', collection: 'Cosmo', code: 'CO-FS-10', price: '₹2,650', url: 'product-details.html', category: 'Kitchen Faucets', description: 'Premium Cosmo Sink Mixer by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo Concealed Valve', collection: 'Cosmo', code: 'CO-FS-11', price: '₹1,025', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Cosmo Concealed Valve by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo Swan Neck', collection: 'Cosmo', code: 'CO-FS-12', price: '₹1,300', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Cosmo Swan Neck by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Cosmo Sink Cock', collection: 'Cosmo', code: 'CO-FS-13', price: '₹1,205', url: 'product-details.html', category: 'Kitchen Faucets', description: 'Premium Cosmo Sink Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Quba Bib Cock', collection: 'Quba', code: 'QU-FS-01', price: '₹1,000', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Quba Bib Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Quba Long Body', collection: 'Quba', code: 'QU-FS-02', price: '₹1,100', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Quba Long Body by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Quba Sink Cock', collection: 'Quba', code: 'QU-FS-03', price: '₹1,512', url: 'product-details.html', category: 'Kitchen Faucets', description: 'Premium Quba Sink Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Quba Swan Neck', collection: 'Quba', code: 'QU-FS-04', price: '₹1,425', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Quba Swan Neck by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Quba Pillar Cock', collection: 'Quba', code: 'QU-FS-05', price: '₹1,300', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Quba Pillar Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Quba Angle Cock', collection: 'Quba', code: 'QU-FS-06', price: '₹787', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Quba Angle Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Quba 2 in 1 Bib Cock', collection: 'Quba', code: 'QU-FS-07', price: '₹1,537', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Quba 2 in 1 Bib Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Quba 2 in 1 Angle Cock', collection: 'Quba', code: 'QU-FS-08', price: '₹1,425', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Quba 2 in 1 Angle Cock by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Quba Wall Mixer', collection: 'Quba', code: 'QU-FS-09', price: '₹4,487', url: 'product-details.html', category: 'Bathroom Faucets', description: 'Premium Quba Wall Mixer by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Quba Sink Mixer', collection: 'Quba', code: 'QU-FS-10', price: '₹2,937', url: 'product-details.html', category: 'Kitchen Faucets', description: 'Premium Quba Sink Mixer by PLUNGE — high-grade brass with mirror chrome finish' },
+        { name: 'Aria Flush Valve', collection: 'Accessories', code: 'AR-FS-1', price: '₹1,862', url: 'product-details.html', category: 'Accessories', description: 'Aria Flush Valve by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Conti Concealed Valve', collection: 'Accessories', code: 'CON-FS-1', price: '₹1,437', url: 'product-details.html', category: 'Accessories', description: 'Conti Concealed Valve by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Flush Valve (M)', collection: 'Accessories', code: 'FW-FS-1', price: '₹962', url: 'product-details.html', category: 'Accessories', description: 'Flush Valve (M) by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Flush Valve (H)', collection: 'Accessories', code: 'FW-FS-2', price: '₹1,250', url: 'product-details.html', category: 'Accessories', description: 'Flush Valve (H) by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Grohe Health Faucet Black With 1.5 Mtr shower tube', collection: 'Accessories', code: 'GR-FS-1', price: '₹750', url: 'product-details.html', category: 'Accessories', description: 'Grohe Health Faucet Black With 1.5 Mtr shower tube by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Grohe Health Faucet Chrome With 1.5 Mtr shower tube', collection: 'Accessories', code: 'GR-FS-2', price: '₹670', url: 'product-details.html', category: 'Accessories', description: 'Grohe Health Faucet Chrome With 1.5 Mtr shower tube by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Mahendra Health Faucet With 1.5 Mtr shower tube', collection: 'Accessories', code: 'MA-FS-3', price: '₹940', url: 'product-details.html', category: 'Accessories', description: 'Mahendra Health Faucet With 1.5 Mtr shower tube by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Neno Health Faucet With 1.5 Mtr shower tube', collection: 'Accessories', code: 'NE-FS-4', price: '₹850', url: 'product-details.html', category: 'Accessories', description: 'Neno Health Faucet With 1.5 Mtr shower tube by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Dolphin Health Faucet With 1.5 Mtr shower tube', collection: 'Accessories', code: 'DE-FS-5', price: '₹1,065', url: 'product-details.html', category: 'Accessories', description: 'Dolphin Health Faucet With 1.5 Mtr shower tube by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Plunge Jet Spray with brass Nut & brass Inner', collection: 'Accessories', code: 'JS-FS-1', price: '₹365', url: 'product-details.html', category: 'Accessories', description: 'Plunge Jet Spray with brass Nut & brass Inner by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Plunge Waste Coupling', collection: 'Accessories', code: 'CO-FS-1', price: '₹187', url: 'product-details.html', category: 'Accessories', description: 'Plunge Waste Coupling by PLUNGE — premium finish bathroom accessory' },
+        { name: 'PVC Sink Coupling Bowl', collection: 'Accessories', code: 'SCP-FS-01', price: '₹138', url: 'product-details.html', category: 'Accessories', description: 'PVC Sink Coupling Bowl by PLUNGE — premium finish bathroom accessory' },
+        { name: 'SS Sink Coupling Bowl', collection: 'Accessories', code: 'SCS-FS-02', price: '₹220', url: 'product-details.html', category: 'Accessories', description: 'SS Sink Coupling Bowl by PLUNGE — premium finish bathroom accessory' },
+        { name: 'SS Bucket Sink Coupling Round', collection: 'Accessories', code: 'SCB-FS-03', price: '₹225', url: 'product-details.html', category: 'Accessories', description: 'SS Bucket Sink Coupling Round by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Square Sink Coupling', collection: 'Accessories', code: 'SCSQ-FS-4', price: '₹238', url: 'product-details.html', category: 'Accessories', description: 'Square Sink Coupling by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Plunge PVC Shower Max', collection: 'Accessories', code: 'SMA-FS-1', price: '₹400', url: 'product-details.html', category: 'Accessories', description: 'Plunge PVC Shower Max by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Plunge PVC Shower Galaxy', collection: 'Accessories', code: 'SGL-FS-2', price: '₹400', url: 'product-details.html', category: 'Accessories', description: 'Plunge PVC Shower Galaxy by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Plunge PVC Shower Prince Round', collection: 'Accessories', code: 'SRO-FS-3', price: '₹400', url: 'product-details.html', category: 'Accessories', description: 'Plunge PVC Shower Prince Round by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Plunge PVC Shower Prince Square', collection: 'Accessories', code: 'SSQ-FS-4', price: '₹400', url: 'product-details.html', category: 'Accessories', description: 'Plunge PVC Shower Prince Square by PLUNGE — premium finish bathroom accessory' },
+        { name: '18" Connection PTMT', collection: 'Accessories', code: 'CP1-FS-1', price: '₹90', url: 'product-details.html', category: 'Accessories', description: '18" Connection PTMT by PLUNGE — premium finish bathroom accessory' },
+        { name: '24" Connection PTMT', collection: 'Accessories', code: 'CP2-FS-2', price: '₹103', url: 'product-details.html', category: 'Accessories', description: '24" Connection PTMT by PLUNGE — premium finish bathroom accessory' },
+        { name: '30" Connection PTMT', collection: 'Accessories', code: 'CP3-FS-3', price: '₹115', url: 'product-details.html', category: 'Accessories', description: '30" Connection PTMT by PLUNGE — premium finish bathroom accessory' },
+        { name: '36" Connection PTMT', collection: 'Accessories', code: 'CP4-FS-4', price: '₹128', url: 'product-details.html', category: 'Accessories', description: '36" Connection PTMT by PLUNGE — premium finish bathroom accessory' },
+        { name: '42" Connection PTMT', collection: 'Accessories', code: 'CP5-FS-5', price: '₹142', url: 'product-details.html', category: 'Accessories', description: '42" Connection PTMT by PLUNGE — premium finish bathroom accessory' },
+        { name: '48" Connection PTMT', collection: 'Accessories', code: 'CP6-FS-6', price: '₹158', url: 'product-details.html', category: 'Accessories', description: '48" Connection PTMT by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Waste Pipe (M)', collection: 'Accessories', code: 'WPL-FS-1', price: '₹40', url: 'product-details.html', category: 'Accessories', description: 'Waste Pipe (M) by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Waste Pipe (H)', collection: 'Accessories', code: 'WPH-FS-2', price: '₹70', url: 'product-details.html', category: 'Accessories', description: 'Waste Pipe (H) by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Waste Pipe Black', collection: 'Accessories', code: 'WPB-FS-3', price: '₹95', url: 'product-details.html', category: 'Accessories', description: 'Waste Pipe Black by PLUNGE — premium finish bathroom accessory' },
+        { name: '1.5 Mtr Shower Tube With Brass Nut & Brass Inner', collection: 'Accessories', code: 'ST-FS-1', price: '₹340', url: 'product-details.html', category: 'Accessories', description: '1.5 Mtr Shower Tube With Brass Nut & Brass Inner by PLUNGE — premium finish bathroom accessory' },
+        { name: '1 Mtr Shower Tube With Brass Nut & Brass Inner', collection: 'Accessories', code: 'ST-FS-2', price: '₹310', url: 'product-details.html', category: 'Accessories', description: '1 Mtr Shower Tube With Brass Nut & Brass Inner by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Lock Round Floor Drain', collection: 'Accessories', code: 'LRP-FS-1', price: '₹88', url: 'product-details.html', category: 'Accessories', description: 'Lock Round Floor Drain by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Lock Round Floor Drain With Hole', collection: 'Accessories', code: 'LRH-FS-2', price: '₹88', url: 'product-details.html', category: 'Accessories', description: 'Lock Round Floor Drain With Hole by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Lock Square Floor Drain', collection: 'Accessories', code: 'LSP-FS-5', price: '₹125', url: 'product-details.html', category: 'Accessories', description: 'Lock Square Floor Drain by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Lock Square Floor Drain With Hole', collection: 'Accessories', code: 'LSH-FS-5', price: '₹125', url: 'product-details.html', category: 'Accessories', description: 'Lock Square Floor Drain With Hole by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Cockroach Round Floor Drain', collection: 'Accessories', code: 'CRP-FS-3', price: '₹208', url: 'product-details.html', category: 'Accessories', description: 'Cockroach Round Floor Drain by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Cockroach Round Floor Drain With Hole', collection: 'Accessories', code: 'CRH-FS-4', price: '₹208', url: 'product-details.html', category: 'Accessories', description: 'Cockroach Round Floor Drain With Hole by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Cockroach Square Floor Drain', collection: 'Accessories', code: 'CSP-FS-7', price: '₹248', url: 'product-details.html', category: 'Accessories', description: 'Cockroach Square Floor Drain by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Cockroach Square Hole Floor Drain', collection: 'Accessories', code: 'CSH-FS-8', price: '₹248', url: 'product-details.html', category: 'Accessories', description: 'Cockroach Square Hole Floor Drain by PLUNGE — premium finish bathroom accessory' },
+        { name: '3" Floor Drain (Per DZ)', collection: 'Accessories', code: 'JB3-FS-9', price: '₹438', url: 'product-details.html', category: 'Accessories', description: '3" Floor Drain (Per DZ) by PLUNGE — premium finish bathroom accessory' },
+        { name: '4" Floor Drain (Per DZ)', collection: 'Accessories', code: 'JB4-FS-10', price: '₹588', url: 'product-details.html', category: 'Accessories', description: '4" Floor Drain (Per DZ) by PLUNGE — premium finish bathroom accessory' },
+        { name: '5" Floor Drain (Per DZ)', collection: 'Accessories', code: 'JB5-FS-11', price: '₹688', url: 'product-details.html', category: 'Accessories', description: '5" Floor Drain (Per DZ) by PLUNGE — premium finish bathroom accessory' },
+        { name: '3" Hole Jali (Per DZ)', collection: 'Accessories', code: 'JH3-FS-12', price: '₹438', url: 'product-details.html', category: 'Accessories', description: '3" Hole Jali (Per DZ) by PLUNGE — premium finish bathroom accessory' },
+        { name: '4" Hole Jali (Per DZ)', collection: 'Accessories', code: 'JH4-FS-13', price: '₹588', url: 'product-details.html', category: 'Accessories', description: '4" Hole Jali (Per DZ) by PLUNGE — premium finish bathroom accessory' },
+        { name: '5" Hole Jali (Per DZ)', collection: 'Accessories', code: 'JH5-FS-14', price: '₹688', url: 'product-details.html', category: 'Accessories', description: '5" Hole Jali (Per DZ) by PLUNGE — premium finish bathroom accessory' },
+        { name: '3" Slice Jali', collection: 'Accessories', code: 'SL3-FS-15', price: '₹75', url: 'product-details.html', category: 'Accessories', description: '3" Slice Jali by PLUNGE — premium finish bathroom accessory' },
+        { name: '4" Slice Jali', collection: 'Accessories', code: 'SL4-FS-16', price: '₹93', url: 'product-details.html', category: 'Accessories', description: '4" Slice Jali by PLUNGE — premium finish bathroom accessory' },
+        { name: '5" Slice Jali', collection: 'Accessories', code: 'SL5-FS-17', price: '₹113', url: 'product-details.html', category: 'Accessories', description: '5" Slice Jali by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Long Spendal', collection: 'Accessories', code: 'LS-FS-01', price: '₹178', url: 'product-details.html', category: 'Accessories', description: 'Long Spendal by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Short Spendal', collection: 'Accessories', code: 'LS-FS-02', price: '₹120', url: 'product-details.html', category: 'Accessories', description: 'Short Spendal by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Jaquar Flange (Per DZ)', collection: 'Accessories', code: 'JFL-FS-01', price: '₹213', url: 'product-details.html', category: 'Accessories', description: 'Jaquar Flange (Per DZ) by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Thread Seal Tape 12mm x 0.1mm x 10mtr (M)', collection: 'Accessories', code: 'TF-FS-01', price: '₹17', url: 'product-details.html', category: 'Accessories', description: 'Thread Seal Tape 12mm x 0.1mm x 10mtr (M) by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Thread Seal Tape 12mm x 0.1mm x 10mtr (H)', collection: 'Accessories', code: 'TF-FS-01', price: '₹25', url: 'product-details.html', category: 'Accessories', description: 'Thread Seal Tape 12mm x 0.1mm x 10mtr (H) by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Thread Seal Tape 12mm x 0.1mm x 15mtr', collection: 'Accessories', code: 'TF-FS-01', price: '₹30', url: 'product-details.html', category: 'Accessories', description: 'Thread Seal Tape 12mm x 0.1mm x 15mtr by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Thread Seal Tape 19mm x 0.1mm x 10mtr', collection: 'Accessories', code: 'TF-FS-01', price: '₹34', url: 'product-details.html', category: 'Accessories', description: 'Thread Seal Tape 19mm x 0.1mm x 10mtr by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Single Soap Dish', collection: 'Accessories', code: 'SSDM-FS-01', price: '₹86.25', url: 'product-details.html', category: 'Accessories', description: 'Single Soap Dish by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Double Soap Dish', collection: 'Accessories', code: 'DSDM-FS-02', price: '₹157.5', url: 'product-details.html', category: 'Accessories', description: 'Double Soap Dish by PLUNGE — premium finish bathroom accessory' },
+        { name: '2x1 With Tumbler', collection: 'Accessories', code: '2WTM-FS-03', price: '₹137.5', url: 'product-details.html', category: 'Accessories', description: '2x1 With Tumbler by PLUNGE — premium finish bathroom accessory' },
+        { name: '3x1 With Tumbler', collection: 'Accessories', code: '3WTM-FS-04', price: '₹195', url: 'product-details.html', category: 'Accessories', description: '3x1 With Tumbler by PLUNGE — premium finish bathroom accessory' },
+        { name: '4x1 With Tumbler', collection: 'Accessories', code: '4WTM-FS-05', price: '₹257.5', url: 'product-details.html', category: 'Accessories', description: '4x1 With Tumbler by PLUNGE — premium finish bathroom accessory' },
+        { name: '5x1 With Tumbler', collection: 'Accessories', code: '5WTM-FS-06', price: '₹300', url: 'product-details.html', category: 'Accessories', description: '5x1 With Tumbler by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Set Up Box Stand', collection: 'Accessories', code: 'SBSM-FS-07', price: '₹275', url: 'product-details.html', category: 'Accessories', description: 'Set Up Box Stand by PLUNGE — premium finish bathroom accessory' },
+        { name: '16" Shelf', collection: 'Accessories', code: 'SHFM-FS-08', price: '₹300', url: 'product-details.html', category: 'Accessories', description: '16" Shelf by PLUNGE — premium finish bathroom accessory' },
+        { name: 'P.P. Corner Set', collection: 'Accessories', code: 'PPCS-FS-09', price: '₹312.5', url: 'product-details.html', category: 'Accessories', description: 'P.P. Corner Set by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Unbreakable Corner Set', collection: 'Accessories', code: 'UBCS-FS-10', price: '₹587.5', url: 'product-details.html', category: 'Accessories', description: 'Unbreakable Corner Set by PLUNGE — premium finish bathroom accessory' },
+        { name: 'Mirror Cabinet Full Size', collection: 'Accessories', code: 'MIRC-FS-11', price: '₹2,750', url: 'product-details.html', category: 'Accessories', description: 'Mirror Cabinet Full Size by PLUNGE — premium finish bathroom accessory' }
     ];
 
     function openSearchModal() {
@@ -270,50 +317,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-    /* ---- Toast Notifications ---- */
-    function showToast(message, type) {
-        type = type || 'success';
-        const toast = document.createElement('div');
-        var bgColor = type === 'success' ? 'bg-brand' : type === 'error' ? 'bg-red-600' : 'bg-charcoal';
-        toast.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 z-[200] flex items-center gap-3 px-6 py-3 rounded-xl shadow-2xl text-white text-sm font-medium transition-all duration-500 translate-y-20 opacity-0 ' + bgColor;
-        toast.setAttribute('role', 'alert');
-        toast.setAttribute('aria-live', 'polite');
-
-        var iconSvg = type === 'success'
-            ? '<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>'
-            : '<svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>';
-
-        toast.innerHTML = iconSvg + '<span>' + message + '</span>';
-        document.body.appendChild(toast);
-
-        requestAnimationFrame(function() {
-            requestAnimationFrame(function() {
-                toast.classList.remove('translate-y-20', 'opacity-0');
-                toast.classList.add('translate-y-0', 'opacity-100');
-            });
-        });
-
-        setTimeout(function() {
-            toast.classList.remove('translate-y-0', 'opacity-100');
-            toast.classList.add('translate-y-20', 'opacity-0');
-            setTimeout(function() { toast.remove(); }, 500);
-        }, 3000);
-    }
-
-    // Bind add-to-cart buttons with toast
-    document.querySelectorAll('.add-to-cart-btn, [data-action="add-to-cart"]').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-            showToast('Added to cart successfully!', 'success');
-        });
-    });
-
-    // Bind add-to-wishlist buttons with toast
-    document.querySelectorAll('.add-to-wishlist-btn, [data-action="add-to-wishlist"]').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-            showToast('Added to wishlist!', 'success');
-        });
-    });
 
     /* ---- Back to Top ---- */
     const backToTop = document.getElementById('back-to-top');

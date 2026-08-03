@@ -78,6 +78,39 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 - Two gallery items removed from gallery.html: "9. Opal wall mixer.png" and "9. Cosmo wall mixer.png"
 
+### Client Feedback Round (2026-08-03)
+Enquiry-flow conversion, catalog cleanup, and pre-presentation audit fixes.
+
+#### Added
+- **Enquiry CTA flow:** All non-functional purchase CTAs (Add to Cart, Buy Now, Proceed to Checkout, Place Order) converted to "Enquire Now" / "Submit Enquiry" links routing to `contact.html#enquire` on product-details.html (main + sticky bar), wishlist.html (×4 cards), cart.html, and checkout.html.
+- **Expanded search index:** `productIndex` in main.js (header search modal) expanded from 10 to 112 products with name, collection, code, price (₹, en-IN), category, and description.
+- **Standalone search page:** search.html products array expanded to the full 112-product catalog with real local product images, compare-at prices (oldPrice), and search keywords.
+- **Search modal:** added to thank-you.html and search.html (previously missing).
+- **Footer + back-to-top:** added to thank-you.html (brand + quick links + customer service + contact info).
+- **Meta descriptions:** added to 16 pages that were missing them (404, about, cart, checkout, collections, contact, faq, gallery, login, my-account, order-tracking, privacy-policy, product-details, register, terms, wishlist).
+
+#### Changed
+- **Header unification:** consistent header across all 19 main pages with "by F.S. Enterprises" tagline, `data-scroll-effect="true"` hook, hamburger + search buttons, mobile menu/overlay.
+- **Catalog:** Topaz, Vignet, and Mini Opal collections removed from all public pages per client feedback (footers, collections.html tabs/panels, search page, product index). Product index now 112 products: Diamond 11, Opal Prime 13, Cosmo 13, Quba 10, Accessories 65.
+- **Homepage:** Products stat updated 50+ → 150+; "Manufacturing and R&D Setup" section removed.
+- **About page:** "Our Journey" timeline, "State-of-the-art Manufacturing and R&D Setup" parallax, and "R&D Laboratory" infrastructure card removed; Products stat updated 50+ → 150+; section numbering re-sequenced.
+- **Collections page:** footer Topaz link → Accessories; per-tab product counts corrected (Diamond 11, Opal Prime 13, Cosmo 13, Quba 10, Accessories 65).
+- **plunge_collections.html (legacy):** Topaz/Vignet/Mini Opal sidebar tabs and placeholder panels removed.
+
+#### Fixed
+- faq.html duplicate `#mobile-overlay` element removed (two overlays were rendering).
+- main.js header scroll selector changed from `getElementById('main-header')` to `querySelector('header[data-scroll-effect="true"]')` (header no longer carries that id).
+- thank-you.html duplicate `id="main-content"` (header + main) — id kept on `<main>` only.
+- Dead `href="#"` policy/support links replaced with real pages (`privacy-policy.html`, `terms.html`, `contact.html#enquire`) across index, about, my-account, collections, cart, checkout, product-details, register, login.
+- Removed dead code from main.js: `showToast()` and add-to-cart/add-to-wishlist bindings (cart/wishlist actions are intentionally non-functional in this static build).
+- Removed `preview-badge` client-preview controller block from main.js.
+
+#### Removed
+- product-details.html "Buy Now" button.
+- Topaz / Vignet / Mini Opal footer links, collection tabs, and panels across all pages.
+- index.html and about.html manufacturing/R&D sections plus the R&D Laboratory card.
+- main.js toast notification system and add-to-cart/add-to-wishlist event handlers.
+
 ---
 
 ## [0.1.0] - 2026-07-28
@@ -112,6 +145,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 |---------|------|-------------|
 | 1.0.0 | 2026-07-28 | Production-ready release: bug fixes, SEO, accessibility, performance, search, documentation |
 | Unreleased | 2026-07-28 | Bug fix: mobile menu, search modal, documentation files |
+| Unreleased | 2026-08-03 | Client feedback: enquiry-flow conversion, Topaz/Vignet/Mini Opal removal, 112-product index, pre-presentation audit fixes |
 | 0.1.0 | 2026-07-28 | Initial project state - all pages created with placeholder images |
 
 ---
