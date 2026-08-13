@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (collectionSearchInput) {
         collectionSearchInput.addEventListener('input', function(e) {
             var term = e.target.value.toLowerCase().trim();
-            var activePane = document.querySelector('.tab-pane:not(.hidden)');
+            var activePane = document.querySelector('.tab-pane.active');
             if (!activePane) return;
             activePane.querySelectorAll('.product-card').forEach(function(card) {
                 var title = (card.querySelector('h3') ? card.querySelector('h3').textContent : '').toLowerCase();

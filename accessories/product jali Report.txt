@@ -1,0 +1,437 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: product jali.pdf
+Color Mode: RGB color
+Color Profile: sRGB IEC61966-2.1
+Ruler Units: pixels
+Artboard Dimensions: 972 px x 648 px
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:
+Myriad Pro (Adobe Fonts)
+
+-----------------------------------------------------------------------------
+Fonts:
+Hind Light (OTF)
+Hind SemiBold (OTF)
+ (OTF)
+ (OTF)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\DSC_5301 copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 29249K, 3050 by 2455 pixels
+Dimensions: 168.062 by 135.276 points 
+Resolution: 1306.662 by 1306.662 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\DSC_5271 copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 12013K, 2030 by 1515 pixels
+Dimensions: 115.348 by 120.131 points 
+Resolution: 1267.121 by 908.006 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\DSC_5287 copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 23924K, 2632 by 2327 pixels
+Dimensions: 164.417 by 145.364 points 
+Resolution: 1152.579 by 1152.579 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\3_ jali Hole copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 15117K, 2254 by 1717 pixels
+Dimensions: 157.194 by 119.744 points 
+Resolution: 1032.403 by 1032.403 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\web photo\jali\4_ Hole Jali copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 16965K, 2217 by 1959 pixels
+Dimensions: 148.678 by 131.376 points 
+Resolution: 1073.625 by 1073.625 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\3_ jali Hole copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 15117K, 2254 by 1717 pixels
+Dimensions: 183.684 by 139.922 points 
+Resolution: 883.518 by 883.518 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\web photo\jali\4_ plan jali copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 15969K, 2255 by 1813 pixels
+Dimensions: 151.428 by 121.747 points 
+Resolution: 1072.192 by 1072.192 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\web photo\jali\5_ Plan Jali copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 20009K, 2790 by 1836 pixels
+Dimensions: 128.66 by 84.666 points 
+Resolution: 1561.327 by 1561.327 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Cockroach SQ Jali copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 29393K, 3508 by 2145 pixels
+Dimensions: 187.176 by 114.451 points 
+Resolution: 1349.403 by 1349.403 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Cocroach SQ hole jaldi copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 18799K, 2416 by 1992 pixels
+Dimensions: 129.651 by 106.897 points 
+Resolution: 1341.699 by 1341.699 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\SQ hole jaldi copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 15515K, 2416 by 1644 pixels
+Dimensions: 131.569 by 89.528 points 
+Resolution: 1322.13 by 1322.13 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\SQ Jali copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 29393K, 3508 by 2145 pixels
+Dimensions: 176.662 by 108.022 points 
+Resolution: 1429.712 by 1429.712 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\DSC_5728 copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 28661K, 2979 by 2463 pixels
+Dimensions: 133.069 by 110.019 points 
+Resolution: 1611.86 by 1611.86 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Lock Round Jali co copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 25659K, 2856 by 2300 pixels
+Dimensions: 131.441 by 105.853 points 
+Resolution: 1564.44 by 1564.44 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\hole jali copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 21993K, 2979 by 1890 pixels
+Dimensions: 129.78 by 82.338 points 
+Resolution: 1652.708 by 1652.708 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Lock Round Jali copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 17905K, 2856 by 1605 pixels
+Dimensions: 126.72 by 71.213 points 
+Resolution: 1622.727 by 1622.727 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\FSE logo  white copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 412K, 487 by 217 pixels
+Dimensions: 68.461 by 30.505 points 
+Resolution: 512.178 by 512.178 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Waste Pipe black copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 14719K, 3996 by 943 pixels
+Dimensions: 195.846 by 88.881 points 
+Resolution: 1469.076 by 763.899 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Waste Pipe (H) copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 9954K, 3792 by 672 pixels
+Dimensions: 150.223 by 87.096 points 
+Resolution: 1817.454 by 555.527 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Waste Pipe (L) copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 10821K, 4080 by 679 pixels
+Dimensions: 21.111 by 126.849 points 
+Resolution: 13915.342 by 385.402 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\DSC_5568 copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 29376K, 2176 by 3456 pixels
+Dimensions: 88.897 by 133.62 points 
+Resolution: 1762.398 by 1862.234 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\CANTI Concealed valve copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 19248K, 1711 by 2880 pixels
+Dimensions: 84.483 by 134.933 points 
+Resolution: 1458.188 by 1536.758 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Aria Flush Wall copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 39379K, 2732 by 3690 pixels
+Dimensions: 102.966 by 139.072 points 
+Resolution: 1910.378 by 1910.378 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Waste Coupling Plunge copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 30962K, 2376 by 3336 pixels
+Dimensions: 94.564 by 132.771 points 
+Resolution: 1809.068 by 1809.068 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\DSC_5328 copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 47851K, 5387 by 2274 pixels
+Dimensions: 191.912 by 81.011 points 
+Resolution: 2021.047 by 2021.047 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\FSE logo  white copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 412K, 487 by 217 pixels
+Dimensions: 68.461 by 30.505 points 
+Resolution: 512.178 by 512.178 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Shower tube 2 copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 29302K, 2928 by 2562 pixels
+Dimensions: 121.409 by 106.233 points 
+Resolution: 1736.417 by 1736.417 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Shower tube copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 31190K, 3294 by 2424 pixels
+Dimensions: 147.363 by 108.442 points 
+Resolution: 1609.417 by 1609.417 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Plunge Jet Spray copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 80736K, 5568 by 3712 pixels
+Dimensions: 181.25 by 141.137 points 
+Resolution: 2211.838 by 1893.643 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Dolphin gun copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 16274K, 1568 by 2657 pixels
+Dimensions: 60.204 by 102.017 points 
+Resolution: 1875.213 by 1875.213 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\neon gun copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 27743K, 2149 by 3305 pixels
+Dimensions: 83.044 by 127.715 points 
+Resolution: 1863.214 by 1863.215 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\mahindra gun copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 22337K, 1759 by 3251 pixels
+Dimensions: 64.984 by 120.104 points 
+Resolution: 1948.918 by 1948.918 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Grohe Silver Hlf set copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 33112K, 2139 by 3963 pixels
+Dimensions: 71.358 by 132.207 points 
+Resolution: 2158.249 by 2158.249 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Grohe Black Hlf Set - GR-fs-1.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 31360K, 1792 by 4480 pixels
+Dimensions: 49.832 by 124.58 points 
+Resolution: 2589.188 by 2589.188 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Plunge PVC Shower Galaxy copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 19266K, 2704 by 1824 pixels
+Dimensions: 181.804 by 150.294 points 
+Resolution: 1070.866 by 873.81 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Plunge PVC Shower Prince Square copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 26020K, 3104 by 2146 pixels
+Dimensions: 162.746 by 133.204 points 
+Resolution: 1373.231 by 1159.966 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Plunge PVC Shower MAX copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 27394K, 3159 by 2220 pixels
+Dimensions: 160.793 by 112.998 points 
+Resolution: 1414.537 by 1414.538 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\FSE logo  white copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 412K, 487 by 217 pixels
+Dimensions: 68.461 by 30.505 points 
+Resolution: 512.178 by 512.178 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Quba angle cock 8 copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 21764K, 2528 by 2204 pixels
+Dimensions: 138.7 by 120.923 points 
+Resolution: 1312.301 by 1312.301 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\Quba long body 2.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 13890K, 2167 by 1641 pixels
+Dimensions: 133.247 by 100.904 points 
+Resolution: 1170.935 by 1170.935 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\DSC_4862 copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 80736K, 3712 by 5568 pixels
+Dimensions: 132.566 by 198.85 points 
+Resolution: 2016.077 by 2016.077 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\FSE logo  white copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 412K, 487 by 217 pixels
+Dimensions: 68.461 by 30.505 points 
+Resolution: 512.178 by 512.178 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\angle walve.psd
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 23755K, 2552 by 2383 pixels
+Dimensions: 131.181 by 122.494 points 
+Resolution: 1400.688 by 1400.688 pixels per inch
+
+
+C:\Users\sohai\Desktop\work\plunge\product brochure_Folder 0-20260728T093934Z-1-001\product brochure_Folder 0\Links\3_ Plan Jali copy.png
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 16892K, 2325 by 1860 pixels
+Dimensions: 181.515 by 145.212 points 
+Resolution: 922.235 by 922.235 pixels per inch

@@ -246,9 +246,14 @@
                     <!-- Mobile: horizontal scroll -->
                     <div class="md:hidden overflow-x-auto -mx-4 px-4 pb-2">
                         <div class="flex gap-2 min-w-max">
-                            <button data-tab="kitchen-fixture" class="sidebar-link active whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-ivory text-charcoal">Kitchen Fixture</button>
-                            <button data-tab="bathroom" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Bathroom</button>
-                            <button data-tab="accessories" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Accessories</button>
+                            <button data-tab="diamond" class="sidebar-link active whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-ivory text-charcoal">Diamond</button>
+                            <button data-tab="opal-prime" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Opal Prime</button>
+                            <button data-tab="cosmo" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Cosmo</button>
+                            <button data-tab="quba" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Quba</button>
+                            <span class="whitespace-nowrap px-3 py-2.5 text-xs font-semibold uppercase tracking-wider text-gray-400">Accessories</span>
+                            <button data-tab="acc-kitchen" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Kitchen</button>
+                            <button data-tab="acc-bathroom" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Bathroom</button>
+                            <button data-tab="acc-showers" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Showers System</button>
                         </div>
                     </div>
 
@@ -256,9 +261,16 @@
                     <div class="hidden md:block bg-gray-50 rounded-lg p-4 border border-gray-100">
                         <h3 class="font-playfair text-lg font-semibold text-charcoal mb-4 px-4">Collections</h3>
                         <nav class="space-y-1">
-                            <button data-tab="kitchen-fixture" class="sidebar-link active w-full text-left">Kitchen Fixture</button>
-                            <button data-tab="bathroom" class="sidebar-link w-full text-left">Bathroom</button>
-                            <button data-tab="accessories" class="sidebar-link w-full text-left">Accessories</button>
+                            <button data-tab="diamond" class="sidebar-link active w-full text-left">Diamond</button>
+                            <button data-tab="opal-prime" class="sidebar-link w-full text-left">Opal Prime</button>
+                            <button data-tab="cosmo" class="sidebar-link w-full text-left">Cosmo</button>
+                            <button data-tab="quba" class="sidebar-link w-full text-left">Quba</button>
+                            <div class="pt-3">
+                                <p class="px-2 pb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-400">Accessories</p>
+                                <button data-tab="acc-kitchen" class="sidebar-link w-full text-left pl-4">Kitchen</button>
+                                <button data-tab="acc-bathroom" class="sidebar-link w-full text-left pl-4">Bathroom</button>
+                                <button data-tab="acc-showers" class="sidebar-link w-full text-left pl-4">Showers System</button>
+                            </div>
                         </nav>
                     </div>
                 </div>
@@ -267,12 +279,99 @@
             <!-- ===== RIGHT CONTENT ===== -->
             <div class="w-full md:w-3/4 lg:w-4/5">
 
+                <!-- ========= ALL COLLECTION TAB ========= -->
+                <div id="all" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">All Collection</h2>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed max-w-xl">The complete PLUNGE range — premium faucets, mixers, shower systems and accessories across Diamond, Opal Prime, Cosmo, Quba and Accessories.</p>
+                    </div>
+                    <div id="all-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                </div>
+
+                <!-- ========= DIAMOND TAB ========= -->
+                <div id="diamond" class="tab-pane active">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Diamond</h2>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed max-w-xl">The Diamond collection — signature bib cocks, pillar cocks, angle cocks, wall mixers and concealed valves crafted for enduring elegance.</p>
+                    </div>
+                    <div id="diamond-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                </div>
+
+                <!-- ========= OPAL PRIME TAB ========= -->
+                <div id="opal-prime" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Opal Prime</h2>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Opal Prime — designer bib cocks, single lever mixers, diverters and table top fittings that blend form with function.</p>
+                    </div>
+                    <div id="opal-prime-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                </div>
+
+                <!-- ========= COSMO TAB ========= -->
+                <div id="cosmo" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Cosmo</h2>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Cosmo — versatile bib cocks, swan necks, wall mixers and concealed valves with a contemporary edge.</p>
+                    </div>
+                    <div id="cosmo-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                </div>
+
+                <!-- ========= QUBA TAB ========= -->
+                <div id="quba" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Quba</h2>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Quba — precision-engineered bib cocks, pillar cocks and wall mixers for dependable everyday performance.</p>
+                    </div>
+                    <div id="quba-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                </div>
+
+                <!-- ========= ACCESSORIES - KITCHEN TAB ========= -->
+                <div id="acc-kitchen" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Accessories - Kitchen</h2>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Kitchen accessories — flush walls, waste pipes, PTMT connections and couplings to complete your sink set-up.</p>
+                    </div>
+                    <div id="acc-kitchen-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                </div>
+
+                <!-- ========= ACCESSORIES - BATHROOM TAB ========= -->
+                <div id="acc-bathroom" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Accessories - Bathroom</h2>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Bathroom accessories — health faucet sets, jet sprays, guns and floor-drain jali, every detail crafted for perfection.</p>
+                    </div>
+                    <div id="acc-bathroom-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                </div>
+
+                <!-- ========= ACCESSORIES - SHOWERS SYSTEM TAB ========= -->
+                <div id="acc-showers" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Accessories - Showers System</h2>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Showers system — PVC shower heads, shower tubes and concealed valves for a refreshing shower experience.</p>
+                    </div>
+                    <div id="acc-showers-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                </div>
+
                 <!-- ========= KITCHEN FIXTURE TAB ========= -->
-                <div id="kitchen-fixture" class="tab-pane active">
+                <div id="kitchen-fixture" class="tab-pane">
                     <div class="mb-8">
                         <div class="flex items-baseline gap-4 mb-2">
                             <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Kitchen Fixture</h2>
-                            <span class="text-sm text-gray-500 font-medium">9 Products</span>
                         </div>
                         <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Precision-engineered sink cocks and sink mixers for the heart of your home. Flawless chrome finishing with reliable everyday performance.</p>
                     </div>
@@ -450,7 +549,6 @@
                     <div class="mb-8">
                         <div class="flex items-baseline gap-4 mb-2">
                             <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Bathroom</h2>
-                            <span class="text-sm text-gray-500 font-medium">46 Products</span>
                         </div>
                         <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Premium faucets and shower systems for your bathroom. Elegant designs with flawless chrome finishing and dependable water-flow engineering.</p>
                     </div>
@@ -1081,7 +1179,7 @@
                         <!-- Plunge PVC Shower Max -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/Artboard 6@4x-100.jpg" alt="Plunge PVC Shower Max" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Plunge PVC Shower MAX copy.png" alt="Plunge PVC Shower Max" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1096,7 +1194,7 @@
                         <!-- Plunge PVC Shower Galaxy -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50@4x-100.jpg" alt="Plunge PVC Shower Galaxy" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Plunge PVC Shower Galaxy copy.png" alt="Plunge PVC Shower Galaxy" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1111,7 +1209,7 @@
                         <!-- Plunge PVC Shower Prince Round -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50_1@4x-100.jpg" alt="Plunge PVC Shower Prince Round" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Plunge PVC Shower Prince Square copy.png" alt="Plunge PVC Shower Prince Round" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1126,7 +1224,7 @@
                         <!-- Plunge PVC Shower Prince Square -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50_2@4x-100.jpg" alt="Plunge PVC Shower Prince Square" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Plunge PVC Shower Prince Square copy.png" alt="Plunge PVC Shower Prince Square" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1141,7 +1239,7 @@
                         <!-- 1.5 Mtr Shower Tube -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/warehouse gate head 35x24 copy@4x-100.jpg" alt="1.5 Mtr Shower Tube With Brass Nut & Brass Inner" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Shower tube 2 copy.png" alt="1.5 Mtr Shower Tube With Brass Nut & Brass Inner" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1156,7 +1254,7 @@
                         <!-- 1 Mtr Shower Tube -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/warehouse gate head 35x24@4x-100.jpg" alt="1 Mtr Shower Tube With Brass Nut & Brass Inner" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Shower tube copy.png" alt="1 Mtr Shower Tube With Brass Nut & Brass Inner" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1191,7 +1289,6 @@
                     <div class="mb-8">
                         <div class="flex items-baseline gap-4 mb-2">
                             <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Accessories</h2>
-                            <span class="text-sm text-gray-500 font-medium">43 Products</span>
                         </div>
                         <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Complete your bathroom with our premium accessories - flush valves, health faucets, shower systems, waste connections and floor-drain jali, every detail crafted for perfection.</p>
                     </div>
@@ -1205,7 +1302,7 @@
                         <!-- Grohe Black HLF Set -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin head  50x 26 2@4x-100.jpg" alt="Grohe Black HLF Set" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Grohe Black Hlf Set - GR-fs-1.png" alt="Grohe Black HLF Set" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1220,7 +1317,7 @@
                         <!-- Grohe Silver HLF Set -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin head  50x 26@4x-100.jpg" alt="Grohe Silver HLF Set" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Grohe Silver Hlf set copy.png" alt="Grohe Silver HLF Set" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1235,7 +1332,7 @@
                         <!-- Mahendra Gun -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front 1 50x50@4x-100.jpg" alt="Mahendra Gun" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/mahindra gun copy.png" alt="Mahendra Gun" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1250,7 +1347,7 @@
                         <!-- Neon Gun -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front 2 50x50@4x-100.jpg" alt="Neon Gun" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/neon gun copy.png" alt="Neon Gun" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1265,7 +1362,7 @@
                         <!-- Dolphin Gun -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front gate 32X44@4x-100.jpg" alt="Dolphin Gun" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Dolphin gun copy.png" alt="Dolphin Gun" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1280,7 +1377,7 @@
                         <!-- Plunge Jet Spray -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front head 1 50X26@4x-100.jpg" alt="Plunge Jet Spray" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Plunge Jet Spray copy.png" alt="Plunge Jet Spray" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1295,7 +1392,7 @@
                         <!-- Plunge PVC Shower MAX -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/Artboard 6@4x-100.jpg" alt="Plunge PVC Shower MAX" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Plunge PVC Shower MAX copy.png" alt="Plunge PVC Shower MAX" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1310,7 +1407,7 @@
                         <!-- Plunge PVC Shower Galaxy -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50@4x-100.jpg" alt="Plunge PVC Shower Galaxy" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Plunge PVC Shower Galaxy copy.png" alt="Plunge PVC Shower Galaxy" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1325,7 +1422,7 @@
                         <!-- Plunge PVC Shower Prince Round -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50_1@4x-100.jpg" alt="Plunge PVC Shower Prince Round" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Plunge PVC Shower Prince Square copy.png" alt="Plunge PVC Shower Prince Round" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1340,7 +1437,7 @@
                         <!-- Plunge PVC Shower Prince Square -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50_2@4x-100.jpg" alt="Plunge PVC Shower Prince Square" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Plunge PVC Shower Prince Square copy.png" alt="Plunge PVC Shower Prince Square" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1355,7 +1452,7 @@
                         <!-- 1.5 M Shower Tube -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/warehouse gate head 35x24 copy@4x-100.jpg" alt="1.5 M Shower Tube" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Shower tube 2 copy.png" alt="1.5 M Shower Tube" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1370,7 +1467,7 @@
                         <!-- 1 M Shower Tube -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/warehouse gate head 35x24@4x-100.jpg" alt="1 M Shower Tube" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Shower tube copy.png" alt="1 M Shower Tube" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1393,7 +1490,7 @@
                         <!-- Aria Flush Wall -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/Artboard 6@4x-100.jpg" alt="Aria Flush Wall" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Aria Flush Wall copy.png" alt="Aria Flush Wall" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1408,7 +1505,7 @@
                         <!-- Conti Concealed Valve -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50@4x-100.jpg" alt="Conti Concealed Valve" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/CANTI Concealed valve copy.png" alt="Conti Concealed Valve" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1423,7 +1520,7 @@
                         <!-- Flush Wall (M) -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50_1@4x-100.jpg" alt="Flush Wall (M)" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Plunge PVC Shower MAX copy.png" alt="Flush Wall (M)" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1438,7 +1535,7 @@
                         <!-- Flush Wall (H) -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50_2@4x-100.jpg" alt="Flush Wall (H)" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Plunge PVC Shower Galaxy copy.png" alt="Flush Wall (H)" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1453,7 +1550,7 @@
                         <!-- Waste Pipe (L) -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front head 2 50X26 copy@4x-100.jpg" alt="Waste Pipe (L)" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Waste Pipe (L) copy.png" alt="Waste Pipe (L)" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1468,7 +1565,7 @@
                         <!-- Waste Pipe (H) -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/gate head 35x26@4x-100.jpg" alt="Waste Pipe (H)" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Waste Pipe (H) copy.png" alt="Waste Pipe (H)" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1483,7 +1580,7 @@
                         <!-- Waste Pipe Black -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/warehouse gate 30x46@4x-100.jpg" alt="Waste Pipe Black" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Waste Pipe black copy.png" alt="Waste Pipe Black" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1498,7 +1595,7 @@
                         <!-- 18" Connection PTMT -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin head  50x 26 2@4x-100.jpg" alt="18&quot; Connection PTMT" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/3_ Plan Jali copy.png" alt="18&quot; Connection PTMT" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1513,7 +1610,7 @@
                         <!-- 24" Connection PTMT -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin head  50x 26@4x-100.jpg" alt="24&quot; Connection PTMT" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/4_ plan jali copy.png" alt="24&quot; Connection PTMT" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1528,7 +1625,7 @@
                         <!-- 30" Connection PTMT -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front 1 50x50@4x-100.jpg" alt="30&quot; Connection PTMT" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/5_ Plan Jali copy.png" alt="30&quot; Connection PTMT" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1543,7 +1640,7 @@
                         <!-- 36" Connection PTMT -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front 2 50x50@4x-100.jpg" alt="36&quot; Connection PTMT" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Cockroach SQ Jali copy.png" alt="36&quot; Connection PTMT" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1558,7 +1655,7 @@
                         <!-- 42" Connection PTMT -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front gate 32X44@4x-100.jpg" alt="42&quot; Connection PTMT" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Dolphin gun copy.png" alt="42&quot; Connection PTMT" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1573,7 +1670,7 @@
                         <!-- 48" Connection PTMT -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front head 1 50X26@4x-100.jpg" alt="48&quot; Connection PTMT" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Grohe Black Hlf Set - GR-fs-1.png" alt="48&quot; Connection PTMT" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1588,7 +1685,7 @@
                         <!-- Plunge Waste Coupling -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front head 2 50X26 copy@4x-100.jpg" alt="Plunge Waste Coupling" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Waste Coupling Plunge copy.png" alt="Plunge Waste Coupling" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1611,7 +1708,7 @@
                         <!-- 3" Plan Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front gate 32X44@4x-100.jpg" alt="3&quot; Plan Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/3_ Plan Jali copy.png" alt="3&quot; Plan Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1626,7 +1723,7 @@
                         <!-- 4" Plan Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front head 1 50X26@4x-100.jpg" alt="4&quot; Plan Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/4_ plan jali copy.png" alt="4&quot; Plan Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1641,7 +1738,7 @@
                         <!-- 5" Plan Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front head 2 50X26 copy@4x-100.jpg" alt="5&quot; Plan Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/5_ Plan Jali copy.png" alt="5&quot; Plan Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1656,7 +1753,7 @@
                         <!-- Cockroach Round Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin head  50x 26 2@4x-100.jpg" alt="Cockroach Round Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Cockroach SQ Jali copy.png" alt="Cockroach Round Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1671,7 +1768,7 @@
                         <!-- Cockroach Round Hole Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin head  50x 26@4x-100.jpg" alt="Cockroach Round Hole Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Cocroach SQ hole jaldi copy.png" alt="Cockroach Round Hole Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1686,7 +1783,7 @@
                         <!-- Cockroach Square Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front 1 50x50@4x-100.jpg" alt="Cockroach Square Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/SQ Jali copy.png" alt="Cockroach Square Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1701,7 +1798,7 @@
                         <!-- Cockroach Square Hole Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/front 2 50x50@4x-100.jpg" alt="Cockroach Square Hole Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/SQ hole jaldi copy.png" alt="Cockroach Square Hole Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1716,7 +1813,7 @@
                         <!-- Lock Round Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/Artboard 6@4x-100.jpg" alt="Lock Round Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Lock Round Jali copy.png" alt="Lock Round Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1731,7 +1828,7 @@
                         <!-- Lock Round Hole Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50@4x-100.jpg" alt="Lock Round Hole Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/Lock Round Jali co copy.png" alt="Lock Round Hole Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1746,7 +1843,7 @@
                         <!-- Lock Square Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50_1@4x-100.jpg" alt="Lock Square Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/SQ Jali copy.png" alt="Lock Square Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1761,7 +1858,7 @@
                         <!-- Lock Square Hole Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50_2@4x-100.jpg" alt="Lock Square Hole Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/SQ hole jaldi copy.png" alt="Lock Square Hole Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1776,7 +1873,7 @@
                         <!-- 3" Hole Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/gate head 35x26@4x-100.jpg" alt="3&quot; Hole Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/hole jali copy.png" alt="3&quot; Hole Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1791,7 +1888,7 @@
                         <!-- 4" Hole Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/warehouse gate 30x46@4x-100.jpg" alt="4&quot; Hole Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/4_ Hole Jali copy.png" alt="4&quot; Hole Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1806,7 +1903,7 @@
                         <!-- 5" Hole Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/warehouse gate head 35x24 copy@4x-100.jpg" alt="5&quot; Hole Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/3_ jali Hole copy.png" alt="5&quot; Hole Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1821,7 +1918,7 @@
                         <!-- 3" Slice Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/warehouse gate head 35x24@4x-100.jpg" alt="3&quot; Slice Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/3_ jali Hole copy.png" alt="3&quot; Slice Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1836,7 +1933,7 @@
                         <!-- 4" Slice Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/Artboard 6@4x-100.jpg" alt="4&quot; Slice Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/4_ Hole Jali copy.png" alt="4&quot; Slice Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1851,7 +1948,7 @@
                         <!-- 5" Slice Jali -->
                         <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
                             <div class="product-img aspect-square bg-gray-50 relative">
-                                <img loading="lazy" src="assets/images/accessories/cabin 50x50@4x-100.jpg" alt="5&quot; Slice Jali" class="w-full h-full object-contain">
+                                <img loading="lazy" src="assets/images/accessories/5_ Plan Jali copy.png" alt="5&quot; Slice Jali" class="w-full h-full object-contain">
                                 <div class="quick-action-overlay">
                                     <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
                                 </div>
@@ -1995,6 +2092,51 @@
                 cards.forEach(card => grid.appendChild(card));
             });
         }
+
+        // ===== BUILD COLLECTION + ACCESSORY GRIDS (clone from source panes) =====
+        (function() {
+            // Collection panes: clone products whose title starts with the collection name
+            var collections = {
+                'diamond': 'Diamond ',
+                'opal-prime': 'Opal Prime ',
+                'cosmo': 'Cosmo ',
+                'quba': 'Quba '
+            };
+            Object.keys(collections).forEach(function(id) {
+                var target = document.getElementById(id + '-grid');
+                if (!target) return;
+                var prefix = collections[id];
+                ['kitchen-fixture', 'bathroom'].forEach(function(paneId) {
+                    var pane = document.getElementById(paneId);
+                    if (!pane) return;
+                    pane.querySelectorAll('.product-card').forEach(function(card) {
+                        var title = card.querySelector('h3') ? card.querySelector('h3').textContent.trim() : '';
+                        if (title.indexOf(prefix) === 0) {
+                            target.appendChild(card.cloneNode(true));
+                        }
+                    });
+                });
+            });
+
+            // Accessory panes: split accessories into Kitchen / Bathroom / Showers System
+            var accGroups = {
+                'acc-kitchen': ['Aria Flush Wall', 'Flush Wall (M)', 'Flush Wall (H)', 'Waste Pipe (L)', 'Waste Pipe (H)', 'Waste Pipe Black', '18" Connection PTMT', '24" Connection PTMT', '30" Connection PTMT', '36" Connection PTMT', '42" Connection PTMT', '48" Connection PTMT', 'Plunge Waste Coupling'],
+                'acc-bathroom': ['Grohe Black HLF Set', 'Grohe Silver HLF Set', 'Mahendra Gun', 'Neon Gun', 'Dolphin Gun', 'Plunge Jet Spray', '3" Plan Jali', '4" Plan Jali', '5" Plan Jali', 'Cockroach Round Jali', 'Cockroach Round Hole Jali', 'Cockroach Square Jali', 'Cockroach Square Hole Jali', 'Lock Round Jali', 'Lock Round Hole Jali', 'Lock Square Jali', 'Lock Square Hole Jali', '3" Hole Jali', '4" Hole Jali', '5" Hole Jali', '3" Slice Jali', '4" Slice Jali', '5" Slice Jali'],
+                'acc-showers': ['Plunge PVC Shower MAX', 'Plunge PVC Shower Galaxy', 'Plunge PVC Shower Prince Round', 'Plunge PVC Shower Prince Square', '1.5 M Shower Tube', '1 M Shower Tube', 'Conti Concealed Valve']
+            };
+            var accPane = document.getElementById('accessories');
+            Object.keys(accGroups).forEach(function(id) {
+                var target = document.getElementById(id + '-grid');
+                if (!target || !accPane) return;
+                var names = accGroups[id];
+                accPane.querySelectorAll('.product-card').forEach(function(card) {
+                    var title = card.querySelector('h3') ? card.querySelector('h3').textContent.trim() : '';
+                    if (names.indexOf(title) !== -1) {
+                        target.appendChild(card.cloneNode(true));
+                    }
+                });
+            });
+        })();
     </script>
 
   <!-- SEARCH MODAL -->
