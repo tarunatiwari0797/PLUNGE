@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Range | PLUNGE by F.S. Enterprises</title>
+    <meta name="description" content="Browse the complete PLUNGE product range - Kitchen Fixture, Bathroom and Accessories with Diamond, Opal Prime, Cosmo, Quba and more by F.S. Enterprises, New Delhi.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#01773D',
+                        gold: '#C9A227',
+                        ivory: '#F5F0E6',
+                        charcoal: '#1A1A1A',
+                        beige: '#E8DCC8',
+                        navy: '#0B2545'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+
+
+
+        /* Product Card */
+        .product-card {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        .product-img {
+            overflow: hidden;
+            position: relative;
+        }
+        .product-img img {
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .product-card:hover .product-img img {
+            transform: scale(1.08);
+        }
+        .quick-action-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(8, 11, 20, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .product-card:hover .quick-action-overlay {
+            opacity: 1;
+        }
+
+        /* Sidebar */
+        .sidebar-link {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            color: #A3A3A3;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            border-left: 3px solid transparent;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .sidebar-link:hover {
+            color: #737373;
+            background: rgba(255,255,255,0.03);
+        }
+        .sidebar-link.active {
+            color: #01773D;
+            font-weight: 600;
+            border-left-color: #01773D;
+        }
+
+        /* Tab Panes */
+        .tab-pane { display: none; }
+        .tab-pane.active { display: block; }
+
+        /* Scrollbar */
+        .mobile-menu::-webkit-scrollbar { width: 4px; }
+        .mobile-menu::-webkit-scrollbar-track { background: #01773D; }
+        .mobile-menu::-webkit-scrollbar-thumb { background: #E8DCC8; border-radius: 4px; }
+
+        /* Custom focus */
+        input:focus, select:focus { outline: none; }
+
+        /* Badge pulse */
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+
+    <link rel="canonical" href="https://plungefaucets.in/collection-products.html">
+    <meta property="og:title" content="Product Range | PLUNGE - Premium Luxury Faucets">
+    <meta property="og:description" content="Browse the complete PLUNGE product range of Diamond, Opal Prime, Cosmo and Quba luxury faucets and bathroom fixtures.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plungefaucets.in/collection-products.html">
+    <meta property="og:site_name" content="PLUNGE by F.S. Enterprises">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Product Range | PLUNGE - Premium Luxury Faucets">
+    <meta name="twitter:description" content="Browse the complete PLUNGE product range of Diamond, Opal Prime, and Cosmo luxury faucets and bathroom fixtures.">
+</head>
+<body class="bg-white font-inter text-gray-900 pt-24 antialiased">
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+        <!-- ========== HEADER ========== -->
+    <header id="main-content" role="banner" data-scroll-effect="true" class="fixed top-0 left-0 right-0 z-50 bg-ivory transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="assets/images/plunge-logo.svg" alt="PLUNGE" class="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Home</a>
+                    <a href="collections.html" class="text-sm font-medium text-brand font-semibold hover:text-brand transition-colors tracking-wide border-b-2 border-gold pb-0.5" aria-current="page">Collections</a>
+                    <a href="gallery.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Gallery</a>
+                    <a href="about.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">About</a>
+                    <a href="faq.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">FAQ</a>
+                    <a href="contact.html" class="text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors tracking-wide border-b-2 border-transparent pb-0.5">Contact</a>
+                </nav>
+
+                <!-- Right Actions -->
+                <div class="flex items-center gap-4">
+                    <button class="text-charcoal/80 hover:text-charcoal transition-colors" aria-label="Search">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="m21 21-4.35-4.35"/></svg>
+                    </button>
+                    <a href="wishlist.html" class="relative text-charcoal/80 hover:text-charcoal transition-colors" aria-label="Wishlist">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        <span class="absolute -top-1.5 -right-1.5 bg-brand text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
+                    </a>
+                    <a href="cart.html" class="relative text-charcoal/80 hover:text-charcoal transition-colors" aria-label="Cart">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                        <span class="absolute -top-1.5 -right-1.5 bg-brand text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">3</span>
+                    </a>
+                    <a href="contact.html#enquire" class="hidden md:inline-flex items-center justify-center px-5 py-2 bg-brand text-white text-xs font-semibold uppercase tracking-wider rounded border border-gold/60 hover:bg-navy transition-colors duration-300">Enquire</a>
+                    <button id="hamburger-btn" class="lg:hidden text-charcoal/80 hover:text-charcoal transition-colors" aria-label="Menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MOBILE MENU ========== -->
+    <div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/40 z-[60]"></div>
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-ivory z-[70] p-8 overflow-y-auto no-scrollbar">
+        <div class="flex items-center justify-between mb-10">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="assets/images/plunge-logo.svg" alt="PLUNGE" class="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+            </a>
+            <button id="mobile-close" class="text-charcoal/60 hover:text-charcoal transition-colors" aria-label="Close menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-1">
+            <a href="index.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-charcoal/80 hover:text-charcoal hover:bg-beige rounded-lg transition-all">Home</a>
+            <a href="collections.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-charcoal/80 hover:text-charcoal hover:bg-beige rounded-lg transition-all">Collections</a>
+            <a href="gallery.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-charcoal/80 hover:text-charcoal hover:bg-beige rounded-lg transition-all">Gallery</a>
+            <a href="about.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-charcoal/80 hover:text-charcoal hover:bg-beige rounded-lg transition-all">About</a>
+            <a href="faq.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-charcoal/80 hover:text-charcoal hover:bg-beige rounded-lg transition-all">FAQ</a>
+            <a href="contact.html" class="mobile-nav-link py-3 px-4 text-sm font-medium text-charcoal/80 hover:text-charcoal hover:bg-beige rounded-lg transition-all">Contact</a>
+        </nav>
+        <div class="mt-8 pt-6 border-t border-gray-200">
+            <a href="contact.html#enquire" class="mobile-nav-link block w-full py-3 text-center bg-brand text-white text-sm font-semibold rounded-lg hover:bg-navy transition-colors">Enquire Now</a>
+            <div class="mt-6 flex items-center gap-4 px-4">
+                <a href="wishlist.html" class="text-charcoal/60 hover:text-charcoal transition-colors" aria-label="Wishlist">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </a>
+                <a href="cart.html" class="text-charcoal/60 hover:text-charcoal transition-colors" aria-label="Cart">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <section class="bg-white pt-10 pb-6 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6">
+                <a href="index.html" class="hover:text-charcoal transition-colors">Home</a>
+                <span>/</span>
+                <a href="collections.html" class="hover:text-charcoal transition-colors">Collections</a>
+                <span>/</span>
+                <span class="text-charcoal font-medium">Products</span>
+            </nav>
+
+            <!-- Title & Description -->
+            <div class="mb-8">
+                <h1 class="font-playfair text-3xl sm:text-4xl lg:text-5xl text-charcoal font-bold tracking-tight mb-4">Product Range</h1>
+                <p class="text-gray-500 text-base sm:text-lg max-w-2xl leading-relaxed">Explore our curated range of premium faucets and fittings. Each collection is crafted with precision, designed for luxury, and built to last.</p>
+            </div>
+
+            <!-- Search & Sort -->
+            <div class="flex flex-col sm:flex-row gap-3">
+                <div class="relative flex-1 max-w-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" id="searchInput" placeholder="Search products..." class="w-full pl-10 pr-4 py-3 border border-gray-200 text-sm bg-gray-50 focus:bg-white focus:border-brand focus:ring-1 focus:ring-brand/20 transition-all duration-200 rounded-sm">
+                </div>
+                <select id="sortSelect" class="px-4 py-3 border border-gray-200 text-sm text-gray-700 bg-gray-50 focus:bg-white focus:border-brand focus:ring-1 focus:ring-brand/20 transition-all duration-200 rounded-sm sm:w-52 cursor-pointer appearance-none bg-no-repeat bg-right" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E&quot;); background-position: right 12px center; background-size: 16px;">
+                    <option value="">Sort by: Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name-az">Name: A to Z</option>
+                    <option value="name-za">Name: Z to A</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+        <div class="flex flex-col md:flex-row gap-8 lg:gap-12">
+
+            <!-- ===== LEFT SIDEBAR ===== -->
+            <aside class="w-full md:w-1/4 lg:w-1/5 flex-shrink-0">
+                <div class="md:sticky md:top-32">
+                    <!-- Mobile: horizontal scroll -->
+                    <div class="md:hidden overflow-x-auto -mx-4 px-4 pb-2">
+                        <div class="flex gap-2 min-w-max">
+                            <button data-tab="kitchen-fixture" data-scroll="diamond" data-deeplink="diamond" class="sidebar-link active whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-ivory text-charcoal">Diamond</button>
+                            <button data-tab="kitchen-fixture" data-scroll="opal-prime" data-deeplink="opal-prime" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Opal Prime</button>
+                            <button data-tab="kitchen-fixture" data-scroll="cosmo" data-deeplink="cosmo" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Cosmo</button>
+                            <button data-tab="kitchen-fixture" data-scroll="quba" data-deeplink="quba" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Quba</button>
+                            <button data-tab="kitchen-fixture" data-deeplink="kitchen" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Kitchen</button>
+                            <button data-tab="bathroom" data-deeplink="bathroom" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Bathroom</button>
+                            <button data-tab="accessories" data-scroll="shower-system" data-deeplink="shower-system" class="sidebar-link whitespace-nowrap rounded-full px-5 py-2.5 text-xs border border-gray-200 bg-white text-gray-500 hover:border-gray-200 hover:text-charcoal">Shower System</button>
+                        </div>
+                    </div>
+
+                    <!-- Desktop: vertical list -->
+                    <div class="hidden md:block bg-gray-50 rounded-lg p-4 border border-gray-100">
+                        <h3 class="font-playfair text-lg font-semibold text-charcoal mb-4 px-4">Collections</h3>
+                        <nav class="space-y-1">
+                            <button data-tab="kitchen-fixture" data-scroll="diamond" data-deeplink="diamond" class="sidebar-link active w-full text-left">Diamond</button>
+                            <button data-tab="kitchen-fixture" data-scroll="opal-prime" data-deeplink="opal-prime" class="sidebar-link w-full text-left">Opal Prime</button>
+                            <button data-tab="kitchen-fixture" data-scroll="cosmo" data-deeplink="cosmo" class="sidebar-link w-full text-left">Cosmo</button>
+                            <button data-tab="kitchen-fixture" data-scroll="quba" data-deeplink="quba" class="sidebar-link w-full text-left">Quba</button>
+                        </nav>
+                        <h3 class="font-playfair text-lg font-semibold text-charcoal mt-6 mb-4 px-4">Accessories</h3>
+                        <nav class="space-y-1">
+                            <button data-tab="kitchen-fixture" data-deeplink="kitchen" class="sidebar-link w-full text-left">Kitchen</button>
+                            <button data-tab="bathroom" data-deeplink="bathroom" class="sidebar-link w-full text-left">Bathroom</button>
+                            <button data-tab="accessories" data-scroll="shower-system" data-deeplink="shower-system" class="sidebar-link w-full text-left">Shower System</button>
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ===== RIGHT CONTENT ===== -->
+            <div class="w-full md:w-3/4 lg:w-4/5">
+
+                <!-- ========= KITCHEN FIXTURE TAB ========= -->
+                <div id="kitchen-fixture" class="tab-pane active">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Kitchen Fixture</h2>
+                            <span class="text-sm text-gray-500 font-medium">9 Products</span>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Precision-engineered sink cocks and sink mixers for the heart of your home. Flawless chrome finishing with reliable everyday performance.</p>
+                    </div>
+
+                    <!-- Diamond Group -->
+                    <div class="mt-10 mb-5" id="diamond">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Diamond</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                        <!-- Diamond Sink Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/diamond/diamond sink cock copy.png" alt="Diamond Sink Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">DI-FS-03</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Diamond Sink Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,205</p>
+                            </div>
+                        </a>
+
+                        <!-- Diamond Sink Mixer -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/diamond/diamond sink mixer.png" alt="Diamond Sink Mixer" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">DI-FS-10</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Diamond Sink Mixer</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹2,650</p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <!-- Opal Prime Group -->
+                    <div class="mt-10 mb-5" id="opal-prime">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Opal Prime</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                        <!-- Opal Prime Sink Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/3. Opal Sink Cock.png" alt="Opal Prime Sink Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-03</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime Sink Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,205</p>
+                            </div>
+                        </a>
+
+                        <!-- Opal Prime Sink Mixer -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/9. Opal wall mixer.png" alt="Opal Prime Sink Mixer" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-10</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime Sink Mixer</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹2,650</p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <!-- Cosmo Group -->
+                    <div class="mt-10 mb-5" id="cosmo">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Cosmo</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                        <!-- Cosmo Sink Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/3. Cosmo Sink Cock.png" alt="Cosmo Sink Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-13</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo Sink Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,205</p>
+                            </div>
+                        </a>
+
+                        <!-- Cosmo Sink Mixer -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/3. Cosmo Sink Cock.png" alt="Cosmo Sink Mixer" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-10</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo Sink Mixer</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹2,650</p>
+                            </div>
+                        </a>
+
+                        <!-- Cosmo Sink Cock (U) -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/3. Cosmo Sink Cock.png" alt="Cosmo Sink Cock (U)" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-03</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo Sink Cock (U)</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,237</p>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <!-- Quba Group -->
+                    <div class="mt-10 mb-5" id="quba">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Quba</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                        <!-- Quba Sink Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/quba/quba sink cock 3 copy.png" alt="Quba Sink Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">QU-FS-03</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Quba Sink Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,512</p>
+                            </div>
+                        </a>
+
+                        <!-- Quba Sink Mixer -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/quba/Quba sink mixer 10 copy.png" alt="Quba Sink Mixer" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">QU-FS-10</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Quba Sink Mixer</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹2,937</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- ========= BATHROOM TAB ========= -->
+                <div id="bathroom" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Bathroom</h2>
+                            <span class="text-sm text-gray-500 font-medium">39 Products</span>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Premium faucets and shower systems for your bathroom. Elegant designs with flawless chrome finishing and dependable water-flow engineering.</p>
+                    </div>
+
+                    <!-- Diamond -->
+                    <div class="mt-10 mb-5">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Diamond</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Diamond Bib Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/diamond/diamond bib cock copy.png" alt="Diamond Bib Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">DI-FS-01</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Diamond Bib Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹780</p>
+                            </div>
+                        </a>
+                        <!-- Diamond Long Body -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/diamond/diamond long body copy.png" alt="Diamond Long Body" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">DI-FS-02</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Diamond Long Body</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹840</p>
+                            </div>
+                        </a>
+                        <!-- Diamond Swan Neck -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/diamond/diamond swan neck copy.png" alt="Diamond Swan Neck" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">DI-FS-04</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Diamond Swan Neck</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,300</p>
+                            </div>
+                        </a>
+                        <!-- Diamond Pillar Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/diamond/diamond 2 way angle valve.png" alt="Diamond Pillar Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">DI-FS-05</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Diamond Pillar Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,047</p>
+                            </div>
+                        </a>
+                        <!-- Diamond Angle Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/diamond/diamond 2 way angle valve.png" alt="Diamond Angle Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">DI-FS-06</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Diamond Angle Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹562</p>
+                            </div>
+                        </a>
+                        <!-- Diamond 2 in 1 Bib Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/diamond/diamond bib cock copy.png" alt="Diamond 2 in 1 Bib Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">DI-FS-07</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Diamond 2 in 1 Bib Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,205</p>
+                            </div>
+                        </a>
+                        <!-- Diamond 2 in 1 Angle Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/diamond/diamond 2 way angle valve.png" alt="Diamond 2 in 1 Angle Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">DI-FS-08</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Diamond 2 in 1 Angle Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,205</p>
+                            </div>
+                        </a>
+                        <!-- Diamond Wall Mixer -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/diamond/diamond wall mixture.png" alt="Diamond Wall Mixer" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">DI-FS-09</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Diamond Wall Mixer</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹4,037</p>
+                            </div>
+                        </a>
+                        <!-- Diamond Concealed Valve -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/diamond/diamond 2 way angle valve.png" alt="Diamond Concealed Valve" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">DI-FS-11</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Diamond Concealed Valve</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,000</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Opal Prime -->
+                    <div class="mt-10 mb-5">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Opal Prime</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Opal Prime Bib Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/1. opal bib cock.png" alt="Opal Prime Bib Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-01</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime Bib Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹780</p>
+                            </div>
+                        </a>
+                        <!-- Opal Prime Long Body -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/2. Opal long body.png" alt="Opal Prime Long Body" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-02</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime Long Body</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹840</p>
+                            </div>
+                        </a>
+                        <!-- Opal Prime Swan Neck -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/4. Opal Swan Neck.png" alt="Opal Prime Swan Neck" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-04</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime Swan Neck</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,300</p>
+                            </div>
+                        </a>
+                        <!-- Opal Prime Pillar Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/5. Opal Piller cock.png" alt="Opal Prime Pillar Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-05</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime Pillar Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,063</p>
+                            </div>
+                        </a>
+                        <!-- Opal Prime Angle Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/8. Opal 2way angle valve.png" alt="Opal Prime Angle Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-06</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime Angle Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹562</p>
+                            </div>
+                        </a>
+                        <!-- Opal Prime 2 in 1 Bib Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/1. opal bib cock.png" alt="Opal Prime 2 in 1 Bib Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-07</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime 2 in 1 Bib Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,265</p>
+                            </div>
+                        </a>
+                        <!-- Opal Prime 2 in 1 Angle Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/8. Opal 2way angle valve.png" alt="Opal Prime 2 in 1 Angle Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-08</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime 2 in 1 Angle Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,175</p>
+                            </div>
+                        </a>
+                        <!-- Opal Prime Wall Mixer -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/9. Opal wall mixer.png" alt="Opal Prime Wall Mixer" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-09</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime Wall Mixer</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹4,125</p>
+                            </div>
+                        </a>
+                        <!-- Opal Prime Concealed Valve -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/11 opal concealed stop cock.png" alt="Opal Prime Concealed Valve" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-11</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime Concealed Valve</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,000</p>
+                            </div>
+                        </a>
+                        <!-- Opal Prime Table Top -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/Opal prime table top.png" alt="Opal Prime Table Top" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-12</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime Table Top</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹2,375</p>
+                            </div>
+                        </a>
+                        <!-- Opal Prime Diverter -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/9. Opal wall mixer.png" alt="Opal Prime Diverter" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-13</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime Diverter</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹6,125</p>
+                            </div>
+                        </a>
+                        <!-- Opal Prime Single Lever -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/opal/Opal prime single lever.png" alt="Opal Prime Single Lever" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">OP-FS-14</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Opal Prime Single Lever</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹4,125</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Cosmo -->
+                    <div class="mt-10 mb-5">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Cosmo</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Cosmo Bib Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/1. Cosmo bib Cock.png" alt="Cosmo Bib Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-01</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo Bib Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹950</p>
+                            </div>
+                        </a>
+                        <!-- Cosmo Long Body -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/2. Cosmo long body.png" alt="Cosmo Long Body" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-02</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo Long Body</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,065</p>
+                            </div>
+                        </a>
+                        <!-- Cosmo Swan Neck (U) -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/4. cosmo swan neck.png" alt="Cosmo Swan Neck (U)" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-04</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo Swan Neck (U)</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,337</p>
+                            </div>
+                        </a>
+                        <!-- Cosmo Pillar Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/5. Cosmo piller cock.png" alt="Cosmo Pillar Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-05</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo Pillar Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,175</p>
+                            </div>
+                        </a>
+                        <!-- Cosmo Angle Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/6. Cosmo angle valve.png" alt="Cosmo Angle Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-06</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo Angle Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹575</p>
+                            </div>
+                        </a>
+                        <!-- Cosmo 2 in 1 Bib Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/1. Cosmo bib Cock.png" alt="Cosmo 2 in 1 Bib Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-07</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo 2 in 1 Bib Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,287</p>
+                            </div>
+                        </a>
+                        <!-- Cosmo 2 in 1 Angle Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/6. Cosmo angle valve.png" alt="Cosmo 2 in 1 Angle Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-08</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo 2 in 1 Angle Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,212</p>
+                            </div>
+                        </a>
+                        <!-- Cosmo Wall Mixer -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/9. Cosmo wall mixer.png" alt="Cosmo Wall Mixer" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-09</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo Wall Mixer</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹4,250</p>
+                            </div>
+                        </a>
+                        <!-- Cosmo Concealed Valve -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/11. Cosmo concealed stop cock.png" alt="Cosmo Concealed Valve" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-11</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo Concealed Valve</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,025</p>
+                            </div>
+                        </a>
+                        <!-- Cosmo Swan Neck -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/cosmos/4. cosmo swan neck.png" alt="Cosmo Swan Neck" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-12</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cosmo Swan Neck</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,300</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Quba -->
+                    <div class="mt-10 mb-5">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Quba</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Quba Bib Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/quba/Quba bib cock 1.png" alt="Quba Bib Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">QU-FS-01</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Quba Bib Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,000</p>
+                            </div>
+                        </a>
+                        <!-- Quba Long Body -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/quba/Quba long body 2.png" alt="Quba Long Body" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">QU-FS-02</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Quba Long Body</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,100</p>
+                            </div>
+                        </a>
+                        <!-- Quba Swan Neck -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/quba/Quba swan neck 4 copy.png" alt="Quba Swan Neck" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">QU-FS-04</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Quba Swan Neck</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,425</p>
+                            </div>
+                        </a>
+                        <!-- Quba Pillar Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/quba/Quba Piller cock 5 copy.png" alt="Quba Pillar Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">QU-FS-05</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Quba Pillar Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,300</p>
+                            </div>
+                        </a>
+                        <!-- Quba Angle Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/quba/Quba angle cock 8 copy.png" alt="Quba Angle Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">QU-FS-06</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Quba Angle Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹787</p>
+                            </div>
+                        </a>
+                        <!-- Quba 2 in 1 Bib Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/quba/Quba bib cock 1.png" alt="Quba 2 in 1 Bib Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">QU-FS-07</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Quba 2 in 1 Bib Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,537</p>
+                            </div>
+                        </a>
+                        <!-- Quba 2 in 1 Angle Cock -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/quba/Quba angle cock 8 copy.png" alt="Quba 2 in 1 Angle Cock" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">QU-FS-08</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Quba 2 in 1 Angle Cock</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,425</p>
+                            </div>
+                        </a>
+                        <!-- Quba Wall Mixer -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/quba/Quba wall mixer 9 copy.png" alt="Quba Wall Mixer" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">QU-FS-09</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Quba Wall Mixer</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹4,487</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+<div id="accessories" class="tab-pane">
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-4 mb-2">
+                            <h2 class="font-playfair text-2xl sm:text-3xl font-bold text-charcoal">Accessories</h2>
+                            <span class="text-sm text-gray-500 font-medium">43 Products</span>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed max-w-xl">Complete your bathroom with our premium accessories - flush valves, health faucets, shower systems, waste connections and floor-drain jali, every detail crafted for perfection.</p>
+                    </div>
+
+                    <!-- Flush / Jet Spray -->
+                    <div class="mt-10 mb-5">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Flush / Jet Spray</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Grohe Black HLF Set -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/GR-FS-1.png" alt="Grohe Black HLF Set" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">GR-FS-1</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Grohe Black HLF Set</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹750</p>
+                            </div>
+                        </a>
+                        <!-- Grohe Silver HLF Set -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/GR-FS-2.png" alt="Grohe Silver HLF Set" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">GR-FS-2</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Grohe Silver HLF Set</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹670</p>
+                            </div>
+                        </a>
+                        <!-- Mahendra Gun -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/MA-FS-3.png" alt="Mahendra Gun" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">MA-FS-3</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Mahendra Gun</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹940</p>
+                            </div>
+                        </a>
+                        <!-- Neon Gun -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/NE-FS-4.png" alt="Neon Gun" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">NE-FS-4</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Neon Gun</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹850</p>
+                            </div>
+                        </a>
+                        <!-- Dolphin Gun -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/DE-FS-5.png" alt="Dolphin Gun" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">DE-FS-5</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Dolphin Gun</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,065</p>
+                            </div>
+                        </a>
+                        <!-- Plunge Jet Spray -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/JS-FS-1.png" alt="Plunge Jet Spray" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">JS-FS-1</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Plunge Jet Spray</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹365</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Shower accessories -->
+                    <div class="mt-10 mb-5" id="shower-system">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Shower accessories</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Plunge PVC Shower MAX -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/SMA-FS-1.png" alt="Plunge PVC Shower MAX" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">SMA-FS-1</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Plunge PVC Shower MAX</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹400</p>
+                            </div>
+                        </a>
+                        <!-- Plunge PVC Shower Galaxy -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/SGL-FS-2.png" alt="Plunge PVC Shower Galaxy" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">SGL-FS-2</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Plunge PVC Shower Galaxy</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹400</p>
+                            </div>
+                        </a>
+                        <!-- Plunge PVC Shower Prince Round -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/cabin 50x50_1@4x-100.jpg" alt="Plunge PVC Shower Prince Round" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">SRO-FS-3</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Plunge PVC Shower Prince Round</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹400</p>
+                            </div>
+                        </a>
+                        <!-- Plunge PVC Shower Prince Square -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/SSQ-FS-4.png" alt="Plunge PVC Shower Prince Square" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">SSQ-FS-4</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Plunge PVC Shower Prince Square</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹400</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Shower Tubes -->
+                    <div class="mt-10 mb-5">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Shower Tubes</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- 1.5 M Shower Tube -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/ST-FS-1.png" alt="1.5 M Shower Tube" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">ST-FS-1</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">1.5 M Shower Tube</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹340</p>
+                            </div>
+                        </a>
+                        <!-- 1 M Shower Tube -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/ST-FS-2.png" alt="1 M Shower Tube" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">ST-FS-2</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">1 M Shower Tube</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹310</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Flush Wall -->
+                    <div class="mt-10 mb-5">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Flush Wall</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Aria Flush Wall -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/AR-FS-1.png" alt="Aria Flush Wall" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">AR-FS-1</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Aria Flush Wall</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,862</p>
+                            </div>
+                        </a>
+                        <!-- Flush Wall (M) -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/FW-FS-1.png" alt="Flush Wall (M)" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">FW-FS-1</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Flush Wall (M)</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹962</p>
+                            </div>
+                        </a>
+                        <!-- Flush Wall (H) -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/cabin 50x50_2@4x-100.jpg" alt="Flush Wall (H)" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">FW-FS-2</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Flush Wall (H)</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,250</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Concealed Valve -->
+                    <div class="mt-10 mb-5">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Concealed Valve</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Conti Concealed Valve -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/CON-FS-1.png" alt="Conti Concealed Valve" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CON-FS-1</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Conti Concealed Valve</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹1,437</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Waste Pipe -->
+                    <div class="mt-10 mb-5">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Waste Pipe</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Waste Pipe (L) -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/WPL-FS-1.png" alt="Waste Pipe (L)" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">WPL-FS-1</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Waste Pipe (L)</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹40</p>
+                            </div>
+                        </a>
+                        <!-- Waste Pipe (H) -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/WPH-FS-2.png" alt="Waste Pipe (H)" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">WPH-FS-2</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Waste Pipe (H)</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹70</p>
+                            </div>
+                        </a>
+                        <!-- Waste Pipe Black -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/WPB-FS-3.png" alt="Waste Pipe Black" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">WPB-FS-3</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Waste Pipe Black</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹95</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Waste Coupling -->
+                    <div class="mt-10 mb-5">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Waste Coupling</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Plunge Waste Coupling -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/CO-FS-1.png" alt="Plunge Waste Coupling" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CO-FS-1</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Plunge Waste Coupling</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹187</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Connection Pipe -->
+                    <div class="mt-10 mb-5">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Connection Pipe</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- 18" Connection PTMT -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/CP-FS-Connections.png" alt="18&quot; Connection PTMT" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CP1-FS-1</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">18" Connection PTMT</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹90</p>
+                            </div>
+                        </a>
+                        <!-- 24" Connection PTMT -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/CP-FS-Connections.png" alt="24&quot; Connection PTMT" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CP2-FS-2</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">24" Connection PTMT</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹103</p>
+                            </div>
+                        </a>
+                        <!-- 30" Connection PTMT -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/CP-FS-Connections.png" alt="30&quot; Connection PTMT" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CP3-FS-3</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">30" Connection PTMT</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹115</p>
+                            </div>
+                        </a>
+                        <!-- 36" Connection PTMT -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/CP-FS-Connections.png" alt="36&quot; Connection PTMT" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CP4-FS-4</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">36" Connection PTMT</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹128</p>
+                            </div>
+                        </a>
+                        <!-- 42" Connection PTMT -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/CP-FS-Connections.png" alt="42&quot; Connection PTMT" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CP5-FS-5</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">42" Connection PTMT</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹142</p>
+                            </div>
+                        </a>
+                        <!-- 48" Connection PTMT -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/CP-FS-Connections.png" alt="48&quot; Connection PTMT" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CP6-FS-6</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">48" Connection PTMT</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹158</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Jali -->
+                    <div class="mt-10 mb-5">
+                        <h3 class="font-playfair text-xl font-semibold text-charcoal border-l-4 border-brand pl-3">Jali</h3>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- 3" Plan Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/JB3-FS-9.png" alt="3&quot; Plan Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">JB3-FS-9</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">3" Plan Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹438</p>
+                            </div>
+                        </a>
+                        <!-- 4" Plan Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/JB4-FS-10.png" alt="4&quot; Plan Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">JB4-FS-10</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">4" Plan Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹588</p>
+                            </div>
+                        </a>
+                        <!-- 5" Plan Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/JB5-FS-11.png" alt="5&quot; Plan Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">JB5-FS-11</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">5" Plan Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹688</p>
+                            </div>
+                        </a>
+                        <!-- Cockroach Round Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/CRP-FS-3.png" alt="Cockroach Round Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CRP-FS-3</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cockroach Round Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹208</p>
+                            </div>
+                        </a>
+                        <!-- Cockroach Round Hole Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/CRH-FS-4.png" alt="Cockroach Round Hole Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CRH-FS-4</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cockroach Round Hole Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹208</p>
+                            </div>
+                        </a>
+                        <!-- Cockroach Square Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/CSP-FS-7.png" alt="Cockroach Square Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CSP-FS-7</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cockroach Square Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹248</p>
+                            </div>
+                        </a>
+                        <!-- Cockroach Square Hole Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/CSH-FS-8.png" alt="Cockroach Square Hole Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">CSH-FS-8</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Cockroach Square Hole Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹248</p>
+                            </div>
+                        </a>
+                        <!-- Lock Round Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/LRP-FS-1.png" alt="Lock Round Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">LRP-FS-1</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Lock Round Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹88</p>
+                            </div>
+                        </a>
+                        <!-- Lock Round Hole Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/LRH-FS-2.png" alt="Lock Round Hole Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">LRH-FS-2</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Lock Round Hole Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹88</p>
+                            </div>
+                        </a>
+                        <!-- Lock Square Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/LSP-FS-5.png" alt="Lock Square Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">LSP-FS-5</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Lock Square Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹125</p>
+                            </div>
+                        </a>
+                        <!-- Lock Square Hole Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/LSH-FS-5.png" alt="Lock Square Hole Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">LSH-FS-5</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">Lock Square Hole Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹125</p>
+                            </div>
+                        </a>
+                        <!-- 3" Hole Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/JH3-FS-12.png" alt="3&quot; Hole Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">JH3-FS-12</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">3" Hole Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹438</p>
+                            </div>
+                        </a>
+                        <!-- 4" Hole Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/JH4-FS-13.png" alt="4&quot; Hole Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">JH4-FS-13</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">4" Hole Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹588</p>
+                            </div>
+                        </a>
+                        <!-- 5" Hole Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/JH5-FS-14.png" alt="5&quot; Hole Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">JH5-FS-14</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">5" Hole Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹688</p>
+                            </div>
+                        </a>
+                        <!-- 3" Slice Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/SL3-FS-15.png" alt="3&quot; Slice Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">SL3-FS-15</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">3" Slice Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹75</p>
+                            </div>
+                        </a>
+                        <!-- 4" Slice Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/SL4-FS-16.png" alt="4&quot; Slice Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">SL4-FS-16</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">4" Slice Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹93</p>
+                            </div>
+                        </a>
+                        <!-- 5" Slice Jali -->
+                        <a href="product-details.html" class="product-card flex flex-col h-full bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-xl group">
+                            <div class="product-img aspect-square bg-gray-50 relative">
+                                <img loading="lazy" src="assets/images/accessories/SL5-FS-17.png" alt="5&quot; Slice Jali" class="w-full h-full object-contain">
+                                <div class="quick-action-overlay">
+                                    <span class="bg-white text-charcoal px-6 py-2.5 text-xs font-semibold tracking-widest uppercase hover:bg-beige hover:text-charcoal transition-colors duration-300 rounded-sm">Enquire Now</span>
+                                </div>
+                            </div>
+                            <div class="p-5 flex-1 flex flex-col">
+                                <span class="text-[11px] text-gray-500 font-medium tracking-wider uppercase">SL5-FS-17</span>
+                                <h3 class="text-charcoal font-semibold text-base mt-1 mb-2 group-hover:text-charcoal transition-colors">5" Slice Jali</h3>
+                                <p class="text-charcoal font-bold text-sm mt-auto">MRP ₹113</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-ivory text-gray-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+
+                <!-- Column 1: Brand -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-5">
+                        <img src="assets/images/plunge-logo.svg" alt="PLUNGE" class="h-9 sm:h-10 w-auto object-contain">
+                    </div>
+                    <p class="text-sm leading-relaxed text-gray-500 mb-6 max-w-xs">Crafting premium luxury faucets that blend timeless design with engineering excellence. Every piece tells a story of quality.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-charcoal hover:border-charcoal/30 transition-all duration-300" aria-label="Facebook">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-charcoal hover:border-charcoal/30 transition-all duration-300" aria-label="Instagram">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-charcoal hover:border-charcoal/30 transition-all duration-300" aria-label="Pinterest">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 4.99 3.657 9.128 8.438 9.878-.117-.949-.223-2.406.047-3.441.243-.937 1.573-6.664 1.573-6.664s-.402-.803-.402-1.989c0-1.863 1.08-3.25 2.425-3.25 1.143 0 1.694.858 1.694 1.887 0 1.15-.731 2.868-1.108 4.464-.316 1.338.669 2.426 1.986 2.426 2.384 0 4.213-2.514 4.213-6.14 0-3.212-2.308-5.459-5.605-5.459-3.817 0-6.057 2.863-6.057 5.832 0 1.154.444 2.391.999 3.063.11.133.126.25.093.385-.102.425-.327 1.338-.372 1.525-.059.243-.195.294-.448.177-1.667-.776-2.707-3.216-2.707-5.178 0-4.217 3.064-8.087 8.842-8.087 4.643 0 8.25 3.306 8.25 7.724 0 4.61-2.903 8.32-6.932 8.32-1.355 0-2.626-.707-3.064-1.542l-.834 3.182c-.302 1.16-1.118 2.617-1.664 3.502A12.014 12.014 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Collections -->
+                <div>
+                    <h4 class="text-charcoal font-semibold text-sm tracking-wider uppercase mb-5">Collections</h4>
+                    <ul class="space-y-3">
+                        <li><a href="collections.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors duration-200">Diamond</a></li>
+                        <li><a href="collections.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors duration-200">Opal Prime</a></li>
+                        <li><a href="collections.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors duration-200">Cosmo</a></li>
+                        <li><a href="collections.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors duration-200">Quba</a></li>
+                        <li><a href="collections.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors duration-200">Accessories</a></li>
+                        
+                        
+                    </ul>
+                </div>
+
+                <!-- Column 3: Quick Links -->
+                <div>
+                    <h4 class="text-charcoal font-semibold text-sm tracking-wider uppercase mb-5">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors duration-200">About Us</a></li>
+                        <li><a href="gallery.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors duration-200">Gallery</a></li>
+                        <li><a href="faq.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors duration-200">FAQ</a></li>
+                        <li><a href="contact.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors duration-200">Contact</a></li>
+                        <li><a href="wishlist.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors duration-200">Wishlist</a></li>
+                        <li><a href="cart.html" class="text-sm text-gray-500 hover:text-charcoal transition-colors duration-200">Cart</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h4 class="text-charcoal font-semibold text-sm tracking-wider uppercase mb-5">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5 text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span class="text-sm text-gray-500 leading-relaxed">F.S. Enterprises, Industrial Area, New Delhi, India</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                            </svg>
+                            <span class="text-sm text-gray-500">+91 1800 123 4567</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span class="text-sm text-gray-500">info@plungefaucets.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-gray-500">&copy; 2026 PLUNGE by F.S. Enterprises. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="privacy-policy.html" class="text-xs text-gray-500 hover:text-charcoal transition-colors duration-200">Privacy Policy</a>
+                    <a href="terms.html" class="text-xs text-gray-500 hover:text-charcoal transition-colors duration-200">Terms of Service</a>
+                    <a href="#" class="text-xs text-gray-500 hover:text-charcoal transition-colors duration-200">Shipping Info</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // ===== SORT (basic client-side) =====
+        const sortSelect = document.getElementById('sortSelect');
+        if (sortSelect) {
+            sortSelect.addEventListener('change', function() {
+                const activePane = document.querySelector('.tab-pane.active');
+                if (!activePane) return;
+                const grid = activePane.querySelector('.grid');
+                if (!grid) return;
+                const cards = Array.from(grid.querySelectorAll('.product-card'));
+                const order = this.value;
+
+                if (!order) return;
+
+                cards.sort((a, b) => {
+                    const priceA = parseInt((a.querySelector('p')?.textContent || '').replace(/[^0-9]/g, ''));
+                    const priceB = parseInt((b.querySelector('p')?.textContent || '').replace(/[^0-9]/g, ''));
+                    const nameA = (a.querySelector('h3')?.textContent || '').toLowerCase();
+                    const nameB = (b.querySelector('h3')?.textContent || '').toLowerCase();
+
+                    switch(order) {
+                        case 'price-low': return priceA - priceB;
+                        case 'price-high': return priceB - priceA;
+                        case 'name-az': return nameA.localeCompare(nameB);
+                        case 'name-za': return nameB.localeCompare(nameA);
+                        default: return 0;
+                    }
+                });
+
+                cards.forEach(card => grid.appendChild(card));
+            });
+        }
+    </script>
+
+    <script>
+        // ===== DEEP-LINK CATEGORY (collection-products.html#kitchen, #diamond, #shower-system, ...) =====
+        (function() {
+            var hash = location.hash ? location.hash.substring(1) : "";
+            var paneMap = {
+                "diamond": "kitchen-fixture",
+                "opal-prime": "kitchen-fixture",
+                "cosmo": "kitchen-fixture",
+                "quba": "kitchen-fixture",
+                "kitchen": "kitchen-fixture",
+                "kitchen-fixture": "kitchen-fixture",
+                "bathroom": "bathroom",
+                "accessories": "accessories",
+                "shower-system": "accessories"
+            };
+            var paneId = paneMap[hash];
+            if (!paneId) return;
+            var pane = document.getElementById(paneId);
+            if (!pane) return;
+
+            document.querySelectorAll(".tab-pane").forEach(function(p) {
+                if (p.id === paneId) {
+                    p.classList.add("active");
+                    p.classList.remove("opacity-0");
+                    p.classList.add("opacity-100");
+                } else {
+                    p.classList.remove("active");
+                    p.classList.add("opacity-0");
+                    p.classList.remove("opacity-100");
+                }
+            });
+
+            var links = document.querySelectorAll(".sidebar-link");
+            links.forEach(function(l) {
+                l.classList.remove("active", "text-charcoal", "border-gray-300", "bg-gray-50", "font-semibold");
+                l.classList.add("text-gray-500", "border-transparent", "font-medium");
+            });
+            var matching = document.querySelectorAll('.sidebar-link[data-deeplink="' + hash + '"]');
+            matching.forEach(function(l) {
+                l.classList.add("active", "text-charcoal", "border-gray-300", "bg-gray-50", "font-semibold");
+                l.classList.remove("text-gray-500", "border-transparent", "font-medium");
+            });
+
+            var target = document.getElementById(hash);
+            window.setTimeout(function() {
+                if (target) {
+                    window.scrollTo(0, target.getBoundingClientRect().top + window.pageYOffset - 140);
+                } else {
+                    window.scrollTo(0, 0);
+                }
+            }, 60);
+        })();
+    </script>
+
+    <script>
+        // ===== SIDEBAR SCROLL (brands / shower-system) =====
+        (function() {
+            var scrollLinks = document.querySelectorAll(".sidebar-link[data-scroll]");
+            scrollLinks.forEach(function(link) {
+                link.addEventListener("click", function() {
+                    var id = link.getAttribute("data-scroll");
+                    var target = document.getElementById(id);
+                    if (!target) return;
+                    window.setTimeout(function() {
+                        window.scrollTo(0, target.getBoundingClientRect().top + window.pageYOffset - 140);
+                    }, 60);
+                });
+            });
+        })();
+    </script>
+
+  <!-- SEARCH MODAL -->
+  <div id="search-modal" class="search-modal fixed inset-0 z-[100] flex items-start justify-center pt-[10vh] px-4" role="dialog" aria-modal="true" aria-label="Search products">
+    <div class="search-backdrop fixed inset-0 bg-black/50" id="search-backdrop"></div>
+    <div class="search-container relative w-full max-w-2xl bg-ivory border border-gray-200 rounded-xl shadow-2xl overflow-hidden">
+      <!-- Search Input -->
+      <div class="flex items-center border-b border-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 ml-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="search-input" type="text" placeholder="Search products, collections..." class="w-full bg-transparent text-charcoal px-4 py-5 text-lg focus:outline-none placeholder-gray-500" autocomplete="off" />
+        <button id="search-close" class="text-gray-600 hover:text-charcoal p-5 transition-colors" aria-label="Close search">
+          <span class="text-xs font-medium bg-white px-2 py-1 rounded">ESC</span>
+        </button>
+      </div>
+      <!-- Search Results -->
+      <div id="search-results" class="search-results p-4">
+        <div id="search-default" class="text-center py-8 text-gray-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-3 text-gray-500/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <p class="text-sm">Type to search our collections</p>
+          <p class="text-xs text-gray-500/60 mt-1">Diamond, Opal Prime, Cosmo, and more</p>
+        </div>
+        <div id="search-loading" class="hidden text-center py-8">
+          <div class="inline-block w-6 h-6 border-2 border-gray-400 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+        <div id="search-no-results" class="hidden text-center py-8 text-gray-500">
+          <p class="text-sm">No products found</p>
+          <p class="text-xs text-gray-500/60 mt-1">Try a different search term</p>
+        </div>
+        <div id="search-results-list" class="hidden space-y-2"></div>
+      </div>
+      <!-- Quick Links -->
+      <div class="border-t border-gray-200 px-5 py-3 flex items-center justify-between">
+        <div class="flex items-center space-x-3 text-xs text-gray-500/60">
+          <span class="flex items-center"><kbd class="bg-white px-1.5 py-0.5 rounded text-gray-500 mr-1">&uarr;&darr;</kbd> Navigate</span>
+          <span class="flex items-center"><kbd class="bg-white px-1.5 py-0.5 rounded text-gray-500 mr-1">Enter</kbd> Select</span>
+        </div>
+        <a href="collections.html" class="text-xs text-gray-600 hover:text-charcoal transition-colors">View all collections &rarr;</a>
+      </div>
+    </div>
+  </div>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "PLUNGE Collections",
+      "description": "Premium luxury faucets and bathroom fixtures",
+      "numberOfItems": 10,
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Diamond Bib Cock","url":"https://plungefaucets.in/product-details.html"},
+        {"@type":"ListItem","position":2,"name":"Diamond Long Body","url":"https://plungefaucets.in/product-details.html"},
+        {"@type":"ListItem","position":3,"name":"Opal Prime Bib Cock","url":"https://plungefaucets.in/product-details.html"},
+        {"@type":"ListItem","position":4,"name":"Opal Prime Sink Mixer","url":"https://plungefaucets.in/product-details.html"},
+        {"@type":"ListItem","position":5,"name":"Cosmo Sink Mixer","url":"https://plungefaucets.in/product-details.html"}
+      ]
+    }
+    </script>
+</body>
+</html>
