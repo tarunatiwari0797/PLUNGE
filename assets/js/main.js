@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 searchNoResults.classList.add('hidden');
                 searchResultsList.classList.remove('hidden');
                 searchResultsList.innerHTML = results.map(product =>
-                    '<a href="' + product.url + '" class="search-result-item flex items-center gap-4 p-3 rounded-lg hover:bg-beige transition-colors group">' +
+                    '<div class="search-result-item flex items-center gap-4 p-3 rounded-lg hover:bg-beige transition-colors group">' +
                         '<div class="w-14 h-14 bg-white rounded-lg flex items-center justify-center flex-shrink-0">' +
                             '<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>' +
                         '</div>' +
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             '<p class="text-sm font-semibold text-gray-700">' + product.price + '</p>' +
                             '<p class="text-[10px] text-gray-500">' + product.code + '</p>' +
                         '</div>' +
-                    '</a>'
+                    '</div>'
                 ).join('');
             }
         }, 200);
